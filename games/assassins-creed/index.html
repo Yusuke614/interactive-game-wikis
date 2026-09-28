@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assassin's Creed • Franchise Portal & Guidebook Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #040e13;
+      --bg-card: rgba(11, 31, 40, 0.88);
+      --bg-card-hover: rgba(16, 42, 53, 0.95);
+      --border-subtle: #183c4b;
+      --border-focus: #00d4e6;
+      --accent-gold: #f3a829;
+      --accent-cyan: #00d4e6;
+      --accent-crimson: #d92534;
+      --text-main: #f0f6fa;
+      --text-muted: #8ca5b2;
+      --text-dim: #54717f;
+      --font-display: 'Cinzel', serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(0, 212, 230, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 10% 30%, rgba(243, 168, 41, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 70%, rgba(217, 37, 52, 0.06) 0%, transparent 40%),
+        linear-gradient(180deg, #030a0e 0%, #06151c 50%, #02070a 100%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 0 0 60px 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .portal-container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Global Header */
+    .top-nav {
+      background: rgba(4, 14, 19, 0.94);
+      border-bottom: 1px solid var(--border-subtle);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 12px 0;
+    }
+    .top-nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-icon {
+      font-size: 24px;
+      color: var(--accent-gold);
+      filter: drop-shadow(0 0 8px rgba(243, 168, 41, 0.5));
+    }
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    .brand-badge {
+      background: rgba(0, 212, 230, 0.15);
+      border: 1px solid rgba(0, 212, 230, 0.4);
+      color: var(--accent-cyan);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* Actions & Mode Switcher */
+    .nav-actions-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .nav-breadcrumb-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .nav-link-btn {
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-link-btn:hover {
+      color: var(--accent-cyan);
+      background: rgba(0, 212, 230, 0.1);
+      border-color: rgba(0, 212, 230, 0.3);
+    }
+    .mode-toggle-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #06141c;
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 3px;
+    }
+    .mode-label {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      font-weight: 600;
+      padding-left: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .mode-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .mode-btn:hover { color: #fff; }
+    .mode-btn.active {
+      background: #0f2b38;
+      color: var(--accent-cyan);
+      border: 1px solid rgba(0, 212, 230, 0.4);
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      padding: 48px 0 32px 0;
+      text-align: center;
+      position: relative;
+    }
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(243, 168, 41, 0.1);
+      border: 1px solid rgba(243, 168, 41, 0.35);
+      color: #fde68a;
+      padding: 5px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 2.85rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+    }
+    .hero-subtitle {
+      font-size: 1.12rem;
+      color: var(--text-muted);
+      max-width: 820px;
+      margin: 0 auto 32px auto;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* Global Metrics Grid */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      max-width: 980px;
+      margin: 0 auto 36px auto;
+    }
+    .metric-card {
+      background: rgba(11, 31, 40, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 16px 20px;
+      text-align: left;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .metric-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 212, 230, 0.4);
+    }
+    .metric-val {
+      font-family: var(--font-mono);
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+    .metric-val span {
+      font-size: 1rem;
+      color: var(--accent-gold);
+    }
+    .metric-lbl {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* Controls Bar */
+    .controls-bar {
+      background: rgba(9, 26, 34, 0.85);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 14px 20px;
+      margin-bottom: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .filter-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .filter-btn {
+      background: #06141c;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 7px 15px;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: var(--font-display);
+      letter-spacing: 0.5px;
+    }
+    .filter-btn:hover {
+      color: #fff;
+      border-color: rgba(0, 212, 230, 0.4);
+    }
+    .filter-btn.active {
+      background: #0f2b38;
+      color: var(--accent-cyan);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 12px rgba(0, 212, 230, 0.25);
+    }
+    .search-wrapper {
+      position: relative;
+      flex-grow: 1;
+      max-width: 360px;
+      min-width: 240px;
+    }
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      pointer-events: none;
+    }
+    .search-input {
+      width: 100%;
+      background: #030c11;
+      border: 1px solid var(--border-subtle);
+      color: #fff;
+      font-size: 0.85rem;
+      padding: 9px 16px 9px 38px;
+      border-radius: 8px;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+    .search-input:focus {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 0 3px rgba(0, 212, 230, 0.15);
+    }
+
+    /* Cards Grid */
+    .guides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 28px;
+    }
+
+    /* Individual Card */
+    .guide-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      backdrop-filter: blur(8px);
+    }
+    .guide-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.6);
+    }
+
+    /* Card Themes */
+    .guide-card.theme-v15 {
+      border-top: 4px solid var(--accent-gold);
+    }
+    .guide-card.theme-v15:hover {
+      border-color: var(--accent-gold);
+      box-shadow: 0 16px 36px rgba(243, 168, 41, 0.2);
+    }
+    .guide-card.theme-v14 {
+      border-top: 4px solid var(--accent-cyan);
+    }
+    .guide-card.theme-v14:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 16px 36px rgba(0, 212, 230, 0.2);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .card-franchise-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .theme-v15 .card-franchise-tag { color: var(--accent-gold); }
+    .theme-v14 .card-franchise-tag { color: var(--accent-cyan); }
+
+    .card-version-badge {
+      background: #06141c;
+      border: 1px solid var(--border-subtle);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .card-subtitle {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.55;
+    }
+
+    .card-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .pill {
+      font-size: 0.74rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+    }
+
+    .card-specs {
+      background: rgba(5, 17, 23, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 24px;
+    }
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .spec-label {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+    .spec-value {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 2px;
+    }
+
+    /* Actions */
+    .card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .btn-launch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    .theme-v15 .btn-launch {
+      background: linear-gradient(135deg, #f3a829, #d97706);
+      color: #000;
+      box-shadow: 0 4px 14px rgba(243, 168, 41, 0.3);
+    }
+    .theme-v15 .btn-launch:hover {
+      background: linear-gradient(135deg, #fbbf24, #f3a829);
+      box-shadow: 0 6px 20px rgba(243, 168, 41, 0.45);
+    }
+
+    .theme-v14 .btn-launch {
+      background: linear-gradient(135deg, #00d4e6, #0284c7);
+      color: #000;
+      box-shadow: 0 4px 14px rgba(0, 212, 230, 0.3);
+    }
+    .theme-v14 .btn-launch:hover {
+      background: linear-gradient(135deg, #38bdf8, #00d4e6);
+      box-shadow: 0 6px 20px rgba(0, 212, 230, 0.45);
+    }
+
+    .secondary-links {
+      display: flex;
+      gap: 8px;
+    }
+    .btn-secondary {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: rgba(7, 21, 28, 0.8);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-secondary:hover {
+      background: #113444;
+      color: #fff;
+      border-color: var(--accent-cyan);
+    }
+
+    /* Drawer */
+    .repo-info-box {
+      background: rgba(8, 24, 32, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 48px;
+    }
+    .repo-info-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .repo-info-header h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toggle-arrow {
+      color: var(--accent-cyan);
+      font-weight: bold;
+      transition: transform 0.2s ease;
+    }
+    .repo-info-body {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .info-pane {
+      background: rgba(5, 17, 23, 0.75);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .info-pane h4 {
+      font-size: 0.88rem;
+      color: var(--accent-gold);
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-family: var(--font-display);
+    }
+    .info-pane pre {
+      background: #02070a;
+      border: 1px solid #0f2b38;
+      border-radius: 6px;
+      padding: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: #8ca5b2;
+      overflow-x: auto;
+    }
+    .info-pane p, .info-pane li {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .info-pane ul {
+      margin-left: 18px;
+      margin-top: 6px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 28px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-dim);
+    }
+    footer a {
+      color: var(--accent-cyan);
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.1rem; }
+      .hero-subtitle { font-size: 1rem; }
+      .guides-grid { grid-template-columns: 1fr; }
+      .controls-bar { flex-direction: column; align-items: stretch; }
+      .search-wrapper { max-width: 100%; }
+      .top-nav-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="top-nav">
+    <div class="portal-container top-nav-inner">
+      <div class="brand-group">
+        <span class="brand-icon">⚓</span>
+        <span class="brand-title">Assassin's Creed</span>
+        <span class="brand-badge">Franchise Hub</span>
+      </div>
+
+      <!-- Actions & Mode Switcher -->
+      <div class="nav-actions-group">
+        <div class="nav-breadcrumb-links">
+          <a id="link_master_portal" href="https://drive.google.com/file/d/1ImvMVRxTst2lnkwxxJgCnGtWGbvueLUk/view?usp=drivesdk" class="nav-link-btn" title="Back to All Games Master Hub">
+            <span>🌐</span> Master Hub
+          </a>
+          <a id="link_top_ac_folder" href="https://drive.google.com/drive/folders/13RblzI5E1_uyMM1ACDl_ut_QbL2Olq0D" target="_blank" class="nav-link-btn" title="Open Assassin's Creed Franchise Folder">
+            <span>🗂️</span> AC Folder
+          </a>
+        </div>
+
+        <div class="mode-toggle-group">
+          <span class="mode-label">Link Mode:</span>
+          <button class="mode-btn active" id="btnModeDrive" onclick="setLinkMode('drive')">Google Drive</button>
+          <button class="mode-btn" id="btnModeWeb" onclick="setLinkMode('web')">Web / Local</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="portal-container">
+
+    <!-- Hero Section -->
+    <section class="hero-banner">
+      <div class="hero-badge-pill">
+        <span>⚔️</span> Dedicated Franchise Portal • 100% Synchronization &amp; Naval Warfare
+      </div>
+      <h1 class="hero-title">Assassin's Creed Guidebook Hub</h1>
+      <p class="hero-subtitle">
+        A centralized collection of interactive completion guides, naval upgrade trees, legendary ship strategies, and modern-day Animus Rift solutions for the <strong>Assassin's Creed</strong> series. Built in pure HTML5, CSS3, and vanilla JavaScript with persistent task tracking and authentic naval HUD design.
+      </p>
+
+      <!-- Global Metrics -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-val">116 <span>tasks</span></div>
+          <div class="metric-lbl">Trackable Checklist Items</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val">12 <span>sections</span></div>
+          <div class="metric-lbl">IGN Walkthrough Modules</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val">5 <span>officers</span></div>
+          <div class="metric-lbl">Jackdaw Specialists &amp; Perks</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val">4 <span>rifts</span></div>
+          <div class="metric-lbl">Animus Puzzles &amp; EGO Nodes</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls Bar -->
+    <section class="controls-bar">
+      <div class="filter-tags">
+        <button class="filter-btn active" data-filter="all" onclick="filterAC('all')">All Guides (2)</button>
+        <button class="filter-btn" data-filter="active" onclick="filterAC('active')">Active Release (v15) (1)</button>
+        <button class="filter-btn" data-filter="archive" onclick="filterAC('archive')">Archive Revisions (1)</button>
+      </div>
+
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="acSearch" class="search-input" placeholder="Search memories, Jackdaw upgrades, legendary ships..." oninput="handleSearch(this.value)">
+      </div>
+    </section>
+
+    <!-- Guide Cards Grid -->
+    <div class="guides-grid" id="guidesGrid">
+
+      <!-- Guide 1: AC Black Flag Resynced (Active Release v15) -->
+      <article class="guide-card theme-v15" data-category="active" data-keywords="assassins creed iv black flag resynced pirate jackdaw naval edward kenway animus 100% sync legendary ships templar rifts v15 active">
+        <div>
+          <div class="card-top">
+            <span class="card-franchise-tag">⚓ Golden Age of Piracy</span>
+            <span class="card-version-badge">Release v15 • Active</span>
+          </div>
+          <h2 class="card-title">Assassin's Creed IV: Black Flag Resynced</h2>
+          <p class="card-subtitle">Complete IGN-grounded completion walkthrough, naval upgrade matrix, specialist officers, legendary ship tactics, Mayan &amp; Templar armors, and Animus Rift puzzles.</p>
+
+          <div class="card-pills">
+            <span class="pill">12 IGN Sections</span>
+            <span class="pill">116 Checkable Tasks</span>
+            <span class="pill">Naval Combat</span>
+            <span class="pill">Legendary Ships</span>
+            <span class="pill">5 Officers</span>
+            <span class="pill">4 Rifts &amp; EGO</span>
+          </div>
+
+          <div class="card-specs">
+            <div class="specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">Trackable Progress</span>
+                <span class="spec-value" style="color: #f3a829;">116 Tasks</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Platform Focus</span>
+                <span class="spec-value">PC / Console</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Naval Officers</span>
+                <span class="spec-value">5 Specialists</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Story Scope</span>
+                <span class="spec-value">Seq 1–13 + 8 Epilogues</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a id="link_ac_launch" href="https://drive.google.com/file/d/1H43bHbvZ9TJtsXa0ie1qiSR2pofmBFJz/view?usp=drivesdk" target="_blank" class="btn-launch">
+            <span>⚔️</span> Launch Interactive Guide
+          </a>
+          <div class="secondary-links">
+            <a id="link_ac_drive" href="https://drive.google.com/file/d/1H43bHbvZ9TJtsXa0ie1qiSR2pofmBFJz/view?usp=drivesdk" target="_blank" class="btn-secondary">
+              📁 Drive File
+            </a>
+            <a id="link_ac_readme" href="https://drive.google.com/file/d/1W93md4TrnzJb7hT_-spKPwNuoNWr9IKl/view?usp=drivesdk" target="_blank" class="btn-secondary">
+              📄 README.md
+            </a>
+            <a id="link_v15_folder" href="https://drive.google.com/drive/folders/11WygZ7Mt5coMjf9fAE2LNLjPnzFu0iUS" target="_blank" class="btn-secondary" title="Open Black Flag Resynced Game Folder">
+              🗂️ Game Folder
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Guide 2: Historical Archive (Release v14) -->
+      <article class="guide-card theme-v14" data-category="archive" data-keywords="assassins creed iv black flag resynced pirate jackdaw naval edward kenway v14 archive milestone">
+        <div>
+          <div class="card-top">
+            <span class="card-franchise-tag">📦 Historical Archive</span>
+            <span class="card-version-badge">Milestone v14</span>
+          </div>
+          <h2 class="card-title">Black Flag Resynced (v14 Archive)</h2>
+          <p class="card-subtitle">Previous stable release milestone of the comprehensive Black Flag Resynced completion guide preserved for version continuity and offline archival.</p>
+
+          <div class="card-pills">
+            <span class="pill">Preserved Milestone</span>
+            <span class="pill">12 Walkthrough Modules</span>
+            <span class="pill">Complete Naval Tree</span>
+            <span class="pill">Full Offline SPA</span>
+          </div>
+
+          <div class="card-specs">
+            <div class="specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">Version Status</span>
+                <span class="spec-value" style="color: #00d4e6;">Archive v14</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Platform Focus</span>
+                <span class="spec-value">PC / Console</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Source Sequence</span>
+                <span class="spec-value">IGN Walkthrough</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Format</span>
+                <span class="spec-value">Standalone HTML</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a id="link_v14_launch" href="https://drive.google.com/file/d/1_h6qZ2URE6TdWPA_EeGCSLOifAh3-huv/view?usp=drivesdk" target="_blank" class="btn-launch">
+            <span>📜</span> Launch v14 Archive
+          </a>
+          <div class="secondary-links">
+            <a id="link_v14_drive" href="https://drive.google.com/file/d/1_h6qZ2URE6TdWPA_EeGCSLOifAh3-huv/view?usp=drivesdk" target="_blank" class="btn-secondary">
+              📁 Drive File
+            </a>
+            <a id="link_v14_folder" href="https://drive.google.com/drive/folders/11WygZ7Mt5coMjf9fAE2LNLjPnzFu0iUS" target="_blank" class="btn-secondary" title="Open Black Flag Resynced Game Folder">
+              🗂️ Game Folder
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Franchise Architecture & Deployment Drawer -->
+    <section class="repo-info-box">
+      <div class="repo-info-header" onclick="toggleRepoInfo()">
+        <h3><span>📁</span> Franchise Architecture &amp; Folder Hierarchy</h3>
+        <span class="toggle-arrow" id="repoToggleArrow">▾</span>
+      </div>
+      <div class="repo-info-body" id="repoInfoBody">
+        <div class="info-pane">
+          <h4>Assassin's Creed Directory Structure</h4>
+          <pre>Assassin's Creed/
+├── index.html                               # AC Franchise Hub Portal
+├── README.md                                # Franchise Overview Documentation
+│
+└── Black Flag Resynced/
+    ├── Assassin's Creed Black Flag Resynced Wiki_v15.html # Active Release (v15)
+    ├── Assassin's Creed Black Flag Resynced Wiki_v14.html # Preserved Archive (v14)
+    ├── README.md                            # Game Guide Documentation
+    └── README_archive_v1.md                 # Archived Documentation Copy</pre>
+        </div>
+
+        <div class="info-pane">
+          <h4>GitHub Pages Relative Paths</h4>
+          <ul>
+            <li><strong>AC Franchise Hub</strong>: <code>games/assassins-creed/index.html</code></li>
+            <li><strong>Franchise Overview</strong>: <code>games/assassins-creed/README.md</code></li>
+            <li><strong>Active Release v15</strong>: <code>games/assassins-creed/black-flag-resynced/index.html</code></li>
+            <li><strong>Archive v14</strong>: <code>games/assassins-creed/black-flag-resynced/archive/ac-black-flag-resynced-wiki-v14.html</code></li>
+            <li>Toggle between <strong>Google Drive Mode</strong> and <strong>Web / Local Mode</strong> in the top header.</li>
+          </ul>
+        </div>
+
+        <div class="info-pane">
+          <h4>Zero-Dependency Portability</h4>
+          <p>
+            Built in 100% pure HTML5, CSS3, and vanilla JavaScript with zero external frameworks or CDNs required. All progress tracking is wrapped in an in-memory fallback around <code>localStorage</code>, fully compatible with desktop file systems and sandboxed mobile viewers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Assassin's Creed Guidebook Hub • Crafted for Charles Williams • Built with pure HTML5, CSS3, &amp; Vanilla JavaScript</p>
+      <p style="margin-top: 6px;">
+        Authoritative guides grounded in official strategy sequences. Explore the master <a id="link_footer_master" href="https://drive.google.com/file/d/1ImvMVRxTst2lnkwxxJgCnGtWGbvueLUk/view?usp=drivesdk" target="_blank">Games Master Hub</a> or the <a id="link_footer_ac_folder" href="https://drive.google.com/drive/folders/13RblzI5E1_uyMM1ACDl_ut_QbL2Olq0D" target="_blank">Assassin's Creed Drive Folder</a>.
+      </p>
+    </footer>
+
+  </main>
+
+  <script>
+    /* Safe Storage Protocol Wrapper */
+    const safeStorage = {
+      _mem: {},
+      getItem(key) {
+        try {
+          if (typeof window !== 'undefined' && window.localStorage) {
+            return window.localStorage.getItem(key);
+          }
+        } catch (e) {}
+        return this._mem[key] || null;
+      },
+      setItem(key, value) {
+        try {
+          if (typeof window !== 'undefined' && window.localStorage) {
+            window.localStorage.setItem(key, value);
+            return;
+          }
+        } catch (e) {}
+        this._mem[key] = String(value);
+      }
+    };
+
+    /* Link Mode Configuration */
+    const linkConfigs = {
+      drive: {
+        master_portal: "https://drive.google.com/file/d/1ImvMVRxTst2lnkwxxJgCnGtWGbvueLUk/view?usp=drivesdk",
+        ac_folder: "https://drive.google.com/drive/folders/13RblzI5E1_uyMM1ACDl_ut_QbL2Olq0D",
+        ac_launch: "https://drive.google.com/file/d/1H43bHbvZ9TJtsXa0ie1qiSR2pofmBFJz/view?usp=drivesdk",
+        ac_readme: "https://drive.google.com/file/d/1njhwGLa3BGCu73CQsxv0MH2qRIDr-eRV/view?usp=drivesdk",
+        ac_game_folder: "https://drive.google.com/drive/folders/11WygZ7Mt5coMjf9fAE2LNLjPnzFu0iUS",
+        v14_launch: "https://drive.google.com/file/d/1_h6qZ2URE6TdWPA_EeGCSLOifAh3-huv/view?usp=drivesdk"
+      },
+      web: {
+        master_portal: "../../index.html",
+        ac_folder: "./",
+        ac_launch: "black-flag-resynced/Assassin's Creed Black Flag Resynced Wiki_v15.html",
+        ac_readme: "black-flag-resynced/README.md",
+        ac_game_folder: "black-flag-resynced/",
+        v14_launch: "black-flag-resynced/Assassin's Creed Black Flag Resynced Wiki_v14.html"
+      }
+    };
+
+    function setLinkMode(mode) {
+      safeStorage.setItem('ac_portal_link_mode', mode);
+      document.getElementById('btnModeDrive').classList.toggle('active', mode === 'drive');
+      document.getElementById('btnModeWeb').classList.toggle('active', mode === 'web');
+
+      const cfg = linkConfigs[mode] || linkConfigs.drive;
+      
+      const setHref = (id, url) => {
+        const el = document.getElementById(id);
+        if (el) el.setAttribute('href', url);
+      };
+
+      setHref('link_master_portal', cfg.master_portal);
+      setHref('link_top_ac_folder', cfg.ac_folder);
+      setHref('link_footer_master', cfg.master_portal);
+      setHref('link_footer_ac_folder', cfg.ac_folder);
+      setHref('link_ac_launch', cfg.ac_launch);
+      setHref('link_ac_readme', cfg.ac_readme);
+      setHref('link_v15_folder', cfg.ac_game_folder);
+      setHref('link_v14_launch', cfg.v14_launch);
+      setHref('link_v14_folder', cfg.ac_game_folder);
+    }
+
+    /* Filter Cards */
+    let currentFilter = 'all';
+    function filterAC(category) {
+      currentFilter = category;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-filter') === category);
+      });
+      applySearchAndFilter();
+    }
+
+    /* Live Search */
+    let searchQuery = '';
+    function handleSearch(val) {
+      searchQuery = val.trim().toLowerCase();
+      applySearchAndFilter();
+    }
+
+    function applySearchAndFilter() {
+      const cards = document.querySelectorAll('.guide-card');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category') || '';
+        const keywords = (card.getAttribute('data-keywords') || '') + ' ' + (card.innerText || '').toLowerCase();
+
+        let matchesFilter = false;
+        if (currentFilter === 'all') {
+          matchesFilter = true;
+        } else if (currentFilter === 'active') {
+          matchesFilter = (cat === 'active');
+        } else if (currentFilter === 'archive') {
+          matchesFilter = (cat === 'archive');
+        }
+
+        let matchesSearch = true;
+        if (searchQuery.length > 0) {
+          const terms = searchQuery.split(/\s+/);
+          matchesSearch = terms.every(term => keywords.includes(term));
+        }
+
+        card.style.display = (matchesFilter && matchesSearch) ? 'flex' : 'none';
+      });
+    }
+
+    /* Drawer Toggle */
+    let repoDrawerOpen = false;
+    function toggleRepoInfo() {
+      repoDrawerOpen = !repoDrawerOpen;
+      const body = document.getElementById('repoInfoBody');
+      const arrow = document.getElementById('repoToggleArrow');
+      if (body) body.style.display = repoDrawerOpen ? 'grid' : 'none';
+      if (arrow) arrow.textContent = repoDrawerOpen ? '▴' : '▾';
+    }
+
+    /* Initialize Saved Mode */
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedMode = safeStorage.getItem('ac_portal_link_mode') || 'drive';
+      setLinkMode(savedMode);
+      const drawer = document.getElementById('repoInfoBody');
+      if (drawer) drawer.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
