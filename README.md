@@ -2,6 +2,8 @@
 
 A centralized collection of comprehensive, interactive video game wikis, walkthrough guides, lore chronicles, and completion trackers. Each guide is engineered as an offline-capable, single-page application (SPA) in pure HTML, CSS, and vanilla JavaScript—featuring persistent progress tracking, real-time live search, global section toggling, and game-authentic visual design.
 
+🌐 **Live GitHub Pages Portal:** [https://yusuke614.github.io/interactive-game-wikis/](https://yusuke614.github.io/interactive-game-wikis/)
+
 ---
 
 ## 🎮 Included Game Guides & Chronicles
@@ -60,7 +62,7 @@ interactive-game-wikis/
         │
         └── the-hyrule-chronicle/
             ├── README.md                    # The Hyrule Chronicle documentation
-            ├── index.html                   # Active release (v4 English translation)
+            ├── index.html                   # Active release (v5 English translation)
             └── archive/
 ```
 
@@ -68,14 +70,17 @@ interactive-game-wikis/
 
 ## 🌐 GitHub Pages Deployment
 
-To host these interactive wikis live on the web for free:
+* 🌐 **Live Portal URL:** [https://yusuke614.github.io/interactive-game-wikis/](https://yusuke614.github.io/interactive-game-wikis/)
+* 💻 **GitHub Repository:** `https://github.com/Yusuke614/interactive-game-wikis`
 
-1. Push this repository to GitHub.
+To configure or re-deploy these interactive wikis on GitHub Pages:
+
+1. Push this repository structure to your GitHub account (`Yusuke614/interactive-game-wikis`).
 2. Navigate to **Repository Settings** > **Pages** (in the left sidebar).
 3. Under **Build and deployment** > **Source**, select **Deploy from a branch**.
 4. Set the branch to `main` and directory to `/ (root)`, then click **Save**.
-5. Within 1–2 minutes, your portal and wikis will be accessible at:
-   `https://<your-username>.github.io/<repository-name>/`
+5. Within 1–2 minutes, your master portal and all guides are live at:
+   [https://yusuke614.github.io/interactive-game-wikis/](https://yusuke614.github.io/interactive-game-wikis/)
 
 ---
 
