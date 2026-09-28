@@ -11,7 +11,7 @@ A centralized collection of comprehensive, interactive video game wikis, walkthr
 | **Assassin's Creed** | [Assassin's Creed IV: Black Flag Resynced](games/assassins-creed/black-flag-resynced/) | `v15` | 116 Tasks | 12 IGN-grounded sections, Jackdaw naval upgrades & 5 officers, 4 Rifts, 100% sync constraints, Mayan & Templar vault armors, Caribbean pirate & Animus theme. |
 | **The Legend of Zelda** | [The Legend of Zelda: Ocarina of Time 3D](games/zelda/ocarina-of-time-3d/) | `v1` | 100+ Tasks | Complete 3DS walkthrough, all 36 Heart Pieces, 100 Gold Skulltulas, songs & warp tunes, Biggoron trading sequence, Master Quest notes, Hyrule/Triforce theme. |
 | **The Legend of Zelda** | [The Legend of Zelda: Echoes of Wisdom](games/zelda/echoes-of-wisdom/) | `v1` | 92 Tasks | All 15 main quests, 8 dungeons & Still Worlds, all 127 Echoes database, 6 Dampé automatons, 40 Heart Pieces, 150 Might Crystals, 25 Stamp Stands, Still World/Tri theme. |
-| **The Legend of Zelda** | [The Hyrule Chronicle (English)](games/zelda/the-hyrule-chronicle/) | `v4` | 5 Canonical Eras | Nintendo's official Japanese 40th anniversary timeline translated into English. Covers the pre-creation Null void (*Echoes of Wisdom*), Dual Foundings of Hyrule, Threefold Timeline Divergence (Fallen, Child, Adult), and the distant Era of the Wild (*BotW* / *TotK*). |
+| **The Legend of Zelda** | [The Hyrule Chronicle (English)](games/zelda/the-hyrule-chronicle/) | `v5` | 5 Canonical Eras | Nintendo's official Japanese 40th anniversary timeline translated into English. Covers the pre-creation Null void (*Echoes of Wisdom*), Dual Foundings of Hyrule, Threefold Timeline Divergence (Fallen, Child, Adult), and the distant Era of the Wild (*BotW* / *TotK*). |
 
 ---
 
