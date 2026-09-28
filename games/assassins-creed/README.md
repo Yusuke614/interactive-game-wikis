@@ -10,7 +10,7 @@ A curated collection of offline-capable, interactive single-page application (SP
 
 | Title | Platform / Setting | Active Release | Scope & Tasks | Folder Location |
 | :--- | :---: | :---: | :---: | :--- |
-| [**Black Flag Resynced**](Black%20Flag%20Resynced/) | PC Remaster / Caribbean Golden Age of Piracy | `v15` | 116 Tasks | `Black Flag Resynced/` — 12 IGN-grounded walkthrough modules, Sequences 1–13 (100% sync), 4 Animus Rifts & EGO solutions, Jackdaw upgrade trees & naval combat, 4 Legendary Ships, 5 Specialist Officers, 15 Naval Contracts, 4 Templar Hunts & 16 Mayan Stelae puzzles, crafting, and achievements. |
+| [**Black Flag Resynced**](black-flag-resynced/) | PC Remaster / Caribbean Golden Age of Piracy | `v15` | 116 Tasks | `Black Flag Resynced/` — 12 IGN-grounded walkthrough modules, Sequences 1–13 (100% sync), 4 Animus Rifts & EGO solutions, Jackdaw upgrade trees & naval combat, 4 Legendary Ships, 5 Specialist Officers, 15 Naval Contracts, 4 Templar Hunts & 16 Mayan Stelae puzzles, crafting, and achievements. |
 
 ---
 
