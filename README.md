@@ -41,6 +41,8 @@ interactive-game-wikis/
 ├── index.html                               # Root portal dashboard linking to all guides
 └── games/
     ├── assassins-creed/
+    │   ├── index.html                       # AC Franchise Hub Portal
+    │   ├── README.md                        # AC Franchise Overview
     │   └── black-flag-resynced/
     │       ├── README.md                    # AC Black Flag guide documentation
     │       ├── index.html                   # Active release (v15)
@@ -49,6 +51,7 @@ interactive-game-wikis/
     │           └── ac-black-flag-resynced-wiki-v14.html
     │
     └── zelda/
+        ├── index.html                       # Zelda Franchise Hub Portal
         ├── README.md                        # Zelda franchise overview
         ├── echoes-of-wisdom/
         │   ├── README.md                    # Echoes of Wisdom guide documentation

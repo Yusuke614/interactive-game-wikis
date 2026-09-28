@@ -772,8 +772,11 @@
             <a id="link_ac_drive" href="https://drive.google.com/file/d/1H43bHbvZ9TJtsXa0ie1qiSR2pofmBFJz/view?usp=drivesdk" target="_blank" class="btn-secondary">
               📁 Drive File
             </a>
-            <a id="link_ac_readme" href="https://drive.google.com/file/d/1W93md4TrnzJb7hT_-spKPwNuoNWr9IKl/view?usp=drivesdk" target="_blank" class="btn-secondary">
+            <a id="link_ac_readme" href="https://drive.google.com/file/d/1cLXzlIAu_Ts5o2cI-uKYV27nff0klkKi/view?usp=drivesdk" target="_blank" class="btn-secondary">
               📄 README.md
+            </a>
+            <a id="link_ac_hub" href="https://drive.google.com/file/d/1KnkZRR5am9gI5wDGUqSfgX7y_RiHDurc/view?usp=drivesdk" target="_blank" class="btn-secondary" title="Assassin's Creed Franchise Hub">
+              ⚓ AC Hub
             </a>
             <a href="https://drive.google.com/drive/folders/11WygZ7Mt5coMjf9fAE2LNLjPnzFu0iUS" target="_blank" class="btn-secondary">
               🗂️ Folder
@@ -833,6 +836,9 @@
             <a id="link_oot_readme" href="https://drive.google.com/file/d/1Zw3Qix5P4EQV4mKO819befPDAy2Y3P9s/view?usp=drivesdk" target="_blank" class="btn-secondary">
               📄 README.md
             </a>
+            <a id="link_zelda_hub_oot" href="https://drive.google.com/file/d/19qG1jVF41YbV7cK20umaIFw9aZmZREkH/view?usp=drivesdk" target="_blank" class="btn-secondary" title="The Legend of Zelda Franchise Hub">
+              🗡️ Zelda Hub
+            </a>
             <a href="https://drive.google.com/drive/folders/136qXmSphqGP3QbxCKrHMJXzYngS9qvQk" target="_blank" class="btn-secondary">
               🗂️ Folder
             </a>
@@ -890,6 +896,9 @@
             </a>
             <a id="link_eow_readme" href="https://drive.google.com/file/d/1kYSR8ob-yaqIecalGWYE-0NqBs1nXvkn/view?usp=drivesdk" target="_blank" class="btn-secondary">
               📄 README.md
+            </a>
+            <a id="link_zelda_hub_eow" href="https://drive.google.com/file/d/19qG1jVF41YbV7cK20umaIFw9aZmZREkH/view?usp=drivesdk" target="_blank" class="btn-secondary" title="The Legend of Zelda Franchise Hub">
+              🗡️ Zelda Hub
             </a>
             <a href="https://drive.google.com/drive/folders/1yskadcK43JTkqoxdez3inqv8uF-wzw8P" target="_blank" class="btn-secondary">
               🗂️ Folder
@@ -949,6 +958,9 @@
             <a id="link_chronicle_readme" href="https://drive.google.com/file/d/1U5IuZHucRSnpyuX9CS93qTRN0wAVx7Iz/view?usp=drivesdk" target="_blank" class="btn-secondary">
               📄 README.md
             </a>
+            <a id="link_zelda_hub_chronicle" href="https://drive.google.com/file/d/19qG1jVF41YbV7cK20umaIFw9aZmZREkH/view?usp=drivesdk" target="_blank" class="btn-secondary" title="The Legend of Zelda Franchise Hub">
+              🗡️ Zelda Hub
+            </a>
             <a href="https://drive.google.com/drive/folders/1bDbtchFdawr1qzqQVawznmLDicTZvBYN" target="_blank" class="btn-secondary">
               🗂️ Folder
             </a>
@@ -968,14 +980,18 @@
         <div class="info-pane">
           <h4>GitHub Directory Hierarchy</h4>
           <pre>interactive-game-wikis/
-├── index.html                   (Root Portal Dashboard)
-├── README.md                    (Master Documentation)
+├── index.html                   (Root Master Portal Dashboard)
+├── README.md                    (Master Hub Documentation)
 └── games/
     ├── assassins-creed/
+    │   ├── index.html           (AC Franchise Hub Portal)
+    │   ├── README.md            (AC Franchise Overview)
     │   └── black-flag-resynced/
     │       ├── index.html       (v15 Release)
     │       └── README.md
     └── zelda/
+        ├── index.html           (Zelda Franchise Hub Portal)
+        ├── README.md            (Zelda Franchise Overview)
         ├── ocarina-of-time-3d/
         │   ├── index.html       (v1 Release)
         │   └── README.md
@@ -1047,23 +1063,27 @@
     const linkConfigs = {
       drive: {
         ac_launch: "https://drive.google.com/file/d/1H43bHbvZ9TJtsXa0ie1qiSR2pofmBFJz/view?usp=drivesdk",
-        ac_readme: "https://drive.google.com/file/d/1W93md4TrnzJb7hT_-spKPwNuoNWr9IKl/view?usp=drivesdk",
+        ac_readme: "https://drive.google.com/file/d/1cLXzlIAu_Ts5o2cI-uKYV27nff0klkKi/view?usp=drivesdk",
+        ac_hub: "https://drive.google.com/file/d/1KnkZRR5am9gI5wDGUqSfgX7y_RiHDurc/view?usp=drivesdk",
         oot_launch: "https://drive.google.com/file/d/1Exx92VAJdFqGRt_iG4UOrJbuu3xxGEnp/view?usp=drivesdk",
         oot_readme: "https://drive.google.com/file/d/1Zw3Qix5P4EQV4mKO819befPDAy2Y3P9s/view?usp=drivesdk",
         eow_launch: "https://drive.google.com/file/d/1yoc3kCgpieigh6LOxXEEGe4sA50efghI/view?usp=drivesdk",
         eow_readme: "https://drive.google.com/file/d/1kYSR8ob-yaqIecalGWYE-0NqBs1nXvkn/view?usp=drivesdk",
         chronicle_launch: "https://drive.google.com/file/d/1Uv4wEIoA41yKZhxXtzauNiUQ1b_ejJrW/view?usp=drivesdk",
-        chronicle_readme: "https://drive.google.com/file/d/1U5IuZHucRSnpyuX9CS93qTRN0wAVx7Iz/view?usp=drivesdk"
+        chronicle_readme: "https://drive.google.com/file/d/1U5IuZHucRSnpyuX9CS93qTRN0wAVx7Iz/view?usp=drivesdk",
+        zelda_hub: "https://drive.google.com/file/d/19qG1jVF41YbV7cK20umaIFw9aZmZREkH/view?usp=drivesdk"
       },
       web: {
         ac_launch: "games/assassins-creed/black-flag-resynced/",
         ac_readme: "games/assassins-creed/black-flag-resynced/README.md",
+        ac_hub: "games/assassins-creed/index.html",
         oot_launch: "games/zelda/ocarina-of-time-3d/",
         oot_readme: "games/zelda/ocarina-of-time-3d/README.md",
         eow_launch: "games/zelda/echoes-of-wisdom/",
         eow_readme: "games/zelda/echoes-of-wisdom/README.md",
         chronicle_launch: "games/zelda/the-hyrule-chronicle/",
-        chronicle_readme: "games/zelda/the-hyrule-chronicle/README.md"
+        chronicle_readme: "games/zelda/the-hyrule-chronicle/README.md",
+        zelda_hub: "games/zelda/index.html"
       }
     };
 
@@ -1087,6 +1107,10 @@
       setHref('link_eow_readme', cfg.eow_readme);
       setHref('link_chronicle_launch', cfg.chronicle_launch);
       setHref('link_chronicle_readme', cfg.chronicle_readme);
+      setHref('link_ac_hub', cfg.ac_hub);
+      setHref('link_zelda_hub_oot', cfg.zelda_hub);
+      setHref('link_zelda_hub_eow', cfg.zelda_hub);
+      setHref('link_zelda_hub_chronicle', cfg.zelda_hub);
     }
 
     /* Filter Cards */
