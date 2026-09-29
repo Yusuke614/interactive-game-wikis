@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Legend of Zelda • Franchise Portal &amp; Guidebook Hub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&amp;family=Cinzel+Decorative:wght@700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-dark: #070e0a;
+      --bg-card: rgba(14, 24, 18, 0.88);
+      --bg-card-hover: rgba(20, 34, 25, 0.95);
+      --border-subtle: #193022;
+      --border-gold: rgba(212, 175, 55, 0.4);
+      --border-focus: #2ecc71;
+      --accent-gold: #d4af37;
+      --accent-gold-light: #f3e5ab;
+      --accent-green: #2ecc71;
+      --accent-purple: #8b5cf6;
+      --accent-cyan: #00d4e6;
+      --text-main: #f4f8f5;
+      --text-muted: #9bb0a2;
+      --text-dim: #63786a;
+      --font-display: 'Cinzel', serif;
+      --font-decorative: 'Cinzel Decorative', serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 15% 35%, rgba(46, 204, 113, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 65%, rgba(139, 92, 246, 0.08) 0%, transparent 45%),
+        linear-gradient(180deg, #050a07 0%, #09140e 50%, #040705 100%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 0 0 60px 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .portal-container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Global Header */
+    .top-nav {
+      background: rgba(8, 15, 11, 0.94);
+      border-bottom: 1px solid var(--border-gold);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 12px 0;
+    }
+    .top-nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-icon {
+      font-size: 24px;
+      color: var(--accent-gold);
+      filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
+    }
+    .brand-title {
+      font-family: var(--font-decorative);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--accent-gold-light);
+      text-transform: uppercase;
+    }
+    .brand-badge {
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--border-gold);
+      color: var(--accent-gold-light);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* Nav Links & Mode Switcher */
+    .nav-actions-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .nav-breadcrumb-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .nav-link-btn {
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-link-btn:hover {
+      color: var(--accent-gold-light);
+      background: rgba(212, 175, 55, 0.1);
+      border-color: rgba(212, 175, 55, 0.3);
+    }
+    
+    
+    
+    
+    
+
+    /* Hero Banner */
+    .hero-banner {
+      padding: 48px 0 32px 0;
+      text-align: center;
+      position: relative;
+    }
+    .hero-triforce {
+      width: 64px;
+      height: 56px;
+      margin: 0 auto 16px;
+      filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.6));
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid var(--border-gold);
+      color: var(--accent-gold-light);
+      padding: 5px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 2.85rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #fff9eb 30%, #e8d08c 70%, #d4af37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+    }
+    .hero-subtitle {
+      font-size: 1.12rem;
+      color: var(--text-muted);
+      max-width: 820px;
+      margin: 0 auto 32px auto;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* Global Metrics Grid */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      max-width: 980px;
+      margin: 0 auto 36px auto;
+    }
+    .metric-card {
+      background: rgba(14, 24, 18, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 16px 20px;
+      text-align: left;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .metric-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-gold);
+    }
+    .metric-val {
+      font-family: var(--font-mono);
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+    .metric-val span {
+      font-size: 1rem;
+      color: var(--accent-gold);
+    }
+    .metric-lbl {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* Controls Bar */
+    .controls-bar {
+      background: rgba(12, 22, 16, 0.85);
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      padding: 14px 20px;
+      margin-bottom: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .filter-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .filter-btn {
+      background: #09130d;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 7px 15px;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: var(--font-display);
+      letter-spacing: 0.5px;
+    }
+    .filter-btn:hover {
+      color: #fff;
+      border-color: rgba(212, 175, 55, 0.4);
+    }
+    .filter-btn.active {
+      background: #182e21;
+      color: var(--accent-gold-light);
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.25);
+    }
+    .search-wrapper {
+      position: relative;
+      flex-grow: 1;
+      max-width: 360px;
+      min-width: 240px;
+    }
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      pointer-events: none;
+    }
+    .search-input {
+      width: 100%;
+      background: #060c08;
+      border: 1px solid var(--border-subtle);
+      color: #fff;
+      font-size: 0.85rem;
+      padding: 9px 16px 9px 38px;
+      border-radius: 8px;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+    .search-input:focus {
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+    }
+
+    /* Cards Grid */
+    .guides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 28px;
+    }
+
+    /* Individual Guide Card */
+    .guide-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      backdrop-filter: blur(8px);
+    }
+    .guide-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.6);
+    }
+
+    /* Card Themes */
+    .guide-card.theme-oot {
+      border-top: 4px solid #2ecc71;
+    }
+    .guide-card.theme-oot:hover {
+      border-color: #2ecc71;
+      box-shadow: 0 16px 36px rgba(46, 204, 113, 0.15);
+    }
+    .guide-card.theme-eow {
+      border-top: 4px solid #8b5cf6;
+    }
+    .guide-card.theme-eow:hover {
+      border-color: #8b5cf6;
+      box-shadow: 0 16px 36px rgba(139, 92, 246, 0.15);
+    }
+    .guide-card.theme-chronicle {
+      border-top: 4px solid #d4af37;
+    }
+    .guide-card.theme-chronicle:hover {
+      border-color: #d4af37;
+      box-shadow: 0 16px 36px rgba(212, 175, 55, 0.18);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .card-franchise-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .theme-oot .card-franchise-tag { color: #2ecc71; }
+    .theme-eow .card-franchise-tag { color: #a78bfa; }
+    .theme-chronicle .card-franchise-tag { color: #f3e5ab; }
+
+    .card-version-badge {
+      background: #08110b;
+      border: 1px solid var(--border-subtle);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .card-subtitle {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.55;
+    }
+
+    /* Card Feature Pills */
+    .card-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .pill {
+      font-size: 0.74rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+    }
+
+    /* Card Specs Box */
+    .card-specs {
+      background: rgba(8, 15, 11, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 24px;
+    }
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .spec-label {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+    .spec-value {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 2px;
+    }
+
+    /* Card Actions */
+    .card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .btn-launch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    .theme-oot .btn-launch {
+      background: linear-gradient(135deg, #ffd700, #10b981);
+      color: #000;
+      box-shadow: 0 4px 14px rgba(46, 204, 113, 0.3);
+    }
+    .theme-oot .btn-launch:hover {
+      background: linear-gradient(135deg, #ffe033, #34d399);
+      box-shadow: 0 6px 20px rgba(46, 204, 113, 0.45);
+    }
+
+    .theme-eow .btn-launch {
+      background: linear-gradient(135deg, #8b5cf6, #f59e0b);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3);
+    }
+    .theme-eow .btn-launch:hover {
+      background: linear-gradient(135deg, #9d71f7, #fbbf24);
+      box-shadow: 0 6px 20px rgba(139, 92, 246, 0.45);
+    }
+
+    .theme-chronicle .btn-launch {
+      background: linear-gradient(135deg, #d4af37, #997d25);
+      color: #000;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.3);
+    }
+    .theme-chronicle .btn-launch:hover {
+      background: linear-gradient(135deg, #e5c158, #b89700);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+    }
+
+    .secondary-links {
+      display: flex;
+      gap: 8px;
+    }
+    .btn-secondary {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: rgba(10, 20, 14, 0.8);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-secondary:hover {
+      background: #172a1e;
+      color: #fff;
+      border-color: rgba(212, 175, 55, 0.4);
+    }
+
+    /* Repository Architecture Drawer */
+    .repo-info-box {
+      background: rgba(12, 22, 16, 0.7);
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 48px;
+    }
+    .repo-info-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .repo-info-header h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toggle-arrow {
+      color: var(--accent-gold);
+      font-weight: bold;
+      transition: transform 0.2s ease;
+    }
+    .repo-info-body {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .info-pane {
+      background: rgba(8, 15, 11, 0.75);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .info-pane h4 {
+      font-size: 0.88rem;
+      color: var(--accent-gold);
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-family: var(--font-display);
+    }
+    .info-pane pre {
+      background: #040805;
+      border: 1px solid #14241a;
+      border-radius: 6px;
+      padding: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: #9bb0a2;
+      overflow-x: auto;
+    }
+    .info-pane p, .info-pane li {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .info-pane ul {
+      margin-left: 18px;
+      margin-top: 6px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid var(--border-gold);
+      padding-top: 28px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-dim);
+    }
+    footer a {
+      color: var(--accent-gold-light);
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.1rem; }
+      .hero-subtitle { font-size: 1rem; }
+      .guides-grid { grid-template-columns: 1fr; }
+      .controls-bar { flex-direction: column; align-items: stretch; }
+      .search-wrapper { max-width: 100%; }
+      .top-nav-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<header class="top-nav">
+<div class="portal-container top-nav-inner">
+<div class="brand-group">
+<span class="brand-icon">⚔️</span>
+<span class="brand-title">The Legend of Zelda</span>
+<span class="brand-badge">Franchise Hub</span>
+</div>
+<!-- Actions & Mode Switcher -->
+<div class="nav-actions-group">
+<div class="nav-breadcrumb-links">
+<a class="nav-link-btn" href="../../index.html" id="link_master_portal" title="Back to All Games Master Hub">
+<span>🌐</span> Master Hub
+          </a>
+
+</div>
+
+</div>
+</div>
+</header>
+<main class="portal-container">
+<!-- Hero Section -->
+<section class="hero-banner">
+<svg class="hero-triforce" viewbox="0 0 100 86.6">
+<polygon fill="#d4af37" points="50,0 25,43.3 75,43.3"></polygon>
+<polygon fill="#d4af37" points="25,43.3 0,86.6 50,86.6"></polygon>
+<polygon fill="#d4af37" points="75,43.3 50,86.6 100,86.6"></polygon>
+</svg>
+<div class="hero-badge-pill">
+<span>🗡️</span> Dedicated Franchise Portal • Walkthroughs &amp; Canon Chronicles
+      </div>
+<h1 class="hero-title">Hyrule Legends &amp; Chronicles Hub</h1>
+<p class="hero-subtitle">
+        A centralized collection of interactive video game wikis, full completion guides, and official canon lore chronicles for <strong>The Legend of Zelda</strong> franchise. Engineered in pure HTML5, CSS3, and vanilla JavaScript with persistent progress tracking, real-time search, and game-authentic visual design.
+      </p>
+<!-- Global Metrics -->
+<div class="metrics-grid">
+<div class="metric-card">
+<div class="metric-val">3 <span>guides</span></div>
+<div class="metric-lbl">Active Guidebooks &amp; Chronicles</div>
+</div>
+<div class="metric-card">
+<div class="metric-val">192+ <span>tasks</span></div>
+<div class="metric-lbl">Trackable Checklist Items</div>
+</div>
+<div class="metric-card">
+<div class="metric-val">5 <span>eras</span></div>
+<div class="metric-lbl">Canonical Timeline History</div>
+</div>
+<div class="metric-card">
+<div class="metric-val">100% <span>IGN / Canon</span></div>
+<div class="metric-lbl">Authoritative Sourcing</div>
+</div>
+</div>
+</section>
+<!-- Controls Bar -->
+<section class="controls-bar">
+<div class="filter-tags">
+<button class="filter-btn active" data-filter="all" onclick="filterZelda('all')">All Guides (3)</button>
+<button class="filter-btn" data-filter="walkthrough" onclick="filterZelda('walkthrough')">Walkthrough Guides (2)</button>
+<button class="filter-btn" data-filter="lore" onclick="filterZelda('lore')">Lore &amp; Chronicles (1)</button>
+<button class="filter-btn" data-filter="3ds" onclick="filterZelda('3ds')">Nintendo 3DS (1)</button>
+<button class="filter-btn" data-filter="switch" onclick="filterZelda('switch')">Nintendo Switch (2)</button>
+</div>
+<div class="search-wrapper">
+<span class="search-icon">🔍</span>
+<input class="search-input" id="zeldaSearch" oninput="handleSearch(this.value)" placeholder="Search Zelda quests, items, echoes, eras..." type="text"/>
+</div>
+</section>
+<!-- Guide Cards Grid -->
+<div class="guides-grid" id="guidesGrid">
+<!-- Guide 1: Zelda Ocarina of Time 3D -->
+<article class="guide-card theme-oot" data-category="walkthrough" data-keywords="legend of zelda ocarina of time 3d nintendo 3ds link master sword triforce heart pieces gold skulltulas warp songs biggoron master quest walkthrough" data-platform="3ds">
+<div>
+<div class="card-top">
+<span class="card-franchise-tag">▲ Hero of Time Era</span>
+<span class="card-version-badge">Release v1</span>
+</div>
+<h2 class="card-title">Ocarina of Time 3D</h2>
+<p class="card-subtitle">Exhaustive 3DS remaster guide: Child &amp; Adult eras, all 36 Heart Pieces, 100 Gold Skulltulas, ocarina songs &amp; warp tunes, Biggoron's Sword, and Master Quest differences.</p>
+<div class="card-pills">
+<span class="pill">12 IGN Sections</span>
+<span class="pill">100+ Checkable Tasks</span>
+<span class="pill">36 Heart Pieces</span>
+<span class="pill">100 Skulltulas</span>
+<span class="pill">Master Quest</span>
+</div>
+<div class="card-specs">
+<div class="specs-grid">
+<div class="spec-item">
+<span class="spec-label">Trackable Progress</span>
+<span class="spec-value" style="color: #2ecc71;">100+ Tasks</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Platform Focus</span>
+<span class="spec-value">Nintendo 3DS</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Collectibles</span>
+<span class="spec-value">36 Hearts / 100 Skulls</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Music &amp; Warps</span>
+<span class="spec-value">13 Ocarina Songs</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card-actions">
+<a class="btn-launch" href="ocarina-of-time-3d/The Legend of Zelda Ocarina of Time 3D Wiki_v1.html" id="link_oot_launch" target="_blank">
+<span>🗡️</span> Launch Interactive Guide
+          </a>
+<div class="secondary-links">
+
+<a class="btn-secondary" href="ocarina-of-time-3d/README.md" id="link_oot_readme" target="_blank">
+              📄 README.md
+            </a>
+
+</div>
+</div>
+</article>
+<!-- Guide 2: Zelda Echoes of Wisdom -->
+<article class="guide-card theme-eow" data-category="walkthrough" data-keywords="legend of zelda echoes of wisdom nintendo switch princess zelda tri rod echoes dampe automatons heart pieces might crystals stamps smoothies null walkthrough" data-platform="switch">
+<div>
+<div class="card-top">
+<span class="card-franchise-tag">✦ Wisdom &amp; Rifts Era</span>
+<span class="card-version-badge">Release v1</span>
+</div>
+<h2 class="card-title">Echoes of Wisdom</h2>
+<p class="card-subtitle">Complete Nintendo Switch companion: all 15 main quests, 8 dungeons, all 127 Echoes database, 6 Dampé automatons, 40 Heart Pieces, 150 Might Crystals, and 69 Smoothie recipes.</p>
+<div class="card-pills">
+<span class="pill">12 IGN Sections</span>
+<span class="pill">92 Checkable Tasks</span>
+<span class="pill">127 Echoes</span>
+<span class="pill">6 Automatons</span>
+<span class="pill">40 Heart Pieces</span>
+</div>
+<div class="card-specs">
+<div class="specs-grid">
+<div class="spec-item">
+<span class="spec-label">Trackable Progress</span>
+<span class="spec-value" style="color: #a78bfa;">92 Tasks</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Platform Focus</span>
+<span class="spec-value">Nintendo Switch</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Echoes Database</span>
+<span class="spec-value">127 Full Entries</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Upgrades</span>
+<span class="spec-value">150 Might Crystals</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card-actions">
+<a class="btn-launch" href="echoes-of-wisdom/The Legend of Zelda Echoes of Wisdom Wiki_v1.html" id="link_eow_launch" target="_blank">
+<span>✨</span> Launch Interactive Guide
+          </a>
+<div class="secondary-links">
+
+<a class="btn-secondary" href="echoes-of-wisdom/README.md" id="link_eow_readme" target="_blank">
+              📄 README.md
+            </a>
+
+</div>
+</div>
+</article>
+<!-- Guide 3: The Hyrule Chronicle -->
+<article class="guide-card theme-chronicle" data-category="lore" data-keywords="legend of zelda hyrule chronicle official timeline nintendo translation null skyward sword ocarina of time breath of the wild tears of the kingdom lore canon" data-platform="switch">
+<div>
+<div class="card-top">
+<span class="card-franchise-tag">⚜️ Official Canon History</span>
+<span class="card-version-badge">Timeline v5</span>
+</div>
+<h2 class="card-title">The Hyrule Chronicle</h2>
+<p class="card-subtitle">Nintendo's official Japanese 40th anniversary timeline translated into English. Complete mythological history from the pre-creation Null void to the Era of the Wild.</p>
+<div class="card-pills">
+<span class="pill">Official Japanese Canon</span>
+<span class="pill">Pre-Creation Null Era</span>
+<span class="pill">Dual Foundings</span>
+<span class="pill">Threefold Split</span>
+<span class="pill">Interactive Timeline</span>
+</div>
+<div class="card-specs">
+<div class="specs-grid">
+<div class="spec-item">
+<span class="spec-label">Canon Scope</span>
+<span class="spec-value" style="color: #f3e5ab;">All 5 Eras</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Timeline Branches</span>
+<span class="spec-value">Fallen, Child, Adult, Wild</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Translation Source</span>
+<span class="spec-value">Nintendo Japan Official</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Format</span>
+<span class="spec-value">Interactive SPA</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card-actions">
+<a class="btn-launch" href="the-hyrule-chronicle/The_Hyrule_Chronicle_English_v5.html" id="link_chronicle_launch" target="_blank">
+<span>📜</span> Launch Interactive Chronicle
+          </a>
+<div class="secondary-links">
+
+<a class="btn-secondary" href="the-hyrule-chronicle/README.md" id="link_chronicle_readme" target="_blank">
+              📄 README.md
+            </a>
+
+</div>
+</div>
+</article>
+</div>
+<!-- Franchise Architecture & Deployment Drawer -->
+<section class="repo-info-box">
+<div class="repo-info-header" onclick="toggleRepoInfo()">
+<h3><span>📁</span> Franchise Architecture &amp; Folder Hierarchy</h3>
+<span class="toggle-arrow" id="repoToggleArrow">▾</span>
+</div>
+<div class="repo-info-body" id="repoInfoBody">
+<div class="info-pane">
+<h4>Zelda Franchise Directory Structure</h4>
+<pre>The Legend of Zelda/
+├── index.html                   (Zelda Franchise Hub Portal)
+├── README.md                    (Franchise Documentation)
+├── Ocarina of Time 3D/
+│   ├── The Legend of Zelda Ocarina of Time 3D Wiki_v1.html
+│   └── README.md
+├── Echoes of Wisdom/
+│   ├── The Legend of Zelda Echoes of Wisdom Wiki_v1.html
+│   └── README.md
+└── The Hyrule Chronicle/
+    ├── The_Hyrule_Chronicle_English_v5.html  (Active Timeline)
+    ├── The_Hyrule_Chronicle_English_v1.html  (Edition v1)
+    ├── The_Hyrule_Chronicle_English_v2.html  (Edition v2)
+    └── README.md</pre>
+</div>
+<div class="info-pane">
+<h4>GitHub Pages Relative Paths</h4>
+<ul>
+<li><strong>Zelda Franchise Hub</strong>: <code>games/zelda/index.html</code></li>
+<li><strong>Ocarina of Time 3D</strong>: <code>games/zelda/ocarina-of-time-3d/index.html</code></li>
+<li><strong>Echoes of Wisdom</strong>: <code>games/zelda/echoes-of-wisdom/index.html</code></li>
+<li><strong>The Hyrule Chronicle</strong>: <code>games/zelda/the-hyrule-chronicle/index.html</code></li>
+
+</ul>
+</div>
+<div class="info-pane">
+<h4>Zero-Dependency Architecture</h4>
+<p>
+            All guides are 100% offline-capable, engineered in pure HTML5, CSS3, and vanilla JavaScript. Progress tracking uses a safe in-memory fallback wrapper around <code>localStorage</code>, fully compatible with desktop browsers, mobile viewers, and <code>content://</code> protocols.
+          </p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<p>The Legend of Zelda Guidebook Hub • Crafted for Charles Williams • Built with pure HTML5, CSS3, &amp; Vanilla JavaScript</p>
+<p style="margin-top: 6px;">Authoritative guides grounded in official strategy sequences. Explore the master <a href="../../index.html" id="link_footer_master">Games Master Hub</a>.</p>
+</footer>
+</main>
+<script>
+    /* Safe Storage Protocol Wrapper */
+    const safeStorage = {
+      _mem: {},
+      getItem(key) {
+        try {
+          if (typeof window !== 'undefined' && window.localStorage) {
+            return window.localStorage.getItem(key);
+          }
+        } catch (e) {}
+        return this._mem[key] || null;
+      },
+      setItem(key, value) {
+        try {
+          if (typeof window !== 'undefined' && window.localStorage) {
+            window.localStorage.setItem(key, value);
+            return;
+          }
+        } catch (e) {}
+        this._mem[key] = String(value);
+      }
+    };
+
+    
+
+    /* Filter Cards */
+    let currentFilter = 'all';
+    function filterZelda(category) {
+      currentFilter = category;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-filter') === category);
+      });
+      applySearchAndFilter();
+    }
+
+    /* Live Search */
+    let searchQuery = '';
+    function handleSearch(val) {
+      searchQuery = val.trim().toLowerCase();
+      applySearchAndFilter();
+    }
+
+    function applySearchAndFilter() {
+      const cards = document.querySelectorAll('.guide-card');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category') || '';
+        const platform = card.getAttribute('data-platform') || '';
+        const keywords = (card.getAttribute('data-keywords') || '') + ' ' + (card.innerText || '').toLowerCase();
+
+        let matchesFilter = false;
+        if (currentFilter === 'all') {
+          matchesFilter = true;
+        } else if (currentFilter === 'walkthrough') {
+          matchesFilter = (cat === 'walkthrough');
+        } else if (currentFilter === 'lore') {
+          matchesFilter = (cat === 'lore');
+        } else if (currentFilter === '3ds') {
+          matchesFilter = (platform === '3ds');
+        } else if (currentFilter === 'switch') {
+          matchesFilter = (platform === 'switch');
+        }
+
+        let matchesSearch = true;
+        if (searchQuery.length > 0) {
+          const terms = searchQuery.split(/\s+/);
+          matchesSearch = terms.every(term => keywords.includes(term));
+        }
+
+        card.style.display = (matchesFilter && matchesSearch) ? 'flex' : 'none';
+      });
+    }
+
+    /* Drawer Toggle */
+    let repoDrawerOpen = false;
+    function toggleRepoInfo() {
+      repoDrawerOpen = !repoDrawerOpen;
+      const body = document.getElementById('repoInfoBody');
+      const arrow = document.getElementById('repoToggleArrow');
+      if (body) body.style.display = repoDrawerOpen ? 'grid' : 'none';
+      if (arrow) arrow.textContent = repoDrawerOpen ? '▴' : '▾';
+    }
+
+    /* Initialize Saved Mode */
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      const drawer = document.getElementById('repoInfoBody');
+      if (drawer) drawer.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
