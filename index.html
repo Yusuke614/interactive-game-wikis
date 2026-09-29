@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Game Wikis Hub • Walkthroughs & Completion Trackers</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Interactive Game Wikis Hub • Walkthroughs &amp; Completion Trackers</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&amp;family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --bg-dark: #07090e;
       --bg-card: rgba(16, 21, 32, 0.85);
@@ -106,43 +107,12 @@
       text-transform: uppercase;
     }
 
-    /* Mode Switcher */
-    .mode-toggle-group {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: #0d121c;
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      padding: 4px;
-    }
-    .mode-label {
-      font-size: 0.75rem;
-      color: var(--text-dim);
-      font-weight: 600;
-      padding-left: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .mode-btn {
-      background: transparent;
-      border: none;
-      color: var(--text-muted);
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 6px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .mode-btn:hover {
-      color: #fff;
-    }
-    .mode-btn.active {
-      background: #1e293b;
-      color: var(--accent-cyan);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-    }
+    
+    
+    
+    
+    
+    
 
     /* Hero Banner */
     .hero-banner {
@@ -653,333 +623,287 @@
   </style>
 </head>
 <body>
+<!-- Navigation Bar -->
+<header class="top-nav">
+<div class="portal-container top-nav-inner">
+<div class="brand-group">
+<span class="brand-icon">⚔️</span>
+<span class="brand-title">Interactive Game Wikis</span>
+<span class="brand-badge">Hub</span>
+</div>
 
-  <!-- Navigation Bar -->
-  <header class="top-nav">
-    <div class="portal-container top-nav-inner">
-      <div class="brand-group">
-        <span class="brand-icon">⚔️</span>
-        <span class="brand-title">Interactive Game Wikis</span>
-        <span class="brand-badge">Hub</span>
+
+</div>
+</header>
+<main class="portal-container">
+<!-- Hero Section -->
+<section class="hero-banner">
+<div class="hero-badge-pill">
+<span>🎮</span> 100% Offline Single-Page Applications • Real-Time Progress Tracking
       </div>
-
-      <!-- Link Mode Switcher -->
-      <div class="mode-toggle-group">
-        <span class="mode-label">Link Mode:</span>
-        <button class="mode-btn active" id="btnModeDrive" onclick="setLinkMode('drive')">Google Drive</button>
-        <button class="mode-btn" id="btnModeWeb" onclick="setLinkMode('web')">Web / Local</button>
-      </div>
-    </div>
-  </header>
-
-  <main class="portal-container">
-
-    <!-- Hero Section -->
-    <section class="hero-banner">
-      <div class="hero-badge-pill">
-        <span>🎮</span> 100% Offline Single-Page Applications • Real-Time Progress Tracking
-      </div>
-      <h1 class="hero-title">Master Guidebook Portal</h1>
-      <p class="hero-subtitle">
+<h1 class="hero-title">Master Guidebook Portal</h1>
+<p class="hero-subtitle">
         A centralized collection of comprehensive game wikis, walkthrough guides, and quest trackers. Engineered in pure HTML5, CSS3, and vanilla JavaScript with persistent state, real-time search, and game-authentic visual design.
       </p>
-
-      <!-- Global Metrics -->
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <div class="metric-val">4 <span>guides</span></div>
-          <div class="metric-lbl">Active Guidebooks</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-val">308+ <span>tasks</span></div>
-          <div class="metric-lbl">Trackable Checklist Items</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-val">100% <span>IGN</span></div>
-          <div class="metric-lbl">Authoritative Sourcing</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-val">Zero <span>deps</span></div>
-          <div class="metric-lbl">Portable Offline Architecture</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Controls Bar -->
-    <section class="controls-bar">
-      <div class="filter-tags">
-        <button class="filter-btn active" data-filter="all" onclick="filterGuides('all')">All Guides (4)</button>
-        <button class="filter-btn" data-filter="zelda" onclick="filterGuides('zelda')">The Legend of Zelda (3)</button>
-        <button class="filter-btn" data-filter="ac" onclick="filterGuides('ac')">Assassin's Creed (1)</button>
-        <button class="filter-btn" data-filter="switch" onclick="filterGuides('switch')">Switch / 3DS (3)</button>
-        <button class="filter-btn" data-filter="pc" onclick="filterGuides('pc')">PC / Console (1)</button>
-      </div>
-
-      <div class="search-wrapper">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="portalSearch" class="search-input" placeholder="Search guides, quests, mechanics, consoles..." oninput="handleSearch(this.value)">
-      </div>
-    </section>
-
-    <!-- Guide Cards Grid -->
-    <div class="guides-grid" id="guidesGrid">
-
-      <!-- Guide 1: AC Black Flag Resynced -->
-      <article class="guide-card theme-ac" data-franchise="ac" data-platform="pc" data-keywords="assassins creed iv black flag resynced pirate jackdaw naval edward kenway animus 100% sync legendary ships templar rifts">
-        <div>
-          <div class="card-top">
-            <span class="card-franchise-tag">⚓ Assassin's Creed Series</span>
-            <span class="card-version-badge">Release v15</span>
-          </div>
-          <h2 class="card-title">Assassin's Creed IV: Black Flag Resynced</h2>
-          <p class="card-subtitle">Complete IGN-grounded completion walkthrough, naval upgrade matrix, specialist officers, legendary ship tactics, and Animus Rift puzzles.</p>
-
-          <div class="card-pills">
-            <span class="pill">12 IGN Sections</span>
-            <span class="pill">116 Checkable Tasks</span>
-            <span class="pill">Naval Combat</span>
-            <span class="pill">Legendary Ships</span>
-            <span class="pill">Vault Armors</span>
-          </div>
-
-          <div class="card-specs">
-            <div class="specs-grid">
-              <div class="spec-item">
-                <span class="spec-label">Trackable Progress</span>
-                <span class="spec-value" style="color: #f3a829;">116 Tasks</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Platform Focus</span>
-                <span class="spec-value">PC / Console</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Naval Officers</span>
-                <span class="spec-value">5 Specialists</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Story Scope</span>
-                <span class="spec-value">Seq 1–13 + 8 Epilogues</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-actions">
-          <a id="link_ac_launch" href="https://drive.google.com/file/d/1H43bHbvZ9TJtsXa0ie1qiSR2pofmBFJz/view?usp=drivesdk" target="_blank" class="btn-launch">
-            <span>⚔️</span> Launch Interactive Guide
+<!-- Global Metrics -->
+<div class="metrics-grid">
+<div class="metric-card">
+<div class="metric-val">4 <span>guides</span></div>
+<div class="metric-lbl">Active Guidebooks</div>
+</div>
+<div class="metric-card">
+<div class="metric-val">308+ <span>tasks</span></div>
+<div class="metric-lbl">Trackable Checklist Items</div>
+</div>
+<div class="metric-card">
+<div class="metric-val">100% <span>IGN</span></div>
+<div class="metric-lbl">Authoritative Sourcing</div>
+</div>
+<div class="metric-card">
+<div class="metric-val">Zero <span>deps</span></div>
+<div class="metric-lbl">Portable Offline Architecture</div>
+</div>
+</div>
+</section>
+<!-- Controls Bar -->
+<section class="controls-bar">
+<div class="filter-tags">
+<button class="filter-btn active" data-filter="all" onclick="filterGuides('all')">All Guides (4)</button>
+<button class="filter-btn" data-filter="zelda" onclick="filterGuides('zelda')">The Legend of Zelda (3)</button>
+<button class="filter-btn" data-filter="ac" onclick="filterGuides('ac')">Assassin's Creed (1)</button>
+<button class="filter-btn" data-filter="switch" onclick="filterGuides('switch')">Switch / 3DS (3)</button>
+<button class="filter-btn" data-filter="pc" onclick="filterGuides('pc')">PC / Console (1)</button>
+</div>
+<div class="search-wrapper">
+<span class="search-icon">🔍</span>
+<input class="search-input" id="portalSearch" oninput="handleSearch(this.value)" placeholder="Search guides, quests, mechanics, consoles..." type="text"/>
+</div>
+</section>
+<!-- Guide Cards Grid -->
+<div class="guides-grid" id="guidesGrid">
+<!-- Guide 1: AC Black Flag Resynced -->
+<article class="guide-card theme-ac" data-franchise="ac" data-keywords="assassins creed iv black flag resynced pirate jackdaw naval edward kenway animus 100% sync legendary ships templar rifts" data-platform="pc">
+<div>
+<div class="card-top">
+<span class="card-franchise-tag">⚓ Assassin's Creed Series</span>
+<span class="card-version-badge">Release v15</span>
+</div>
+<h2 class="card-title">Assassin's Creed IV: Black Flag Resynced</h2>
+<p class="card-subtitle">Complete IGN-grounded completion walkthrough, naval upgrade matrix, specialist officers, legendary ship tactics, and Animus Rift puzzles.</p>
+<div class="card-pills">
+<span class="pill">12 IGN Sections</span>
+<span class="pill">116 Checkable Tasks</span>
+<span class="pill">Naval Combat</span>
+<span class="pill">Legendary Ships</span>
+<span class="pill">Vault Armors</span>
+</div>
+<div class="card-specs">
+<div class="specs-grid">
+<div class="spec-item">
+<span class="spec-label">Trackable Progress</span>
+<span class="spec-value" style="color: #f3a829;">116 Tasks</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Platform Focus</span>
+<span class="spec-value">PC / Console</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Naval Officers</span>
+<span class="spec-value">5 Specialists</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Story Scope</span>
+<span class="spec-value">Seq 1–13 + 8 Epilogues</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card-actions">
+<a class="btn-launch" href="games/assassins-creed/black-flag-resynced/Assassin's Creed Black Flag Resynced Wiki_v15.html" id="link_ac_launch" target="_blank">
+<span>⚔️</span> Launch Interactive Guide
           </a>
-          <div class="secondary-links">
-            <a id="link_ac_drive" href="https://drive.google.com/file/d/1H43bHbvZ9TJtsXa0ie1qiSR2pofmBFJz/view?usp=drivesdk" target="_blank" class="btn-secondary">
-              📁 Drive File
-            </a>
-            <a id="link_ac_readme" href="https://drive.google.com/file/d/1cLXzlIAu_Ts5o2cI-uKYV27nff0klkKi/view?usp=drivesdk" target="_blank" class="btn-secondary">
+<div class="secondary-links">
+
+<a class="btn-secondary" href="games/assassins-creed/black-flag-resynced/README.md" id="link_ac_readme" target="_blank">
               📄 README.md
             </a>
-            <a id="link_ac_hub" href="https://drive.google.com/file/d/1KnkZRR5am9gI5wDGUqSfgX7y_RiHDurc/view?usp=drivesdk" target="_blank" class="btn-secondary" title="Assassin's Creed Franchise Hub">
+<a class="btn-secondary" href="games/assassins-creed/index.html" id="link_ac_hub" target="_blank" title="Assassin's Creed Franchise Hub">
               ⚓ AC Hub
             </a>
-            <a href="https://drive.google.com/drive/folders/11WygZ7Mt5coMjf9fAE2LNLjPnzFu0iUS" target="_blank" class="btn-secondary">
-              🗂️ Folder
-            </a>
-          </div>
-        </div>
-      </article>
 
-      <!-- Guide 2: Zelda Ocarina of Time 3D -->
-      <article class="guide-card theme-oot" data-franchise="zelda" data-platform="switch" data-keywords="legend of zelda ocarina of time 3d nintendo 3ds link master sword triforce heart pieces gold skulltulas warp songs biggoron master quest">
-        <div>
-          <div class="card-top">
-            <span class="card-franchise-tag">▲ The Legend of Zelda</span>
-            <span class="card-version-badge">Release v1</span>
-          </div>
-          <h2 class="card-title">Ocarina of Time 3D</h2>
-          <p class="card-subtitle">Exhaustive 3DS remaster guide: Child & Adult eras, all 36 Heart Pieces, 100 Gold Skulltulas, ocarina songs & warp tunes, Biggoron's Sword, and Master Quest differences.</p>
-
-          <div class="card-pills">
-            <span class="pill">12 IGN Sections</span>
-            <span class="pill">100+ Checkable Tasks</span>
-            <span class="pill">36 Heart Pieces</span>
-            <span class="pill">100 Skulltulas</span>
-            <span class="pill">Master Quest</span>
-          </div>
-
-          <div class="card-specs">
-            <div class="specs-grid">
-              <div class="spec-item">
-                <span class="spec-label">Trackable Progress</span>
-                <span class="spec-value" style="color: #2ecc71;">100+ Tasks</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Platform Focus</span>
-                <span class="spec-value">Nintendo 3DS</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Collectibles</span>
-                <span class="spec-value">36 Hearts / 100 Skulls</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Music & Warps</span>
-                <span class="spec-value">13 Ocarina Songs</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-actions">
-          <a id="link_oot_launch" href="https://drive.google.com/file/d/1Exx92VAJdFqGRt_iG4UOrJbuu3xxGEnp/view?usp=drivesdk" target="_blank" class="btn-launch">
-            <span>🗡️</span> Launch Interactive Guide
+</div>
+</div>
+</article>
+<!-- Guide 2: Zelda Ocarina of Time 3D -->
+<article class="guide-card theme-oot" data-franchise="zelda" data-keywords="legend of zelda ocarina of time 3d nintendo 3ds link master sword triforce heart pieces gold skulltulas warp songs biggoron master quest" data-platform="switch">
+<div>
+<div class="card-top">
+<span class="card-franchise-tag">▲ The Legend of Zelda</span>
+<span class="card-version-badge">Release v1</span>
+</div>
+<h2 class="card-title">Ocarina of Time 3D</h2>
+<p class="card-subtitle">Exhaustive 3DS remaster guide: Child &amp; Adult eras, all 36 Heart Pieces, 100 Gold Skulltulas, ocarina songs &amp; warp tunes, Biggoron's Sword, and Master Quest differences.</p>
+<div class="card-pills">
+<span class="pill">12 IGN Sections</span>
+<span class="pill">100+ Checkable Tasks</span>
+<span class="pill">36 Heart Pieces</span>
+<span class="pill">100 Skulltulas</span>
+<span class="pill">Master Quest</span>
+</div>
+<div class="card-specs">
+<div class="specs-grid">
+<div class="spec-item">
+<span class="spec-label">Trackable Progress</span>
+<span class="spec-value" style="color: #2ecc71;">100+ Tasks</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Platform Focus</span>
+<span class="spec-value">Nintendo 3DS</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Collectibles</span>
+<span class="spec-value">36 Hearts / 100 Skulls</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Music &amp; Warps</span>
+<span class="spec-value">13 Ocarina Songs</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card-actions">
+<a class="btn-launch" href="games/zelda/ocarina-of-time-3d/The Legend of Zelda Ocarina of Time 3D Wiki_v1.html" id="link_oot_launch" target="_blank">
+<span>🗡️</span> Launch Interactive Guide
           </a>
-          <div class="secondary-links">
-            <a id="link_oot_drive" href="https://drive.google.com/file/d/1Exx92VAJdFqGRt_iG4UOrJbuu3xxGEnp/view?usp=drivesdk" target="_blank" class="btn-secondary">
-              📁 Drive File
-            </a>
-            <a id="link_oot_readme" href="https://drive.google.com/file/d/1Zw3Qix5P4EQV4mKO819befPDAy2Y3P9s/view?usp=drivesdk" target="_blank" class="btn-secondary">
+<div class="secondary-links">
+
+<a class="btn-secondary" href="games/zelda/ocarina-of-time-3d/README.md" id="link_oot_readme" target="_blank">
               📄 README.md
             </a>
-            <a id="link_zelda_hub_oot" href="https://drive.google.com/file/d/19qG1jVF41YbV7cK20umaIFw9aZmZREkH/view?usp=drivesdk" target="_blank" class="btn-secondary" title="The Legend of Zelda Franchise Hub">
+<a class="btn-secondary" href="games/zelda/index.html" id="link_zelda_hub_oot" target="_blank" title="The Legend of Zelda Franchise Hub">
               🗡️ Zelda Hub
             </a>
-            <a href="https://drive.google.com/drive/folders/136qXmSphqGP3QbxCKrHMJXzYngS9qvQk" target="_blank" class="btn-secondary">
-              🗂️ Folder
-            </a>
-          </div>
-        </div>
-      </article>
 
-      <!-- Guide 3: Zelda Echoes of Wisdom -->
-      <article class="guide-card theme-eow" data-franchise="zelda" data-platform="switch" data-keywords="legend of zelda echoes of wisdom nintendo switch princess zelda tri rod echoes dampé automatons heart pieces might crystals stamps smoothies null">
-        <div>
-          <div class="card-top">
-            <span class="card-franchise-tag">✦ The Legend of Zelda</span>
-            <span class="card-version-badge">Release v1</span>
-          </div>
-          <h2 class="card-title">Echoes of Wisdom</h2>
-          <p class="card-subtitle">Complete Nintendo Switch companion: all 15 main quests, 8 dungeons, all 127 Echoes database, 6 Dampé automatons, 40 Heart Pieces, 150 Might Crystals, and 69 Smoothie recipes.</p>
-
-          <div class="card-pills">
-            <span class="pill">12 IGN Sections</span>
-            <span class="pill">92 Checkable Tasks</span>
-            <span class="pill">127 Echoes</span>
-            <span class="pill">6 Automatons</span>
-            <span class="pill">40 Heart Pieces</span>
-          </div>
-
-          <div class="card-specs">
-            <div class="specs-grid">
-              <div class="spec-item">
-                <span class="spec-label">Trackable Progress</span>
-                <span class="spec-value" style="color: #a78bfa;">92 Tasks</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Platform Focus</span>
-                <span class="spec-value">Nintendo Switch</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Echoes Database</span>
-                <span class="spec-value">127 Full Entries</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Upgrades</span>
-                <span class="spec-value">150 Might Crystals</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-actions">
-          <a id="link_eow_launch" href="https://drive.google.com/file/d/1yoc3kCgpieigh6LOxXEEGe4sA50efghI/view?usp=drivesdk" target="_blank" class="btn-launch">
-            <span>✨</span> Launch Interactive Guide
+</div>
+</div>
+</article>
+<!-- Guide 3: Zelda Echoes of Wisdom -->
+<article class="guide-card theme-eow" data-franchise="zelda" data-keywords="legend of zelda echoes of wisdom nintendo switch princess zelda tri rod echoes dampé automatons heart pieces might crystals stamps smoothies null" data-platform="switch">
+<div>
+<div class="card-top">
+<span class="card-franchise-tag">✦ The Legend of Zelda</span>
+<span class="card-version-badge">Release v1</span>
+</div>
+<h2 class="card-title">Echoes of Wisdom</h2>
+<p class="card-subtitle">Complete Nintendo Switch companion: all 15 main quests, 8 dungeons, all 127 Echoes database, 6 Dampé automatons, 40 Heart Pieces, 150 Might Crystals, and 69 Smoothie recipes.</p>
+<div class="card-pills">
+<span class="pill">12 IGN Sections</span>
+<span class="pill">92 Checkable Tasks</span>
+<span class="pill">127 Echoes</span>
+<span class="pill">6 Automatons</span>
+<span class="pill">40 Heart Pieces</span>
+</div>
+<div class="card-specs">
+<div class="specs-grid">
+<div class="spec-item">
+<span class="spec-label">Trackable Progress</span>
+<span class="spec-value" style="color: #a78bfa;">92 Tasks</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Platform Focus</span>
+<span class="spec-value">Nintendo Switch</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Echoes Database</span>
+<span class="spec-value">127 Full Entries</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Upgrades</span>
+<span class="spec-value">150 Might Crystals</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card-actions">
+<a class="btn-launch" href="games/zelda/echoes-of-wisdom/The Legend of Zelda Echoes of Wisdom Wiki_v1.html" id="link_eow_launch" target="_blank">
+<span>✨</span> Launch Interactive Guide
           </a>
-          <div class="secondary-links">
-            <a id="link_eow_drive" href="https://drive.google.com/file/d/1yoc3kCgpieigh6LOxXEEGe4sA50efghI/view?usp=drivesdk" target="_blank" class="btn-secondary">
-              📁 Drive File
-            </a>
-            <a id="link_eow_readme" href="https://drive.google.com/file/d/1kYSR8ob-yaqIecalGWYE-0NqBs1nXvkn/view?usp=drivesdk" target="_blank" class="btn-secondary">
+<div class="secondary-links">
+
+<a class="btn-secondary" href="games/zelda/echoes-of-wisdom/README.md" id="link_eow_readme" target="_blank">
               📄 README.md
             </a>
-            <a id="link_zelda_hub_eow" href="https://drive.google.com/file/d/19qG1jVF41YbV7cK20umaIFw9aZmZREkH/view?usp=drivesdk" target="_blank" class="btn-secondary" title="The Legend of Zelda Franchise Hub">
+<a class="btn-secondary" href="games/zelda/index.html" id="link_zelda_hub_eow" target="_blank" title="The Legend of Zelda Franchise Hub">
               🗡️ Zelda Hub
             </a>
-            <a href="https://drive.google.com/drive/folders/1yskadcK43JTkqoxdez3inqv8uF-wzw8P" target="_blank" class="btn-secondary">
-              🗂️ Folder
-            </a>
-          </div>
-        </div>
-      </article>
 
-      <!-- Guide 4: The Hyrule Chronicle -->
-      <article class="guide-card theme-chronicle" data-franchise="zelda" data-platform="switch" data-keywords="legend of zelda hyrule chronicle official timeline nintendo translation null skyward sword ocarina of time breath of the wild tears of the kingdom">
-        <div>
-          <div class="card-top">
-            <span class="card-franchise-tag">⚜️ Official Canon History</span>
-            <span class="card-version-badge">Timeline v5</span>
-          </div>
-          <h2 class="card-title">The Hyrule Chronicle</h2>
-          <p class="card-subtitle">Nintendo's official Japanese 40th anniversary timeline translated into English. Complete mythological history from the pre-creation Null void to the Era of the Wild.</p>
-
-          <div class="card-pills">
-            <span class="pill">Official Japanese Canon</span>
-            <span class="pill">Pre-Creation Null Era</span>
-            <span class="pill">Dual Foundings</span>
-            <span class="pill">Threefold Split</span>
-            <span class="pill">Interactive Timeline</span>
-          </div>
-
-          <div class="card-specs">
-            <div class="specs-grid">
-              <div class="spec-item">
-                <span class="spec-label">Canon Scope</span>
-                <span class="spec-value" style="color: #f3e5ab;">All 5 Eras</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Timeline Branches</span>
-                <span class="spec-value">Fallen, Child, Adult, Wild</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Translation Source</span>
-                <span class="spec-value">Nintendo Japan Official</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Format</span>
-                <span class="spec-value">Interactive SPA</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-actions">
-          <a id="link_chronicle_launch" href="https://drive.google.com/file/d/1Uv4wEIoA41yKZhxXtzauNiUQ1b_ejJrW/view?usp=drivesdk" target="_blank" class="btn-launch">
-            <span>📜</span> Launch Interactive Chronicle
+</div>
+</div>
+</article>
+<!-- Guide 4: The Hyrule Chronicle -->
+<article class="guide-card theme-chronicle" data-franchise="zelda" data-keywords="legend of zelda hyrule chronicle official timeline nintendo translation null skyward sword ocarina of time breath of the wild tears of the kingdom" data-platform="switch">
+<div>
+<div class="card-top">
+<span class="card-franchise-tag">⚜️ Official Canon History</span>
+<span class="card-version-badge">Timeline v5</span>
+</div>
+<h2 class="card-title">The Hyrule Chronicle</h2>
+<p class="card-subtitle">Nintendo's official Japanese 40th anniversary timeline translated into English. Complete mythological history from the pre-creation Null void to the Era of the Wild.</p>
+<div class="card-pills">
+<span class="pill">Official Japanese Canon</span>
+<span class="pill">Pre-Creation Null Era</span>
+<span class="pill">Dual Foundings</span>
+<span class="pill">Threefold Split</span>
+<span class="pill">Interactive Timeline</span>
+</div>
+<div class="card-specs">
+<div class="specs-grid">
+<div class="spec-item">
+<span class="spec-label">Canon Scope</span>
+<span class="spec-value" style="color: #f3e5ab;">All 5 Eras</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Timeline Branches</span>
+<span class="spec-value">Fallen, Child, Adult, Wild</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Translation Source</span>
+<span class="spec-value">Nintendo Japan Official</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Format</span>
+<span class="spec-value">Interactive SPA</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card-actions">
+<a class="btn-launch" href="games/zelda/the-hyrule-chronicle/The_Hyrule_Chronicle_English_v5.html" id="link_chronicle_launch" target="_blank">
+<span>📜</span> Launch Interactive Chronicle
           </a>
-          <div class="secondary-links">
-            <a id="link_chronicle_drive" href="https://drive.google.com/file/d/1Uv4wEIoA41yKZhxXtzauNiUQ1b_ejJrW/view?usp=drivesdk" target="_blank" class="btn-secondary">
-              📁 Drive File
-            </a>
-            <a id="link_chronicle_readme" href="https://drive.google.com/file/d/1U5IuZHucRSnpyuX9CS93qTRN0wAVx7Iz/view?usp=drivesdk" target="_blank" class="btn-secondary">
+<div class="secondary-links">
+
+<a class="btn-secondary" href="games/zelda/the-hyrule-chronicle/README.md" id="link_chronicle_readme" target="_blank">
               📄 README.md
             </a>
-            <a id="link_zelda_hub_chronicle" href="https://drive.google.com/file/d/19qG1jVF41YbV7cK20umaIFw9aZmZREkH/view?usp=drivesdk" target="_blank" class="btn-secondary" title="The Legend of Zelda Franchise Hub">
+<a class="btn-secondary" href="games/zelda/index.html" id="link_zelda_hub_chronicle" target="_blank" title="The Legend of Zelda Franchise Hub">
               🗡️ Zelda Hub
             </a>
-            <a href="https://drive.google.com/drive/folders/1bDbtchFdawr1qzqQVawznmLDicTZvBYN" target="_blank" class="btn-secondary">
-              🗂️ Folder
-            </a>
-          </div>
-        </div>
-      </article>
 
-    </div>
-
-    <!-- Repository & GitHub Deployment Drawer -->
-    <section class="repo-info-box">
-      <div class="repo-info-header" onclick="toggleRepoInfo()">
-        <h3><span>📁</span> Repository Architecture & GitHub Pages Deployment Guide</h3>
-        <span class="toggle-arrow" id="repoToggleArrow">▾</span>
-      </div>
-      <div class="repo-info-body" id="repoInfoBody">
-        <div class="info-pane">
-          <h4>GitHub Directory Hierarchy</h4>
-          <pre>interactive-game-wikis/
+</div>
+</div>
+</article>
+</div>
+<!-- Repository & GitHub Deployment Drawer -->
+<section class="repo-info-box">
+<div class="repo-info-header" onclick="toggleRepoInfo()">
+<h3><span>📁</span> Repository Architecture &amp; GitHub Pages Deployment Guide</h3>
+<span class="toggle-arrow" id="repoToggleArrow">▾</span>
+</div>
+<div class="repo-info-body" id="repoInfoBody">
+<div class="info-pane">
+<h4>GitHub Directory Hierarchy</h4>
+<pre>interactive-game-wikis/
 ├── index.html                   (Root Master Portal Dashboard)
 ├── README.md                    (Master Hub Documentation)
 └── games/
@@ -1001,42 +925,33 @@
         └── the-hyrule-chronicle/
             ├── index.html       (v5 English Translation)
             └── README.md</pre>
-        </div>
-
-        <div class="info-pane">
-          <h4>Free GitHub Pages Hosting</h4>
-          <ul>
-            <li>Push this repository structure to your GitHub account.</li>
-            <li>Go to <strong>Settings</strong> &gt; <strong>Pages</strong> in your GitHub repository.</li>
-            <li>Under <em>Build and deployment</em> &gt; <em>Source</em>, choose <strong>Deploy from a branch</strong>.</li>
-            <li>Select branch <strong>main</strong> and directory <strong>/ (root)</strong>, then click <strong>Save</strong>.</li>
-            <li>Your master portal and all guides will be live at <code>https://&lt;username&gt;.github.io/&lt;repo&gt;/</code>!</li>
-          </ul>
-        </div>
-
-        <div class="info-pane">
-          <h4>Dual-Mode Portability</h4>
-          <p>
-            Toggle between <strong>Google Drive Mode</strong> (for instant cloud preview of files directly in Drive) and <strong>Web / Local Mode</strong> (for relative paths when hosted on GitHub Pages or local folders).
-          </p>
-          <p style="margin-top: 8px;">
+</div>
+<div class="info-pane">
+<h4>Free GitHub Pages Hosting</h4>
+<ul>
+<li>Push this repository structure to your GitHub account.</li>
+<li>Go to <strong>Settings</strong> &gt; <strong>Pages</strong> in your GitHub repository.</li>
+<li>Under <em>Build and deployment</em> &gt; <em>Source</em>, choose <strong>Deploy from a branch</strong>.</li>
+<li>Select branch <strong>main</strong> and directory <strong>/ (root)</strong>, then click <strong>Save</strong>.</li>
+<li>Your master portal and all guides will be live at <code>https://&lt;username&gt;.github.io/&lt;repo&gt;/</code>!</li>
+</ul>
+</div>
+<div class="info-pane">
+<h4>Zero-Dependency Portability</h4>
+<p>Built in 100% pure HTML5, CSS3, and vanilla JavaScript with zero external frameworks, dependencies, or cloud fonts. Engineered for rapid offline execution and seamless static web hosting on GitHub Pages.</p>
+<p style="margin-top: 8px;">
             All progress checkmarks and states are persisted using a hardened in-memory fallback wrapper around <code>localStorage</code>, fully compatible with sandboxed mobile viewers, Android <code>content://</code> URIs, and desktop file systems.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <p>Interactive Game Wikis Hub • Crafted for Charles Williams • Built with pure HTML5, CSS3, &amp; Vanilla JavaScript</p>
-      <p style="margin-top: 6px;">
-        Authoritative guides grounded in official strategy sequences. Explore the central <a href="https://drive.google.com/drive/folders/1IdcWk78Zk0d3rE5j4bHN2A1zN3h5kr7b" target="_blank">Games Drive Folder</a>.
-      </p>
-    </footer>
-
-  </main>
-
-  <script>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<p>Interactive Game Wikis Hub • Crafted for Charles Williams • Built with pure HTML5, CSS3, &amp; Vanilla JavaScript</p>
+<p style="margin-top: 6px;">Authoritative guides grounded in official strategy sequences.</p>
+</footer>
+</main>
+<script>
     /* Safe Storage Protocol Wrapper */
     const safeStorage = {
       _mem: {},
@@ -1059,59 +974,7 @@
       }
     };
 
-    /* Link Mode Configuration */
-    const linkConfigs = {
-      drive: {
-        ac_launch: "https://drive.google.com/file/d/1H43bHbvZ9TJtsXa0ie1qiSR2pofmBFJz/view?usp=drivesdk",
-        ac_readme: "https://drive.google.com/file/d/1cLXzlIAu_Ts5o2cI-uKYV27nff0klkKi/view?usp=drivesdk",
-        ac_hub: "https://drive.google.com/file/d/1KnkZRR5am9gI5wDGUqSfgX7y_RiHDurc/view?usp=drivesdk",
-        oot_launch: "https://drive.google.com/file/d/1Exx92VAJdFqGRt_iG4UOrJbuu3xxGEnp/view?usp=drivesdk",
-        oot_readme: "https://drive.google.com/file/d/1Zw3Qix5P4EQV4mKO819befPDAy2Y3P9s/view?usp=drivesdk",
-        eow_launch: "https://drive.google.com/file/d/1yoc3kCgpieigh6LOxXEEGe4sA50efghI/view?usp=drivesdk",
-        eow_readme: "https://drive.google.com/file/d/1kYSR8ob-yaqIecalGWYE-0NqBs1nXvkn/view?usp=drivesdk",
-        chronicle_launch: "https://drive.google.com/file/d/1Uv4wEIoA41yKZhxXtzauNiUQ1b_ejJrW/view?usp=drivesdk",
-        chronicle_readme: "https://drive.google.com/file/d/1U5IuZHucRSnpyuX9CS93qTRN0wAVx7Iz/view?usp=drivesdk",
-        zelda_hub: "https://drive.google.com/file/d/19qG1jVF41YbV7cK20umaIFw9aZmZREkH/view?usp=drivesdk"
-      },
-      web: {
-        ac_launch: "games/assassins-creed/black-flag-resynced/",
-        ac_readme: "games/assassins-creed/black-flag-resynced/README.md",
-        ac_hub: "games/assassins-creed/index.html",
-        oot_launch: "games/zelda/ocarina-of-time-3d/",
-        oot_readme: "games/zelda/ocarina-of-time-3d/README.md",
-        eow_launch: "games/zelda/echoes-of-wisdom/",
-        eow_readme: "games/zelda/echoes-of-wisdom/README.md",
-        chronicle_launch: "games/zelda/the-hyrule-chronicle/",
-        chronicle_readme: "games/zelda/the-hyrule-chronicle/README.md",
-        zelda_hub: "games/zelda/index.html"
-      }
-    };
-
-    function setLinkMode(mode) {
-      safeStorage.setItem('portal_link_mode', mode);
-      document.getElementById('btnModeDrive').classList.toggle('active', mode === 'drive');
-      document.getElementById('btnModeWeb').classList.toggle('active', mode === 'web');
-
-      const cfg = linkConfigs[mode] || linkConfigs.drive;
-      
-      const setHref = (id, url) => {
-        const el = document.getElementById(id);
-        if (el) el.setAttribute('href', url);
-      };
-
-      setHref('link_ac_launch', cfg.ac_launch);
-      setHref('link_ac_readme', cfg.ac_readme);
-      setHref('link_oot_launch', cfg.oot_launch);
-      setHref('link_oot_readme', cfg.oot_readme);
-      setHref('link_eow_launch', cfg.eow_launch);
-      setHref('link_eow_readme', cfg.eow_readme);
-      setHref('link_chronicle_launch', cfg.chronicle_launch);
-      setHref('link_chronicle_readme', cfg.chronicle_readme);
-      setHref('link_ac_hub', cfg.ac_hub);
-      setHref('link_zelda_hub_oot', cfg.zelda_hub);
-      setHref('link_zelda_hub_eow', cfg.zelda_hub);
-      setHref('link_zelda_hub_chronicle', cfg.zelda_hub);
-    }
+    
 
     /* Filter Cards */
     let currentFilter = 'all';
@@ -1180,8 +1043,7 @@
 
     // Initialize saved preferences
     document.addEventListener('DOMContentLoaded', () => {
-      const savedMode = safeStorage.getItem('portal_link_mode') || 'drive';
-      setLinkMode(savedMode);
+      
     });
   </script>
 </body>
