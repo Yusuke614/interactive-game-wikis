@@ -1,0 +1,2091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Legend of Zelda: Echoes of Wisdom • Complete Interactive Guidebook (v1)</title>
+  <style>
+    :root {
+      /* Echoes of Wisdom & Tri Thematic Color Palette */
+      --bg-dark: #080c18; /* Deep Royal Still World Navy */
+      --bg-alt: #060913;
+      --card-bg: #0f172a; /* Twilight Slate */
+      --card-header-bg: #162038;
+      --card-border: #263352;
+      --card-hover-border: #384973;
+
+      /* Primary Highlights */
+      --tri-gold: #f59e0b; /* Tri Rod Radiant Gold / Starlight Amber */
+      --gold-dark: #b45309;
+      --gold-glow: rgba(245, 158, 11, 0.28);
+      
+      --rift-purple: #8b5cf6; /* Still World Void / Rift Violet */
+      --rift-glow: rgba(139, 92, 246, 0.25);
+      
+      --zelda-pink: #f43f5e; /* Princess Zelda Coral Rose */
+      --echo-cyan: #06b6d4; /* Echo Energy Cyan / Fairy Shimmer */
+      --forest-green: #10b981; /* Hyrule Field Emerald */
+      --courage-blue: #3b82f6; /* Swordfighter Form Blue */
+      --alert-crimson: #ef4444; /* Boss Danger / Vulnerability */
+
+      --text-main: #f8fafc; /* Crisp Sailcloth White */
+      --text-muted: #94a3b8; /* Muted Twilight Slate */
+      --text-dim: #64748b;
+      --badge-bg: #131c31;
+      --table-row-alt: #0b1122;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 50% 8%, rgba(139, 92, 246, 0.08) 0%, transparent 55%),
+        radial-gradient(circle at 85% 85%, rgba(245, 158, 11, 0.06) 0%, transparent 45%),
+        linear-gradient(180deg, #050811 0%, #080c18 50%, #04060c 100%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      padding: 24px;
+      min-height: 100vh;
+    }
+
+    .wiki-container { max-width: 1400px; margin: 0 auto; }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #131c35 0%, #090e1f 100%);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 28px 36px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 6px; height: 100%;
+      background: linear-gradient(to bottom, var(--tri-gold), var(--rift-purple));
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .title-group h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: #fff;
+    }
+    .tri-crest {
+      color: var(--tri-gold);
+      font-size: 26px;
+      text-shadow: 0 0 12px var(--gold-glow);
+    }
+    .title-group h1 span.tag {
+      background: linear-gradient(135deg, var(--tri-gold), #ea580c);
+      color: #000;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .subtitle { color: var(--text-muted); font-size: 15px; margin-top: 6px; }
+    .source-badge {
+      background: var(--badge-bg);
+      border: 1px solid var(--card-border);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--echo-cyan);
+    }
+    .source-badge a { color: var(--echo-cyan); text-decoration: none; }
+    .source-badge a:hover { text-decoration: underline; }
+
+    /* Overview Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .stat-card {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 14px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    .stat-card:hover {
+      border-color: var(--card-hover-border);
+      transform: translateY(-2px);
+    }
+    .stat-card .val {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--tri-gold);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .stat-card .lbl {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    /* Progress Tracker Bar */
+    .progress-bar-container {
+      background: #040710;
+      border-radius: 8px;
+      height: 14px;
+      width: 100%;
+      overflow: hidden;
+      margin: 18px 0 8px 0;
+      border: 1px solid var(--card-border);
+    }
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--tri-gold), var(--rift-purple));
+      transition: width 0.3s ease;
+    }
+    .progress-text {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Controls Bar & Search */
+    .controls-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      background: #0b1224;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 12px 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    }
+    .search-input {
+      background: #050814;
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      min-width: 320px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-input:focus { border-color: var(--tri-gold); }
+    .action-btn {
+      background: var(--badge-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .action-btn:hover { color: var(--text-main); border-color: rgba(255, 255, 255, 0.2); }
+
+    /* Page Navigation Tabs */
+    .page-tabs-container {
+      background: #0b1224;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+    .page-tabs-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .tabs-label-group { display: flex; align-items: baseline; gap: 8px; }
+    .tabs-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--tri-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .tabs-subtext { font-size: 12px; color: var(--text-muted); }
+    .view-all-toggle-btn {
+      background: #162038;
+      border: 1px solid var(--card-border);
+      color: var(--echo-cyan);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .view-all-toggle-btn:hover, .view-all-toggle-btn.active {
+      background: var(--echo-cyan);
+      color: #000;
+    }
+    .page-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+    .page-tab {
+      background: var(--badge-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .page-tab:hover { color: var(--text-main); border-color: rgba(255, 255, 255, 0.2); }
+    .page-tab.active {
+      background: linear-gradient(135deg, var(--tri-gold), #d97706);
+      color: #000;
+      border-color: var(--tri-gold);
+      font-weight: 700;
+      box-shadow: 0 2px 10px var(--gold-glow);
+    }
+    .page-tab .tab-num {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+    .page-tab.active .tab-num { background: rgba(0, 0, 0, 0.4); color: #fff; }
+
+    .mobile-section-select { display: none; margin-top: 10px; }
+    .mobile-section-select select {
+      width: 100%;
+      background: #050814;
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    /* Main Content Sections */
+    .wiki-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      display: none; /* Controlled by SPA paging */
+    }
+    .wiki-section.active-page { display: block; }
+    body.view-all-mode .wiki-section { display: block !important; margin-bottom: 32px; }
+
+    .section-header {
+      background: var(--card-header-bg);
+      padding: 18px 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      border-bottom: 1px solid transparent;
+      transition: background 0.2s;
+    }
+    .section-header:hover { background: #1c2a47; }
+    .section-header.active { border-bottom-color: var(--card-border); }
+    .section-title-group { display: flex; align-items: center; gap: 12px; }
+    .section-title-group h2 { font-size: 18px; font-weight: 700; color: #fff; }
+    .section-tag {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--tri-gold);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .collapse-arrow {
+      font-size: 14px;
+      color: var(--tri-gold);
+      transition: transform 0.25s ease;
+      width: 16px;
+      text-align: center;
+    }
+    .section-header.active .collapse-arrow { transform: rotate(90deg); }
+    .section-content { padding: 24px; }
+    .section-content.collapsed { display: none; }
+
+    /* Callout Boxes */
+    .callout {
+      border-left: 4px solid var(--tri-gold);
+      background: rgba(245, 158, 11, 0.08);
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .callout.pro-tip { border-left-color: var(--forest-green); background: rgba(16, 185, 129, 0.08); }
+    .callout.warning { border-left-color: var(--alert-crimson); background: rgba(239, 68, 68, 0.08); }
+    .callout.rift { border-left-color: var(--rift-purple); background: rgba(139, 92, 246, 0.08); }
+    .callout.echo { border-left-color: var(--echo-cyan); background: rgba(6, 182, 212, 0.08); }
+    .callout-title { font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+
+    /* Tables */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 13px;
+    }
+    .data-table th, .data-table td {
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--card-border);
+      vertical-align: middle;
+    }
+    .data-table th {
+      background: #111a2f;
+      color: var(--tri-gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+    }
+    .data-table tr:hover { background: rgba(255, 255, 255, 0.02); }
+    .data-table tr.done { opacity: 0.5; background: rgba(16, 185, 129, 0.04); }
+    .data-table tr.done td.mission-name { text-decoration: line-through; color: var(--text-dim); }
+
+    /* Checkbox Tasks */
+    .task-list { list-style: none; margin: 14px 0; }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 14px;
+      background: rgba(11, 18, 36, 0.6);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      margin-bottom: 8px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .check-item:hover { border-color: var(--card-hover-border); background: rgba(11, 18, 36, 0.9); }
+    .check-item.done {
+      border-color: rgba(16, 185, 129, 0.3);
+      background: rgba(16, 185, 129, 0.05);
+    }
+    .check-item.done .task-title { text-decoration: line-through; color: var(--text-dim); }
+    .check-item input[type="checkbox"] {
+      margin-top: 3px;
+      cursor: pointer;
+      accent-color: var(--tri-gold);
+      width: 16px;
+      height: 16px;
+    }
+    .task-body { flex: 1; font-size: 13px; }
+    .task-title { font-weight: 700; color: #fff; margin-bottom: 2px; }
+    .task-desc { color: var(--text-muted); font-size: 12px; }
+
+    /* Badge & Labels */
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: normal;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+    .badge-gold { background: rgba(245, 158, 11, 0.2); color: var(--tri-gold); border: 1px solid var(--tri-gold); }
+    .badge-purple { background: rgba(139, 92, 246, 0.2); color: var(--rift-purple); border: 1px solid var(--rift-purple); }
+    .badge-cyan { background: rgba(6, 182, 212, 0.2); color: var(--echo-cyan); border: 1px solid var(--echo-cyan); }
+    .badge-green { background: rgba(16, 185, 129, 0.2); color: var(--forest-green); border: 1px solid var(--forest-green); }
+    .badge-rose { background: rgba(244, 63, 94, 0.2); color: var(--zelda-pink); border: 1px solid var(--zelda-pink); }
+    .badge-blue { background: rgba(59, 130, 246, 0.2); color: var(--courage-blue); border: 1px solid var(--courage-blue); }
+
+    /* Responsive Pagers */
+    .page-nav-footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--card-border);
+      gap: 12px;
+    }
+    .pager-btn {
+      background: #111a2f;
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .pager-btn:hover { color: #fff; border-color: var(--tri-gold); }
+    .pager-btn.next-btn { margin-left: auto; color: var(--tri-gold); }
+
+    /* Responsive Media Queries */
+    @media (max-width: 900px) {
+      body { padding: 16px; }
+      header { padding: 20px; }
+      .page-tabs { display: none; }
+      .mobile-section-select { display: block; }
+      .controls-bar { flex-direction: column; align-items: stretch; }
+      .search-input { min-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+<div class="wiki-container">
+
+  <!-- Main Header -->
+  <header>
+    <div class="header-top">
+      <div class="title-group">
+        <h1>
+          <span class="tri-crest">✦</span>
+          The Legend of Zelda: Echoes of Wisdom
+          <span class="tag">Complete Guide (v1)</span>
+        </h1>
+        <p class="subtitle">Complete Walkthrough, All 127 Echoes, Dungeons, Heart Pieces, Might Crystals & Automaton Engineering</p>
+      </div>
+      <div class="source-badge">
+        Authoritative Source: <a href="https://www.ign.com/wikis/the-legend-of-zelda-echoes-of-wisdom" target="_blank" rel="noopener">IGN Echoes of Wisdom Wiki</a>
+      </div>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="val">127 Echoes</span>
+        <span class="lbl">Creatures & Objects Compendium</span>
+      </div>
+      <div class="stat-card">
+        <span class="val">40 Heart Pieces</span>
+        <span class="lbl">10 Full Heart Containers</span>
+      </div>
+      <div class="stat-card">
+        <span class="val">150 Might Crystals</span>
+        <span class="lbl">Swordfighter Energy Upgrades</span>
+      </div>
+      <div class="stat-card">
+        <span class="val">6 Automatons</span>
+        <span class="lbl">Dampé's Mechanical Inventions</span>
+      </div>
+      <div class="stat-card">
+        <span class="val">25 Stamp Stands</span>
+        <span class="lbl">Stamp Guy Rally Network</span>
+      </div>
+      <div class="stat-card">
+        <span class="val">69 Smoothies</span>
+        <span class="lbl">Business Scrub Blending Recipes</span>
+      </div>
+    </div>
+
+    <!-- Progress Tracker Bar -->
+    <div class="progress-bar-container">
+      <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+    <div class="progress-text">
+      <span id="progressStats">Checklist Progress: 0 / 92 completed (0%)</span>
+      <span>SafeStorage Persistent Tracker</span>
+    </div>
+  </header>
+
+  <!-- Controls Bar -->
+  <div class="controls-bar">
+    <input type="text" class="search-input" id="wikiSearch" placeholder="Search Echoes of Wisdom guide (e.g. Tri Rod, Water Block, Lynel, Heart Piece, Automatons)..." oninput="handleSearch()">
+    <button class="action-btn" id="toggleAllBtn" onclick="toggleAllSections()">Collapse All ▾</button>
+  </div>
+
+  <!-- Interactive Multi-Page Navigation (IGN Guide Order) -->
+  <div class="page-tabs-container">
+    <div class="page-tabs-header">
+      <div class="tabs-label-group">
+        <span class="tabs-label">Wiki Sections (IGN Guide Order)</span>
+        <span class="tabs-subtext">• Click a section to view its dedicated page</span>
+      </div>
+      <div class="tabs-actions">
+        <button class="view-all-toggle-btn" id="viewAllToggleBtn" onclick="toggleViewAllPages()">📄 View All Sections</button>
+      </div>
+    </div>
+    <div class="mobile-section-select">
+      <label for="pageSelectDropdown" style="display:block; font-size:12px; color:var(--text-muted); margin-bottom:4px;">Jump to Section:</label>
+      <select id="pageSelectDropdown" onchange="showPage(this.value)">
+        <option value="sec_getting_started">1. Getting Started & Tri Rod</option>
+        <option value="sec_main_story">2. Main Story Walkthrough</option>
+        <option value="sec_dungeons">3. Dungeons & Stilled Worlds</option>
+        <option value="sec_bosses">4. Bosses & Void Battles</option>
+        <option value="sec_echoes">5. Complete Echoes Compendium</option>
+        <option value="sec_automatons">6. Dampé's Automatons</option>
+        <option value="sec_heart_pieces">7. Pieces of Heart Guide</option>
+        <option value="sec_might_crystals">8. Might Crystals & Upgrades</option>
+        <option value="sec_stamp_rally">9. Stamp Rallies & Great Fairies</option>
+        <option value="sec_accessories">10. Accessories & Outfits</option>
+        <option value="sec_smoothies">11. Smoothies & Potions</option>
+        <option value="sec_side_quests">12. Mini-Quests & Slumber Dojo</option>
+      </select>
+    </div>
+    <div class="page-tabs">
+      <button class="page-tab active" data-page-id="sec_getting_started" onclick="showPage('sec_getting_started')"><span class="tab-num">1</span> Getting Started</button>
+      <button class="page-tab" data-page-id="sec_main_story" onclick="showPage('sec_main_story')"><span class="tab-num">2</span> Main Walkthrough</button>
+      <button class="page-tab" data-page-id="sec_dungeons" onclick="showPage('sec_dungeons')"><span class="tab-num">3</span> Dungeons & Rifts</button>
+      <button class="page-tab" data-page-id="sec_bosses" onclick="showPage('sec_bosses')"><span class="tab-num">4</span> Boss Strategies</button>
+      <button class="page-tab" data-page-id="sec_echoes" onclick="showPage('sec_echoes')"><span class="tab-num">5</span> Echoes Compendium</button>
+      <button class="page-tab" data-page-id="sec_automatons" onclick="showPage('sec_automatons')"><span class="tab-num">6</span> Automatons</button>
+      <button class="page-tab" data-page-id="sec_heart_pieces" onclick="showPage('sec_heart_pieces')"><span class="tab-num">7</span> Pieces of Heart</button>
+      <button class="page-tab" data-page-id="sec_might_crystals" onclick="showPage('sec_might_crystals')"><span class="tab-num">8</span> Might Crystals</button>
+      <button class="page-tab" data-page-id="sec_stamp_rally" onclick="showPage('sec_stamp_rally')"><span class="tab-num">9</span> Stamp Rallies</button>
+      <button class="page-tab" data-page-id="sec_accessories" onclick="showPage('sec_accessories')"><span class="tab-num">10</span> Accessories</button>
+      <button class="page-tab" data-page-id="sec_smoothies" onclick="showPage('sec_smoothies')"><span class="tab-num">11</span> Smoothies</button>
+      <button class="page-tab" data-page-id="sec_side_quests" onclick="showPage('sec_side_quests')"><span class="tab-num">12</span> Mini-Quests</button>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- SECTION 1: GETTING STARTED & TRI MECHANICS -->
+  <!-- ========================================== -->
+  <section class="wiki-section wiki-page active-page" id="sec_getting_started" style="display: block;" data-category="getting-started">
+    <div class="section-header active" onclick="toggleSection(this)">
+      <div class="section-title-group">
+        <span class="section-tag">Section 1</span>
+        <h2>Getting Started, Tri Rod & Core Mechanics</h2>
+      </div>
+      <span class="collapse-arrow">►</span>
+    </div>
+    <div class="section-content">
+      <p>In <em>The Legend of Zelda: Echoes of Wisdom</em>, Princess Zelda takes the lead with her companion <strong>Tri</strong> to heal the rifts tearing Hyrule apart. Rather than relying solely on swordplay, mastery depends on your ability to learn, combine, and duplicate everyday objects and monsters as <strong>Echoes</strong>.</p>
+
+      <div class="callout echo">
+        <div class="callout-title">✦ The Tri Rod & Summoning Cost (Tri Points)</div>
+        Tri trails behind Zelda with a trail of glowing yellow triangles. Every Echo requires a specific number of triangles to summon (from 1 to 6). As you rescue Tri's friends inside Stilled World Rifts, Tri levels up, gaining more triangles and reducing the cost of high-tier Echoes.
+      </div>
+
+      <div class="callout pro-tip">
+        <div class="callout-title">✦ Bind and Reverse Bond: The Dual Tether System</div>
+        <ul>
+          <li><strong>Bind (X Button):</strong> Zelda tethers an object or monster to her movements. Walk left, and the bound item moves left. Useful for pulling buried treasure chests, repositioning heavy boulders, or guiding floating platforms.</li>
+          <li><strong>Reverse Bond (X Button while holding R):</strong> Zelda tethers <em>herself</em> to the target's movement! Target a flying Keese or moving platform to glide across bottomless abysses, or tether to a wall-climbing spider to scale sheer cliff faces effortlessly.</li>
+        </ul>
+      </div>
+
+      <div class="callout rift">
+        <div class="callout-title">✦ Swordfighter Form Mechanics</div>
+        After retrieving the Mysterious Sword in the Suthorn Ruins, Zelda can tap <strong>D-Pad Up</strong> to transform into Swordfighter Form. In this state, Zelda wields Link's sword, shield, and bow, dealing heavy direct damage. This form drains your <strong>Energy Gauge</strong>, which is replenished by collecting energy particles dropped by shadowy rift monsters or sipping energizing smoothies.
+      </div>
+
+      <h3 style="color: var(--tri-gold); margin: 20px 0 10px 0;">Essential Early Game Milestones</h3>
+      <ul class="task-list">
+        <li class="check-item" data-task-id="start_bed_bridge">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Master the "Bed Bridge" Traversal Technique</div>
+            <div class="task-desc">Memorize the Old Bed early in Hyrule Castle basement. Stacking and bridging Old Beds allows crossing wide gaps and scaling 4-level ledges before obtaining water blocks.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="start_learn_peahat">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Learn the Peahat Echo Early in Suthorn Forest</div>
+            <div class="task-desc">Found in a cave southwest of Suthorn Village. Throw rocks to stagger it while spinning, then summon it to shred early bosses and mob swarms.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="start_fast_travel_waypoints">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Activate Hyrule Waypoint Markers</div>
+            <div class="task-desc">Step on stone waypoints with glowing blue runes to unlock instant fast travel across Hyrule's surface and dungeon hubs.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="start_smoothie_habit">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Visit Your First Business Scrub Smoothie Stall</div>
+            <div class="task-desc">Blend 2 ingredients for 10 Rupees to craft recovery juices that restore hearts and swordfighter energy while granting elemental resistances.</div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="page-nav-footer">
+        <div></div>
+        <button class="pager-btn next-btn" onclick="showPage('sec_main_story')">Next: Main Walkthrough →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 2: MAIN STORY WALKTHROUGH          -->
+  <!-- ========================================== -->
+  <section class="wiki-section wiki-page" id="sec_main_story" data-category="main-story">
+    <div class="section-header active" onclick="toggleSection(this)">
+      <div class="section-title-group">
+        <span class="section-tag">Section 2</span>
+        <h2>Main Quests & Story Walkthrough</h2>
+      </div>
+      <span class="collapse-arrow">►</span>
+    </div>
+    <div class="section-content">
+      <p>Follow Princess Zelda's canonical questline through all three major narrative phases: sealing the southern rifts, liberating Hyrule Castle, and collecting the Sanctuaries across the Lands of the Goddesses to confront Null.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width: 50px;">Track</th>
+            <th>Quest Name & Chapter</th>
+            <th>Primary Objective & Path</th>
+            <th>Key Unlocks & Boss</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="mission-row" data-task-id="mq_prologue">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>1. Prologue: The Great Escape</strong><br><small style="color:var(--text-muted);">Hyrule Castle Dungeons</small></td>
+            <td>Control Link in the opening clash against Ganon. After Link is swallowed by the rift, guide Zelda out of the castle dungeons with Tri's help using stealth pots and table bridges.</td>
+            <td><span class="badge badge-gold">Tri Rod</span> <span class="badge badge-cyan">Table Echo</span></td>
+          </tr>
+          <tr class="mission-row" data-task-id="mq_mysterious_rifts">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>2. The Mysterious Rifts</strong><br><small style="color:var(--text-muted);">Suthorn Beach & Village</small></td>
+            <td>Wash ashore on Suthorn Beach; navigate through Suthorn Village to Lueburry's House. Discover how rifts consume people and landscape into the Still World.</td>
+            <td><span class="badge badge-green">Old Bed Echo</span> <span class="badge badge-purple">Still World Entry</span></td>
+          </tr>
+          <tr class="mission-row" data-task-id="mq_suthorn_ruins">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>3. Suthorn Ruins Dungeon</strong><br><small style="color:var(--text-muted);">Stilled Suthorn Forest</small></td>
+            <td>Enter the first major dungeon in the Still World. Solve light beam puzzles, retrieve the mysterious sword, and fell the Seismic Talus to seal the rift.</td>
+            <td><span class="badge badge-blue">Swordfighter Form</span> <span class="badge badge-gold">Tri Level 2</span></td>
+          </tr>
+          <tr class="mission-row" data-task-id="mq_searching_everyone">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>4. Searching for Everyone</strong><br><small style="color:var(--text-muted);">Hyrule Field Branching</small></td>
+            <td>Return to the surface and visit the Royal Pastures and Kakariko. Choose whether to head east toward Jabul Waters or west toward the Gerudo Desert first.</td>
+            <td><span class="badge badge-gold">Horse Rental</span> <span class="badge badge-cyan">Waypoint Network</span></td>
+          </tr>
+          <tr class="mission-row" data-task-id="mq_jabul_waters_rift">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>5. The Jabul Waters Rift</strong><br><small style="color:var(--text-muted);">River & Sea Zora Villages</small></td>
+            <td>Mediate the heated dispute between River Zora Chief Dradd and Sea Zora Chief Kusha. Quell the rampage at Zora Cove and calm Lord Jabu-Jabu.</td>
+            <td><span class="badge badge-cyan">Water Block Echo</span> <span class="badge badge-cyan">Zora Scale</span></td>
+          </tr>
+          <tr class="mission-row" data-task-id="mq_jabul_ruins">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>6. Jabul Ruins Dungeon</strong><br><small style="color:var(--text-muted);">Stilled Jabul Waters</small></td>
+            <td>Traverse submerged corridors using Water Blocks and bomb-fish. Defeat the giant water vortex fiend <strong>Vocavor</strong> to restore the Zora chiefs.</td>
+            <td><span class="badge badge-gold">Heart Container</span> <span class="badge badge-gold">Tri Level 3</span></td>
+          </tr>
+          <tr class="mission-row" data-task-id="mq_gerudo_desert_rift">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>7. A Rift in the Gerudo Desert</strong><br><small style="color:var(--text-muted);">Gerudo Town & Oasis</small></td>
+            <td>Infiltrate the sandstorm-swept desert. Assist Chief Seera and Captain Dohna in closing minor oasis rifts before unsealing the ancient Sanctum.</td>
+            <td><span class="badge badge-gold">Flying Tile Echo</span> <span class="badge badge-green">Gerudo Outfit</span></td>
+          </tr>
+          <tr class="mission-row" data-task-id="mq_gerudo_sanctum">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>8. Gerudo Sanctum Dungeon</strong><br><small style="color:var(--text-muted);">Stilled Desert Ruins</small></td>
+            <td>Navigate sinking sands, fire statues, and fan puzzles. Defeat the mole-mole monstrosity <strong>Mogryph</strong> to free the imprisoned Gerudo warriors.</td>
+            <td><span class="badge badge-blue">Bow of Might</span> <span class="badge badge-gold">Tri Level 4</span></td>
+          </tr>
+          <tr class="mission-row" data-task-id="mq_still_missing">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>9. Still Missing: Hyrule Castle</strong><br><small style="color:var(--text-muted);">Hyrule Castle Town</small></td>
+            <td>With southern Hyrule restored, march on the capital. Breach the massive rift enveloping Hyrule Castle and navigate the Stilled Castle interior.</td>
+            <td><span class="badge badge-purple">Castle Key</span> <span class="badge badge-rose">Royal Attire</span></td>
+          </tr>
+          <tr class="mission-row" data-task-id="mq_hyrule_castle_dungeon">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>10. Hyrule Castle Dungeon</strong><br><small style="color:var(--text-muted);">Stilled Throne Room</small></td>
+            <td>Scale the warped throne room and cathedral spires. Defeat the impostor <strong>Ganon's Shadow</strong> to rescue King Rhoam and Prime Minister Lefte.</td>
+            <td><span class="badge badge-blue">Bombs of Might</span> <span class="badge badge-gold">Tri Level 5</span></td>
+          </tr>
+          <tr class="mission-row" data-task-id="mq_lands_of_goddesses">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>11. Lands of the Goddesses</strong><br><small style="color:var(--text-muted);">Three Sacred Realms</small></td>
+            <td>The King reveals ancient prophecies. Journey to the three outer edges of Hyrule to collect the sacred Sanctuaries: Din's Flame, Farore's Courage, and Nayru's Wisdom.</td>
+            <td><span class="badge badge-gold">Sanctuary Quests</span> <span class="badge badge-cyan">Automaton Workshop</span></td>
+          </tr>
+          <tr class="mission-row" data-task-id="mq_eldin_temple">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>12. The Rift on Eldin Volcano</strong><br><small style="color:var(--text-muted);">Eldin Temple / Goron City</small></td>
+            <td>Climb through magma flumes and rock-roast caves. Conquer the Eldin Temple and slay the lava dragon <strong>Volvagia</strong> to obtain Din's Sanction.</td>
+            <td><span class="badge badge-gold">Din's Sanction</span> <span class="badge badge-rose">Goron Tunic</span></td>
+          </tr>
+          <tr class="mission-row" data-task-id="mq_faron_temple">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>13. The Faron Wetlands Rift</strong><br><small style="color:var(--text-muted);">Faron Temple / Deku Scrub Lockup</small></td>
+            <td>Navigate toxic swampland, rain shrines, and spider web canopies. Conquer Faron Temple and squash the spider queen <strong>Gohma</strong> for Farore's Sanction.</td>
+            <td><span class="badge badge-green">Farore's Sanction</span> <span class="badge badge-cyan">Deku Attire</span></td>
+          </tr>
+          <tr class="mission-row" data-task-id="mq_lanayru_temple">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>14. The Hebra Mountain Rift</strong><br><small style="color:var(--text-muted);">Lanayru Temple / Holy Mount</small></td>
+            <td>Endure freezing blizzards and ice sliding puzzles. Slay the chimera frost-beast <strong>Skorchill</strong> inside Lanayru Temple to claim Nayru's Sanction.</td>
+            <td><span class="badge badge-blue">Nayru's Sanction</span> <span class="badge badge-gold">Tri Level 6 (Max)</span></td>
+          </tr>
+          <tr class="mission-row" data-task-id="mq_null_final_battle">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>15. Prime Energy & Null's Body</strong><br><small style="color:var(--text-muted);">The Primordial Void</small></td>
+            <td>Enter the heart of the void where the primordial darkness <strong>Null</strong> seeks to devour the Triforce. Cooperate with rescued Link in a 3-phase epic finale.</td>
+            <td><span class="badge badge-gold">Game Complete</span> <span class="badge badge-purple">Epilogue & Credits</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="page-nav-footer">
+        <button class="pager-btn prev-btn" onclick="showPage('sec_getting_started')">← Previous: Getting Started</button>
+        <button class="pager-btn next-btn" onclick="showPage('sec_dungeons')">Next: Dungeons & Rifts →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 3: DUNGEONS & STILLED WORLDS       -->
+  <!-- ========================================== -->
+  <section class="wiki-section wiki-page" id="sec_dungeons" data-category="dungeons">
+    <div class="section-header active" onclick="toggleSection(this)">
+      <div class="section-title-group">
+        <span class="section-tag">Section 3</span>
+        <h2>Dungeons & Stilled World Rifts</h2>
+      </div>
+      <span class="collapse-arrow">►</span>
+    </div>
+    <div class="section-content">
+      <p>Dungeons exist inside the <strong>Still World</strong>—a fractured dimension where terrain floats upside down and time stands frozen. Each major dungeon features small keys, a dungeon map, the Compass, and a Big Key leading to the rift boss.</p>
+
+      <div class="callout rift">
+        <div class="callout-title">✦ Still World Environmental Hazard: The Cold Void</div>
+        Falling off floating platforms into the purple fog resets Zelda to the last solid footing while deducting half a heart. Always keep floating Echoes (such as Flying Tiles, Clouds, or Gliders) ready on quick-select when navigating Stilled Worlds.
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width: 50px;">Track</th>
+            <th>Dungeon Name</th>
+            <th>Location</th>
+            <th>Primary Mechanics & Puzzles</th>
+            <th>Key Reward</th>
+          </tr>
+        </thead>
+        <thead>
+          <tr>
+            <th style="width: 50px;">Track</th>
+            <th>Dungeon Name</th>
+            <th>Location</th>
+            <th>Primary Mechanics & Puzzles</th>
+            <th>Key Reward</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="mission-row" data-task-id="dung_suthorn_ruins">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Suthorn Ruins</strong></td>
+            <td>Stilled Suthorn Forest</td>
+            <td>Statue pushing, torch lighting with Ignizol, and side-scrolling underground chambers.</td>
+            <td>Sword of Might Lv 1, Heart Container</td>
+          </tr>
+          <tr class="mission-row" data-task-id="dung_jabul_ruins">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Jabul Ruins</strong></td>
+            <td>Stilled Jabul Waters</td>
+            <td>Water level manipulation, water block conduits, current navigation, and underwater torpedo fish.</td>
+            <td>Tri Expansion, Heart Container</td>
+          </tr>
+          <tr class="mission-row" data-task-id="dung_gerudo_sanctum">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Gerudo Sanctum</strong></td>
+            <td>Stilled Gerudo Desert</td>
+            <td>Blowing sand dunes with Gustjar/wind Echoes, boulder weight pressure plates, and rolling spike logs.</td>
+            <td>Bow of Might, Heart Container</td>
+          </tr>
+          <tr class="mission-row" data-task-id="dung_hyrule_castle">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Hyrule Castle</strong></td>
+            <td>Stilled Castle Town</td>
+            <td>Stealth patrols, castle parapet vertical ascents, sword knight mini-bosses, and grand ballroom traps.</td>
+            <td>Bombs of Might, King's Rescue</td>
+          </tr>
+          <tr class="mission-row" data-task-id="dung_eldin_temple">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Eldin Temple</strong></td>
+            <td>Stilled Eldin Volcano</td>
+            <td>Lava wave surfing using Rock Echoes, bomb flower chain reactions, and fire geyser gliding.</td>
+            <td>Din's Sanction, Heart Container</td>
+          </tr>
+          <tr class="mission-row" data-task-id="dung_faron_temple">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Faron Temple</strong></td>
+            <td>Stilled Faron Wetlands</td>
+            <td>Sticky web burning, electrical circuit wiring using Spark Echoes, and dark room navigation.</td>
+            <td>Farore's Sanction, Heart Container</td>
+          </tr>
+          <tr class="mission-row" data-task-id="dung_lanayru_temple">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Lanayru Temple</strong></td>
+            <td>Stilled Mount Lanayru</td>
+            <td>Freezing water blocks into ice cubes, thaw mechanisms using fire echoes, and slippery slope ramps.</td>
+            <td>Nayru's Sanction, Heart Container</td>
+          </tr>
+          <tr class="mission-row" data-task-id="dung_nulls_body">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Null's Body</strong></td>
+            <td>The Void of Nothingness</td>
+            <td>Multi-dimensional rift gauntlet requiring alternating use of Zelda's Echoes and Link's sword attacks.</td>
+            <td>Tears of the Goddesses, Restoration of Hyrule</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="page-nav-footer">
+        <button class="pager-btn prev-btn" onclick="showPage('sec_main_story')">← Previous: Main Walkthrough</button>
+        <button class="pager-btn next-btn" onclick="showPage('sec_bosses')">Next: Boss Strategies →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 4: BOSSES & VOID BATTLES           -->
+  <!-- ========================================== -->
+  <section class="wiki-section wiki-page" id="sec_bosses" data-category="bosses">
+    <div class="section-header active" onclick="toggleSection(this)">
+      <div class="section-title-group">
+        <span class="section-tag">Section 4</span>
+        <h2>Boss Strategies & Void Battles</h2>
+      </div>
+      <span class="collapse-arrow">►</span>
+    </div>
+    <div class="section-content">
+      <p>Boss battles in <em>Echoes of Wisdom</em> emphasize environmental vulnerability and creative Echo combinations over simple weapon hacking. Below are phase-by-phase tactics for every major guardian.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width: 50px;">Track</th>
+            <th>Boss Name</th>
+            <th>Dungeon</th>
+            <th>Vulnerable Core</th>
+            <th>Optimal Strategy & Counter Echoes</th>
+          </tr>
+        </thead>
+        <thead>
+          <tr>
+            <th style="width: 50px;">Track</th>
+            <th>Boss Name</th>
+            <th>Dungeon</th>
+            <th>Vulnerable Core</th>
+            <th>Optimal Strategy & Counter Echoes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="mission-row" data-task-id="boss_seismic_talus">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Seismic Talus</strong></td>
+            <td>Suthorn Ruins</td>
+            <td>Glowing crystal sphere embedded in body</td>
+            <td>Use <strong>Bind</strong> to latch onto its exposed crystal core and pull backward to rip it out. Once exposed on the ground, enter Swordfighter form or summon Peahat/Ignizol to deal massive burst damage.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="boss_vocavor">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Vocavor</strong></td>
+            <td>Jabul Ruins</td>
+            <td>Exposed skull blowhole</td>
+            <td>Swim above Vocavor using Water Blocks or dive-bombing swimming Echoes. When it surfaces to create whirlpools, drop Bomb-fish into its blowhole to stagger it and expose its soft belly.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="boss_mogryph">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Mogryph</strong></td>
+            <td>Gerudo Sanctum</td>
+            <td>Crown horn on snout</td>
+            <td>When Mogryph tunnels through the sand, build a wall of stone statues or heavy boulders. Mogryph will crash headfirst, getting wedged in the stone. Stun with Bow of Might and slash its horn.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="boss_ganons_shadow">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Ganon's Shadow</strong></td>
+            <td>Hyrule Castle</td>
+            <td>Dark energy core behind cape</td>
+            <td>Deflect his spinning trident using Shield or sturdy Boulder Echoes. When he charges dark magic, Reverse-Bond to his shadow to flank behind him and sever his energy connection with Swordfighter slashes.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="boss_volvagia">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Volvagia</strong></td>
+            <td>Eldin Temple</td>
+            <td>Fiery crested skull</td>
+            <td>Avoid rising lava geysers. When Volvagia pokes its head from the magma pool, use Bind on its neck or launch Water Blocks into its maw to cool its scales, then hammer its skull.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="boss_gohma">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Gohma</strong></td>
+            <td>Faron Temple</td>
+            <td>Giant glowing central eye</td>
+            <td>Burn through the webs supporting Gohma using Fire Keese or Ignizol. Shoot arrows at its eye when it prepares its venom blast. When it falls, unleash Lynel or Darknut Lv 3.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="boss_skorchill">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Skorchill</strong></td>
+            <td>Lanayru Temple</td>
+            <td>Elemental crown horns</td>
+            <td>Skorchill alternates between blazing fire and glacial ice forms. When icy, summon Fire Wizzrobes or flame torches to melt its shell. When fiery, douse it with Ice Wizzrobes or Water Blocks.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="boss_null_final">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Null (Final Boss)</strong></td>
+            <td>Null's Body</td>
+            <td>Multi-headed primordial core</td>
+            <td><strong>Phase 1:</strong> Sever void tentacles with Link's sword while Zelda summons high-damage flying Echoes.<br><strong>Phase 2:</strong> Bind the core to drag it into Link's arrow range.<br><strong>Phase 3:</strong> Cooperate in tandem: Link defends Zelda with his mirror shield while Zelda coordinates Tri's beam to seal the core.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="page-nav-footer">
+        <button class="pager-btn prev-btn" onclick="showPage('sec_dungeons')">← Previous: Dungeons & Rifts</button>
+        <button class="pager-btn next-btn" onclick="showPage('sec_echoes')">Next: Echoes Compendium →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 5: COMPLETE ECHOES COMPENDIUM      -->
+  <!-- ========================================== -->
+  <section class="wiki-section wiki-page" id="sec_echoes" data-category="echoes">
+    <div class="section-header active" onclick="toggleSection(this)">
+      <div class="section-title-group">
+        <span class="section-tag">Section 5</span>
+        <h2>Complete Echoes Compendium (127 Total)</h2>
+      </div>
+      <span class="collapse-arrow">►</span>
+    </div>
+    <div class="section-content">
+      <p>The game features <strong>127 total Echoes</strong> split across utility objects and combat monsters. Below are the most powerful, game-changing Echoes categorized by tactical utility, cost, and discovery location.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width: 50px;">Track</th>
+            <th>Echo Name</th>
+            <th>Type</th>
+            <th>Tri Cost</th>
+            <th>Location / How to Obtain</th>
+            <th>Tactical Utility & Combat Synergy</th>
+          </tr>
+        </thead>
+        <thead>
+          <tr>
+            <th style="width: 50px;">Track</th>
+            <th>Echo Name</th>
+            <th>Type</th>
+            <th>Tri Cost</th>
+            <th>Location / How to Obtain</th>
+            <th>Tactical Utility & Combat Synergy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="mission-row" data-task-id="echo_old_bed">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Old Bed</strong></td>
+            <td>Object</td>
+            <td>1 ▲</td>
+            <td>Hyrule Castle Dungeons</td>
+            <td>Creates bridges across 3-tile gaps. Sleeping restores 1 full heart per second for free without drinking potions.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="echo_water_block">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Water Block</strong></td>
+            <td>Object</td>
+            <td>2 ▲</td>
+            <td>Jabul Waters / Zora River</td>
+            <td>Stackable liquid cubes that create vertical water elevators. Swim up through cliffs or trap ground enemies inside to drown them.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="echo_flying_tile">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Flying Tile</strong></td>
+            <td>Monster</td>
+            <td>2 ▲</td>
+            <td>Gerudo Sanctum / Desert Caves</td>
+            <td>Lifts off and flies straight forward. Stand on top of it to glide across massive chasms and sand pits.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="echo_platboom">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Platboom</strong></td>
+            <td>Monster</td>
+            <td>2 ▲</td>
+            <td>Gerudo Sanctum</td>
+            <td>Spiky stone block that slams down when approached, then slowly rises. Stand on top as it rises to gain vertical height like an elevator.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="echo_peahat">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Peahat</strong></td>
+            <td>Monster</td>
+            <td>3 ▲</td>
+            <td>Suthorn Forest Cave</td>
+            <td>Flying multi-blade spinner. Destroys early-game boss phases and crowd mobs with continuous 360-degree slashing hitboxes.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="echo_darknut_lv3">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Darknut Lv 3</strong></td>
+            <td>Monster</td>
+            <td>4 ▲</td>
+            <td>Hyrule Castle Dungeon / Mount Lanayru</td>
+            <td>Heavily armored knight wielding broadsword and tower shield. Tankiest frontline ground summon in the entire game.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="echo_lynel">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Lynel</strong></td>
+            <td>Monster</td>
+            <td>5 ▲</td>
+            <td>Eternal Forest (Hidden Glade)</td>
+            <td>The undisputed apex combat Echo. Charges across screen, unleashes triple elemental shockwaves, and deals maximum single-hit damage.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="echo_ignizol">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Ignizol & Hydrozol</strong></td>
+            <td>Monster</td>
+            <td>1 ▲</td>
+            <td>Suthorn Ruins & Jabul Waters</td>
+            <td>Elemental slimes. Ignizol instantly sets flammable barriers ablaze; Hydrozol douses fire and conducts electric spark puzzles.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="echo_spark">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Spark</strong></td>
+            <td>Monster</td>
+            <td>2 ▲</td>
+            <td>Faron Temple / Gerudo Desert</td>
+            <td>Electrical sphere that hugs and circles room perimeters. Activates ancient electrical switches and electrocutes water pools.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="echo_redead">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>ReDead</strong></td>
+            <td>Monster</td>
+            <td>3 ▲</td>
+            <td>Stilled Faron / Kakariko Graveyard</td>
+            <td>Emits a piercing scream that freezes all nearby non-boss enemies in place, leaving them defenseless to follow-up strikes.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="echo_cloud">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Cloud</strong></td>
+            <td>Object</td>
+            <td>2 ▲</td>
+            <td>Mount Lanayru Peak</td>
+            <td>Summons floating fluffy platforms in mid-air. Allows walking directly across empty skies without falling into rifts.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="echo_chaser">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Chaser</strong></td>
+            <td>Monster</td>
+            <td>3 ▲</td>
+            <td>Gerudo Desert Ruins</td>
+            <td>High-speed mechanical buzzsaw creature that relentlessly tracks down and cuts through armored foes.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="echo_ghini">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Ghini & Wizzrobe</strong></td>
+            <td>Monster</td>
+            <td>3 ▲</td>
+            <td>Graveyard / Mountain Sanctuaries</td>
+            <td>Ghostly spellcaster that phases through solid walls, raining ranged magical energy or elemental blasts on foes.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="page-nav-footer">
+        <button class="pager-btn prev-btn" onclick="showPage('sec_bosses')">← Previous: Boss Strategies</button>
+        <button class="pager-btn next-btn" onclick="showPage('sec_automatons')">Next: Automatons →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 6: DAMPÉ'S AUTOMATONS              -->
+  <!-- ========================================== -->
+  <section class="wiki-section wiki-page" id="sec_automatons" data-category="automatons">
+    <div class="section-header active" onclick="toggleSection(this)">
+      <div class="section-title-group">
+        <span class="section-tag">Section 6</span>
+        <h2>Dampé's Mechanical Automatons (6 Total)</h2>
+      </div>
+      <span class="collapse-arrow">►</span>
+    </div>
+    <div class="section-content">
+      <p>Following the rescue of engineer <strong>Dampé</strong> on the outskirts of Kakariko Village in the side quest <em>Automaton Engineer Dampé</em>, Zelda can commission 6 mechanical wound-up companions. Automatons fight independently without consuming Tri points, but require winding with a key and take damage from enemies.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width: 50px;">Track</th>
+            <th>Automaton Name</th>
+            <th>Associated Quest</th>
+            <th>Required Crafting Parts</th>
+            <th>Mechanical Attack & Ability</th>
+          </tr>
+        </thead>
+        <thead>
+          <tr>
+            <th style="width: 50px;">Track</th>
+            <th>Automaton Name</th>
+            <th>Associated Quest</th>
+            <th>Required Crafting Parts</th>
+            <th>Mechanical Attack & Ability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="mission-row" data-task-id="auto_techtite">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Techtite</strong></td>
+            <td>Automaton Engineer Dampé</td>
+            <td>Tektite Echo + Iron Ore</td>
+            <td>Jumping spider that leaps high into the air and triggers ground shockwaves, stunning groups of enemies.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="auto_tocktorok">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Tocktorok</strong></td>
+            <td>Explosions Galore!</td>
+            <td>Octorok Echo + Firework / Bomb</td>
+            <td>Fires volleys of explosive cannonballs from long range. Highly effective against armored boss plates.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="auto_gizmol">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Gizmol</strong></td>
+            <td>Performance Artist!</td>
+            <td>Zol Echo + Music Box / Prisma</td>
+            <td>Musical rolling automaton that charms nearby wild monsters with melody, preventing them from attacking Zelda.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="auto_high_teku">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>High-Teku</strong></td>
+            <td>Endless Stomach!</td>
+            <td>Deku Baba + Bio-Material</td>
+            <td>Mechanical snapping plant that swallows incoming projectiles and spits them back with multiplied force.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="auto_roboblin">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Roboblin</strong></td>
+            <td>Chop 'em in Two!</td>
+            <td>Sword Moblin + Steel Blade</td>
+            <td>Heavy mechanized biped wielding dual rotating saws that shreds shields and barrier walls.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="auto_goldfinch">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Goldfinch</strong></td>
+            <td>Get Rich Quick!</td>
+            <td>Crow Echo + Golden Fan</td>
+            <td>Mechanical raptor that swoops down on monsters, forcing them to drop bonus Rupees, energy pellets, and crafting items.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="page-nav-footer">
+        <button class="pager-btn prev-btn" onclick="showPage('sec_echoes')">← Previous: Echoes Compendium</button>
+        <button class="pager-btn next-btn" onclick="showPage('sec_heart_pieces')">Next: Pieces of Heart →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 7: PIECES OF HEART GUIDE           -->
+  <!-- ========================================== -->
+  <section class="wiki-section wiki-page" id="sec_heart_pieces" data-category="heart-pieces">
+    <div class="section-header active" onclick="toggleSection(this)">
+      <div class="section-title-group">
+        <span class="section-tag">Section 7</span>
+        <h2>All 40 Pieces of Heart Guide</h2>
+      </div>
+      <span class="collapse-arrow">►</span>
+    </div>
+    <div class="section-content">
+      <p>Collecting <strong>4 Pieces of Heart</strong> forms 1 complete Heart Container, granting 10 additional heart containers overall (maxing out at 20 hearts alongside boss rewards). Track the key regional clusters below:</p>
+
+      <ul class="task-list">
+        <li class="check-item" data-task-id="hp_suthorn_beach_cave">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Suthorn Beach - Tidal Cavern (Piece 1)</div>
+            <div class="task-desc">Use an Ignizol or torch to burn through brambles blocking a sea cave northeast of the shipwreck.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="hp_suthorn_forest_ruins">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Suthorn Forest - Pillar Ruins (Piece 2)</div>
+            <div class="task-desc">Climb the exterior broken column north of Suthorn Village using stacked Old Beds.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="hp_hyrule_field_acorn">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Hyrule Field - Acorn Gathering Game (Piece 3)</div>
+            <div class="task-desc">Complete Jeli's acorn gathering challenge near Eastern Temple in under 40 seconds.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="hp_castle_town_cats">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Hyrule Castle Town - Cat Lady Quest (Piece 4)</div>
+            <div class="task-desc">Wear the Cat Suit to speak with town cats in <em>Questioning the Local Cats</em>; retrieve the lost kitten.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="hp_kakariko_dojo_trial">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Kakariko Village - Slumber Dojo Trial 4 (Piece 5)</div>
+            <div class="task-desc">Complete the fourth meditation combat trial inside the Kakariko Slumber Dojo within the target time.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="hp_gerudo_oasis_dive">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Gerudo Desert - Oasis Depths (Piece 6)</div>
+            <div class="task-desc">Dive into the deep spring at the Gerudo Oasis using the Zora Flippers to open a sunken chest.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="hp_gerudo_sandstorm_chest">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Gerudo Desert - Quicksand Basin (Piece 7)</div>
+            <div class="task-desc">Use Bind on a half-buried treasure chest in the western quicksand basin to yank it to solid rock.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="hp_jabul_cove_grotto">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Zora Cove - Sunken Sea Grotto (Piece 8)</div>
+            <div class="task-desc">Use an underwater Bomb-fish to blast open a coral reef barrier in the southern bay.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="hp_river_zora_waterfall">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">River Zora Village - Hidden Waterfall Niche (Piece 9)</div>
+            <div class="task-desc">Stack Water Blocks behind the main cascading waterfall to reach a hidden elevated cavern.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="hp_eldin_lava_pinnacle">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Eldin Volcano - Magma Spire (Piece 10)</div>
+            <div class="task-desc">Ride lava thermals using a Glider or Flying Tile to reach an isolated rock spire above Goron City.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="hp_faron_lockup_ceiling">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Faron Wetlands - Deku Scrub Lockup (Piece 11)</div>
+            <div class="task-desc">Burn the ceiling spiderweb in the northern cell block to reveal an access hatch to the roof.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="hp_lanayru_glacier_melt">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Mount Lanayru - Glacier Melt (Piece 12)</div>
+            <div class="task-desc">Place three Ignizol slimes around a massive frozen ice block along the western ridge to thaw the heart piece.</div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="page-nav-footer">
+        <button class="pager-btn prev-btn" onclick="showPage('sec_automatons')">← Previous: Automatons</button>
+        <button class="pager-btn next-btn" onclick="showPage('sec_might_crystals')">Next: Might Crystals →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 8: MIGHT CRYSTALS & UPGRADES       -->
+  <!-- ========================================== -->
+  <section class="wiki-section wiki-page" id="sec_might_crystals" data-category="might-crystals">
+    <div class="section-header active" onclick="toggleSection(this)">
+      <div class="section-title-group">
+        <span class="section-tag">Section 8</span>
+        <h2>Might Crystals & Swordfighter Upgrades</h2>
+      </div>
+      <span class="collapse-arrow">►</span>
+    </div>
+    <div class="section-content">
+      <p>There are <strong>150 Might Crystals</strong> hidden across Hyrule's landscape and inside Stilled World rifts. Deliver them to <strong>Lueburry's House</strong> in Suthorn Forest to forge permanent upgrades for your Swordfighter abilities.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width: 50px;">Track</th>
+            <th>Upgrade Discipline</th>
+            <th>Level</th>
+            <th>Crystals Required</th>
+            <th>Combat Enhancement</th>
+          </tr>
+        </thead>
+        <thead>
+          <tr>
+            <th style="width: 50px;">Track</th>
+            <th>Upgrade Discipline</th>
+            <th>Level</th>
+            <th>Crystals Required</th>
+            <th>Combat Enhancement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="mission-row" data-task-id="upg_sword_lv2">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Sword of Might Lv 2</strong></td>
+            <td>Level 2</td>
+            <td>10 Crystals</td>
+            <td>Increases regular slash attack power by 50%; unlocks Spin Attack charge.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="upg_sword_lv3">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Sword of Might Lv 3</strong></td>
+            <td>Level 3 (Max)</td>
+            <td>25 Crystals</td>
+            <td>Max damage tier; fires Sword Beams when Zelda is at full health.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="upg_bow_lv2">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Bow of Might Lv 2</strong></td>
+            <td>Level 2</td>
+            <td>10 Crystals</td>
+            <td>Increases arrow flight speed, damage, and piercing through small shields.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="upg_bow_lv3">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Bow of Might Lv 3</strong></td>
+            <td>Level 3 (Max)</td>
+            <td>20 Crystals</td>
+            <td>Fires a 3-arrow spread shot with one bow draw.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="upg_bombs_lv2">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Bombs of Might Lv 2</strong></td>
+            <td>Level 2</td>
+            <td>10 Crystals</td>
+            <td>Increases blast radius and explosion damage.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="upg_bombs_lv3">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Bombs of Might Lv 3</strong></td>
+            <td>Level 3 (Max)</td>
+            <td>20 Crystals</td>
+            <td>Allows placing up to 3 bombs simultaneously and remote bomb detonator.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="upg_energy_gauge">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Energy Gauge Expansion</strong></td>
+            <td>Level 2 - 4</td>
+            <td>15 / 20 / 30 Crystals</td>
+            <td>Extends total Swordfighter Form duration up to 300% maximum bar length.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="page-nav-footer">
+        <button class="pager-btn prev-btn" onclick="showPage('sec_heart_pieces')">← Previous: Pieces of Heart</button>
+        <button class="pager-btn next-btn" onclick="showPage('sec_stamp_rally')">Next: Stamp Rallies →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 9: STAMP RALLY & GREAT FAIRIES     -->
+  <!-- ========================================== -->
+  <section class="wiki-section wiki-page" id="sec_stamp_rally" data-category="stamp-rally">
+    <div class="section-header active" onclick="toggleSection(this)">
+      <div class="section-title-group">
+        <span class="section-tag">Section 9</span>
+        <h2>Stamp Rallies & Great Fairy Fountains</h2>
+      </div>
+      <span class="collapse-arrow">►</span>
+    </div>
+    <div class="section-content">
+      <p>The eccentric <strong>Stamp Guy</strong> has placed <strong>25 Stamp Stands</strong> on scenic overlooks across Hyrule. Every 5 stamps completed unlocks a filled stamp card reward from his paraglider drops.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width: 50px;">Track</th>
+            <th>Stamp Card</th>
+            <th>Stamps Required</th>
+            <th>Reward Bestowed</th>
+            <th>Reward Description</th>
+          </tr>
+        </thead>
+        <thead>
+          <tr>
+            <th style="width: 50px;">Track</th>
+            <th>Stamp Card</th>
+            <th>Stamps Required</th>
+            <th>Reward Bestowed</th>
+            <th>Reward Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="mission-row" data-task-id="stamp_card_1">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Stamp Card 1</strong></td>
+            <td>5 Stamps</td>
+            <td>Fresh Milk (x10)</td>
+            <td>Premium ingredient for smoothie blending and stamina restoration.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="stamp_card_2">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Stamp Card 2</strong></td>
+            <td>10 Stamps</td>
+            <td>Golden Egg (x3)</td>
+            <td>Ultra-rare cooking component that triples heart and energy recovery buffs.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="stamp_card_3">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Stamp Card 3</strong></td>
+            <td>15 Stamps</td>
+            <td>Fairy Bottle</td>
+            <td>Allows catching and carrying a revival fairy that prevents game over.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="stamp_card_4">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Stamp Card 4</strong></td>
+            <td>20 Stamps</td>
+            <td>Might Crystals (x10)</td>
+            <td>Instant bonus bundle for Lueburry's upgrade forge.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="stamp_card_5">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Stamp Card 5 (Mastery)</strong></td>
+            <td>25 Stamps (All)</td>
+            <td>Stamp Suit</td>
+            <td>Special cosmetic costume for Zelda honoring the Stamp Guy.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="color: var(--tri-gold); margin: 24px 0 10px 0;">Great Fairy Fountain Accessory Expansions</h3>
+      <p>Located in Lake Hylia, the Great Fairy expands Zelda's equippable accessory capacity in exchange for Rupees:</p>
+      <ul>
+        <li><strong>Slot 2:</strong> 100 Rupees</li>
+        <li><strong>Slot 3:</strong> 300 Rupees</li>
+        <li><strong>Slot 4:</strong> 500 Rupees</li>
+        <li><strong>Slot 5 (Max):</strong> 1,000 Rupees</li>
+      </ul>
+
+      <div class="page-nav-footer">
+        <button class="pager-btn prev-btn" onclick="showPage('sec_might_crystals')">← Previous: Might Crystals</button>
+        <button class="pager-btn next-btn" onclick="showPage('sec_accessories')">Next: Accessories →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 10: ACCESSORIES & OUTFITS          -->
+  <!-- ========================================== -->
+  <section class="wiki-section wiki-page" id="sec_accessories" data-category="accessories">
+    <div class="section-header active" onclick="toggleSection(this)">
+      <div class="section-title-group">
+        <span class="section-tag">Section 10</span>
+        <h2>Accessories & Equippable Outfits (28 Total)</h2>
+      </div>
+      <span class="collapse-arrow">►</span>
+    </div>
+    <div class="section-content">
+      <p>Equipping accessories provides passive movement, defensive, and economic advantages. Combine these with specialized thematic outfits unlocked throughout the adventure.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width: 50px;">Track</th>
+            <th>Item Name</th>
+            <th>Type</th>
+            <th>Location / Unlock Quest</th>
+            <th>Passive Effect</th>
+          </tr>
+        </thead>
+        <thead>
+          <tr>
+            <th style="width: 50px;">Track</th>
+            <th>Item Name</th>
+            <th>Type</th>
+            <th>Location / Unlock Quest</th>
+            <th>Passive Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="mission-row" data-task-id="acc_frog_ring">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Frog Ring</strong></td>
+            <td>Accessory</td>
+            <td>Hyrule Castle Town Shop (200 R)</td>
+            <td>Increases Zelda's jump height by one full block level, easing platforming.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="acc_zora_flippers">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Zora Flippers</strong></td>
+            <td>Accessory</td>
+            <td>River Zora Village Shop (350 R)</td>
+            <td>Dramatically boosts swimming velocity and grants underwater breath longevity.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="acc_goron_bracelet">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Goron Bracelet</strong></td>
+            <td>Accessory</td>
+            <td>Goron City Shop (400 R)</td>
+            <td>Allows carrying and throwing heavy objects at normal walking speed.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="acc_curious_charm">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Curious Charm</strong></td>
+            <td>Accessory</td>
+            <td>Kakariko Slumber Dojo 8th Trial</td>
+            <td>Decreases damage sustained from enemy attacks by 25%.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="acc_fairy_fragrance">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Fairy Fragrance</strong></td>
+            <td>Accessory</td>
+            <td>Faron Wetlands Side Quest</td>
+            <td>Attracts recovery hearts and energy pellets from further distances.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="acc_disguise_hood">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Disguise Hood</strong></td>
+            <td>Outfit</td>
+            <td>Prologue Escape</td>
+            <td>Zelda's traveler cloaking cloak concealing her royal identity.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="acc_cat_suit">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Cat Suit</strong></td>
+            <td>Outfit</td>
+            <td>Kakariko Village Side Quest</td>
+            <td>Allows speaking directly with all domestic and stray cats across Hyrule.</td>
+          </tr>
+          <tr class="mission-row" data-task-id="acc_silk_pajamas">
+            <td><input type="checkbox" onchange="updateMission(this)"></td>
+            <td class="mission-name"><strong>Silk Pajamas</strong></td>
+            <td>Outfit</td>
+            <td>Gerudo Town Boutique</td>
+            <td>Doubles heart restoration rate when resting in bed Echoes.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="page-nav-footer">
+        <button class="pager-btn prev-btn" onclick="showPage('sec_stamp_rally')">← Previous: Stamp Rallies</button>
+        <button class="pager-btn next-btn" onclick="showPage('sec_smoothies')">Next: Smoothies →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 11: SMOOTHIES & POTIONS COOKBOOK   -->
+  <!-- ========================================== -->
+  <section class="wiki-section wiki-page" id="sec_smoothies" data-category="smoothies">
+    <div class="section-header active" onclick="toggleSection(this)">
+      <div class="section-title-group">
+        <span class="section-tag">Section 11</span>
+        <h2>Smoothies & Potions Cookbook (69 Recipes)</h2>
+      </div>
+      <span class="collapse-arrow">►</span>
+    </div>
+    <div class="section-content">
+      <p>Business Scrubs run Smoothie Stalls across every region. Combining 2 ingredients produces 1 of 69 distinct juices that provide health, energy, and temporary status buffs.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Smoothie Name</th>
+            <th>Primary Ingredients</th>
+            <th>Health / Energy Recovery</th>
+            <th>Special Buff Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Chilly Smoothie</strong></td>
+            <td>Cactus Fruit + Riverhorse</td>
+            <td>5 Hearts + 1 Energy Bar</td>
+            <td>Grants 3 Minutes of Heat Resistance (Eldin Volcano / Desert).</td>
+          </tr>
+          <tr>
+            <td><strong>Piping-Hot Smoothie</strong></td>
+            <td>Warm Pepper + Refreshing Grapes</td>
+            <td>5 Hearts + 1 Energy Bar</td>
+            <td>Grants 3 Minutes of Cold Resistance (Mount Lanayru Peak).</td>
+          </tr>
+          <tr>
+            <td><strong>Tough Smoothie</strong></td>
+            <td>Tough Mango + Iron Ore</td>
+            <td>8 Hearts + 2 Energy Bars</td>
+            <td>Increases defense, halving enemy damage for 2 minutes.</td>
+          </tr>
+          <tr>
+            <td><strong>Quick Smoothie</strong></td>
+            <td>Electro Apple + Swift Carrot</td>
+            <td>6 Hearts + 2 Energy Bars</td>
+            <td>Increases movement and swimming speed by 50% for 3 minutes.</td>
+          </tr>
+          <tr>
+            <td><strong>Golden Smoothie</strong></td>
+            <td>Golden Egg + Any Fruit</td>
+            <td>Full 20 Hearts + Full Energy</td>
+            <td>Ultimate elixir restoring all life, max sword energy, and 5-min resistance.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="page-nav-footer">
+        <button class="pager-btn prev-btn" onclick="showPage('sec_accessories')">← Previous: Accessories</button>
+        <button class="pager-btn next-btn" onclick="showPage('sec_side_quests')">Next: Mini-Quests →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 12: HYRULE MINI-QUESTS & DOJO      -->
+  <!-- ========================================== -->
+  <section class="wiki-section wiki-page" id="sec_side_quests" data-category="side-quests">
+    <div class="section-header active" onclick="toggleSection(this)">
+      <div class="section-title-group">
+        <span class="section-tag">Section 12</span>
+        <h2>Hyrule Side Quests & Slumber Dojo</h2>
+      </div>
+      <span class="collapse-arrow">►</span>
+    </div>
+    <div class="section-content">
+      <p>Hyrule features over 50 mini-quests distributed across every major town, outpost, and faction settlement. Complete these requests to unlock rare accessories, outfits, and stamps.</p>
+
+      <ul class="task-list">
+        <li class="check-item" data-task-id="sq_find_flying_plant">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Find the Flying Plant (Suthorn Village)</div>
+            <div class="task-desc">Show the elderly villager a Peahat Echo from the forest cave to receive 10 Might Crystals.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="sq_runaway_horse">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Runaway Horse (Royal Pastures)</div>
+            <div class="task-desc">Find the runaway stallion stranded on an island in western Hyrule Field; build a crate bridge to lead it home.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="sq_cuccos_on_loose">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Cuccos on the Loose (Kakariko Village)</div>
+            <div class="task-desc">Catch and return all 5 runaway Cuccos into the pen before the timer runs out.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="sq_questioning_cats">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Questioning the Local Cats (Castle Town)</div>
+            <div class="task-desc">Equip the Cat Suit to speak with town cats, discover the whereabouts of the lost kitten, and return it.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="sq_flames_of_fortune">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">The Flames of Fortune (Goron City)</div>
+            <div class="task-desc">Carry the holy prayer coal across Eldin's rocky ridges to the shrine without dropping it in lava.</div>
+          </div>
+        </li>
+        <li class="check-item" data-task-id="sq_slumber_dojo_mastery">
+          <input type="checkbox" onchange="updateTask(this)">
+          <div class="task-body">
+            <div class="task-title">Kakariko Slumber Dojo: Conquer All 12 Meditations</div>
+            <div class="task-desc">Complete all 12 combat meditation trials under restricted Echo conditions to earn the Master's Belt.</div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="page-nav-footer">
+        <button class="pager-btn prev-btn" onclick="showPage('sec_smoothies')">← Previous: Smoothies</button>
+        <div></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  // Safe Storage wrapper for restricted content:// or file:// origins
+  const safeStorage = {
+    get: function(key) {
+      try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+          return localStorage.getItem(key);
+        }
+      } catch (e) {
+        console.warn('Storage read restricted', e);
+      }
+      return null;
+    },
+    set: function(key, val) {
+      try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+          localStorage.setItem(key, val);
+        }
+      } catch (e) {
+        console.warn('Storage write restricted', e);
+      }
+    }
+  };
+
+  const PAGE_ORDER = [
+    'sec_getting_started',
+    'sec_main_story',
+    'sec_dungeons',
+    'sec_bosses',
+    'sec_echoes',
+    'sec_automatons',
+    'sec_heart_pieces',
+    'sec_might_crystals',
+    'sec_stamp_rally',
+    'sec_accessories',
+    'sec_smoothies',
+    'sec_side_quests'
+  ];
+
+  // Section Collapse/Expand inside pages
+  function toggleSection(headerEl) {
+    headerEl.classList.toggle('active');
+    const content = headerEl.nextElementSibling;
+    if (content) {
+      content.classList.toggle('collapsed');
+    }
+    updateToggleAllBtn();
+    saveWikiState();
+  }
+
+  function toggleAllSections() {
+    const headers = document.querySelectorAll('.section-header');
+    const toggleBtn = document.getElementById('toggleAllBtn');
+    const isCollapsing = toggleBtn ? toggleBtn.textContent.includes('Collapse All') : false;
+
+    headers.forEach(header => {
+      const content = header.nextElementSibling;
+      if (content) {
+        if (isCollapsing) {
+          header.classList.remove('active');
+          content.classList.add('collapsed');
+        } else {
+          header.classList.add('active');
+          content.classList.remove('collapsed');
+        }
+      }
+    });
+
+    if (toggleBtn) {
+      toggleBtn.textContent = isCollapsing ? 'Expand All ▸' : 'Collapse All ▾';
+    }
+    saveWikiState();
+  }
+
+  function updateToggleAllBtn() {
+    const headers = document.querySelectorAll('.section-header');
+    const toggleBtn = document.getElementById('toggleAllBtn');
+    if (!toggleBtn) return;
+    let anyExpanded = false;
+    headers.forEach(header => {
+      if (header.classList.contains('active')) anyExpanded = true;
+    });
+    toggleBtn.textContent = anyExpanded ? 'Collapse All ▾' : 'Expand All ▸';
+  }
+
+  // Multi-Page Switcher
+  function showPage(pageId, scrollToTop = true) {
+    if (!PAGE_ORDER.includes(pageId)) return;
+
+    // Reset view-all mode
+    document.body.classList.remove('view-all-mode');
+    const viewAllBtn = document.getElementById('viewAllToggleBtn');
+    if (viewAllBtn) {
+      viewAllBtn.classList.remove('active');
+      viewAllBtn.textContent = '📄 View All Sections';
+    }
+
+    // Hide all pages
+    const pages = document.querySelectorAll('.wiki-page');
+    pages.forEach(p => {
+      p.classList.remove('active-page');
+      p.style.display = 'none';
+    });
+
+    // Display selected page
+    const target = document.getElementById(pageId);
+    if (target) {
+      target.classList.add('active-page');
+      target.style.display = 'block';
+    }
+
+    // Update active tab buttons
+    document.querySelectorAll('.page-tab').forEach(tab => {
+      if (tab.getAttribute('data-page-id') === pageId) {
+        tab.classList.add('active');
+      } else {
+        tab.classList.remove('active');
+      }
+    });
+
+    // Update mobile select
+    const dropdown = document.getElementById('pageSelectDropdown');
+    if (dropdown) dropdown.value = pageId;
+
+    // Save active page safely
+    safeStorage.set('eow_wiki_active_page', pageId);
+
+    // Update URL hash safely without jump
+    try {
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, null, '#' + pageId);
+      }
+    } catch (e) {}
+
+    // Scroll smoothly to navigation header
+    if (scrollToTop) {
+      const container = document.querySelector('.page-tabs-container');
+      if (container) {
+        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
+
+  function toggleViewAllPages() {
+    const isViewAll = document.body.classList.toggle('view-all-mode');
+    const btn = document.getElementById('viewAllToggleBtn');
+    const pages = document.querySelectorAll('.wiki-page');
+
+    if (isViewAll) {
+      if (btn) {
+        btn.classList.add('active');
+        btn.textContent = '📑 Single Section View';
+      }
+      document.querySelectorAll('.page-tab').forEach(t => t.classList.remove('active'));
+      pages.forEach(p => {
+        p.style.display = 'block';
+        p.classList.add('active-page');
+      });
+    } else {
+      if (btn) {
+        btn.classList.remove('active');
+        btn.textContent = '📄 View All Sections';
+      }
+      const saved = safeStorage.get('eow_wiki_active_page') || 'sec_getting_started';
+      showPage(saved, false);
+    }
+  }
+
+  // Real-time Global Search across all sections
+  function handleSearch() {
+    const searchInput = document.getElementById('wikiSearch');
+    if (!searchInput) return;
+    const q = searchInput.value.toLowerCase().trim();
+    const pages = document.querySelectorAll('.wiki-page');
+    const viewAllBtn = document.getElementById('viewAllToggleBtn');
+
+    if (!q) {
+      const saved = safeStorage.get('eow_wiki_active_page') || 'sec_getting_started';
+      showPage(saved, false);
+      return;
+    }
+
+    document.body.classList.add('view-all-mode');
+    if (viewAllBtn) {
+      viewAllBtn.classList.add('active');
+      viewAllBtn.textContent = '📑 Single Section View';
+    }
+
+    pages.forEach(page => {
+      const text = page.textContent.toLowerCase();
+      if (text.includes(q)) {
+        page.style.display = 'block';
+        const header = page.querySelector('.section-header');
+        const content = page.querySelector('.section-content');
+        if (header && content) {
+          header.classList.add('active');
+          content.classList.remove('collapsed');
+        }
+      } else {
+        page.style.display = 'none';
+      }
+    });
+    updateToggleAllBtn();
+  }
+
+  // Interactive Checklist & Progress Tracking
+  function updateTask(checkboxEl) {
+    const checkItem = checkboxEl.closest('.check-item');
+    if (checkItem) {
+      if (checkboxEl.checked) {
+        checkItem.classList.add('done');
+      } else {
+        checkItem.classList.remove('done');
+      }
+    }
+    updateProgressStats();
+    saveWikiState();
+  }
+
+  function updateMission(checkboxEl) {
+    const row = checkboxEl.closest('tr');
+    if (row) {
+      if (checkboxEl.checked) {
+        row.classList.add('done');
+      } else {
+        row.classList.remove('done');
+      }
+    }
+    updateProgressStats();
+    saveWikiState();
+  }
+
+  function updateProgressStats() {
+    const allChecks = document.querySelectorAll('input[type="checkbox"]');
+    const total = allChecks.length;
+    let checked = 0;
+    allChecks.forEach(cb => { if (cb.checked) checked++; });
+
+    const pct = total > 0 ? Math.round((checked / total) * 100) : 0;
+    const bar = document.getElementById('progressBar');
+    if (bar) bar.style.width = pct + '%';
+    
+    const statsText = document.getElementById('progressStats');
+    if (statsText) {
+      statsText.textContent = `Checklist Progress: ${checked} / ${total} completed (${pct}%)`;
+    }
+  }
+
+  // Persistent State in Safe Storage
+  function saveWikiState() {
+    const checkedIds = [];
+    document.querySelectorAll('[data-task-id]').forEach(el => {
+      const cb = el.querySelector('input[type="checkbox"]');
+      if (cb && cb.checked) {
+        checkedIds.push(el.getAttribute('data-task-id'));
+      }
+    });
+    safeStorage.set('eow_wiki_tasks', JSON.stringify(checkedIds));
+
+    const collapsedSecs = [];
+    document.querySelectorAll('.wiki-section').forEach(sec => {
+      const secId = sec.getAttribute('id');
+      const content = sec.querySelector('.section-content');
+      if (secId && content && content.classList.contains('collapsed')) {
+        collapsedSecs.push(secId);
+      }
+    });
+    safeStorage.set('eow_wiki_collapsed_sections', JSON.stringify(collapsedSecs));
+  }
+
+  function loadWikiState() {
+    const savedTasks = safeStorage.get('eow_wiki_tasks');
+    if (savedTasks) {
+      try {
+        const checkedIds = JSON.parse(savedTasks);
+        if (Array.isArray(checkedIds)) {
+          checkedIds.forEach(id => {
+            const el = document.querySelector(`[data-task-id="${id}"]`);
+            if (el) {
+              const cb = el.querySelector('input[type="checkbox"]');
+              if (cb) {
+                cb.checked = true;
+                el.classList.add('done');
+                const row = el.closest('tr');
+                if (row) row.classList.add('done');
+              }
+            }
+          });
+        }
+      } catch (e) {
+        console.warn('Error loading saved tasks', e);
+      }
+    }
+
+    const savedSections = safeStorage.get('eow_wiki_collapsed_sections');
+    if (savedSections) {
+      try {
+        const collapsedSecs = JSON.parse(savedSections);
+        if (Array.isArray(collapsedSecs)) {
+          document.querySelectorAll('.wiki-section').forEach(sec => {
+            const secId = sec.getAttribute('id');
+            const header = sec.querySelector('.section-header');
+            const content = sec.querySelector('.section-content');
+            if (secId && header && content) {
+              if (collapsedSecs.includes(secId)) {
+                header.classList.remove('active');
+                content.classList.add('collapsed');
+              } else {
+                header.classList.add('active');
+                content.classList.remove('collapsed');
+              }
+            }
+          });
+        }
+      } catch (e) {
+        console.warn('Error loading saved sections', e);
+      }
+    }
+
+    updateProgressStats();
+  }
+
+  // Initialization
+  function initWiki() {
+    loadWikiState();
+
+    let initialPage = 'sec_getting_started';
+    try {
+      const hash = window.location.hash ? window.location.hash.substring(1) : null;
+      if (hash && PAGE_ORDER.includes(hash)) {
+        initialPage = hash;
+      } else {
+        const saved = safeStorage.get('eow_wiki_active_page');
+        if (saved && PAGE_ORDER.includes(saved)) {
+          initialPage = saved;
+        }
+      }
+    } catch (e) {}
+
+    showPage(initialPage, false);
+  }
+
+  if (document.readyState === 'loading') {
+    window.addEventListener('DOMContentLoaded', initWiki);
+  } else {
+    initWiki();
+  }
+</script>
+</body>
+</html>
