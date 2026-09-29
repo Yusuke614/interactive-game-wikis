@@ -2,7 +2,7 @@
 
 A curated collection of offline-capable, interactive single-page application (SPA) game wikis, walkthrough guides, and mechanics references for the **Assassin's Creed** franchise. Grounded directly on authoritative IGN walkthrough sequences, synchronization constraints, and the Abstergo Animus database, with persistent task tracking, live search, and franchise-specific aesthetics.
 
-🌐 **Franchise Hub Portal:** [index.html](https://drive.google.com/file/d/1KnkZRR5am9gI5wDGUqSfgX7y_RiHDurc/view?usp=drivesdk)
+🌐 **Franchise Hub Portal:** [index.html](index.html)
 
 ---
 
