@@ -2,8 +2,6 @@
 
 An interactive, single-page completion guide and mechanics reference for **Assassin's Creed IV: Black Flag Resynced**. Grounded directly on the official IGN walkthrough sequence and styled with the authentic aesthetic of the Caribbean Golden Age of Piracy and the Abstergo Animus interface.
 
-🌐 **Franchise Hub Portal:** [index.html](../index.html)
-
 ---
 
 ## ⚓ Overview & Quick Specs
