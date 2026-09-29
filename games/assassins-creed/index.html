@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assassin's Creed • Franchise Portal & Guidebook Hub</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Assassin's Creed • Franchise Portal &amp; Guidebook Hub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&amp;family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --bg-dark: #040e13;
       --bg-card: rgba(11, 31, 40, 0.88);
@@ -134,40 +135,11 @@
       background: rgba(0, 212, 230, 0.1);
       border-color: rgba(0, 212, 230, 0.3);
     }
-    .mode-toggle-group {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: #06141c;
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      padding: 3px;
-    }
-    .mode-label {
-      font-size: 0.72rem;
-      color: var(--text-dim);
-      font-weight: 600;
-      padding-left: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .mode-btn {
-      background: transparent;
-      border: none;
-      color: var(--text-muted);
-      font-size: 0.76rem;
-      font-weight: 600;
-      padding: 5px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .mode-btn:hover { color: #fff; }
-    .mode-btn.active {
-      background: #0f2b38;
-      color: var(--accent-cyan);
-      border: 1px solid rgba(0, 212, 230, 0.4);
-    }
+    
+    
+    
+    
+    
 
     /* Hero Banner */
     .hero-banner {
@@ -617,211 +589,178 @@
   </style>
 </head>
 <body>
-
-  <!-- Navigation Bar -->
-  <header class="top-nav">
-    <div class="portal-container top-nav-inner">
-      <div class="brand-group">
-        <span class="brand-icon">⚓</span>
-        <span class="brand-title">Assassin's Creed</span>
-        <span class="brand-badge">Franchise Hub</span>
-      </div>
-
-      <!-- Actions & Mode Switcher -->
-      <div class="nav-actions-group">
-        <div class="nav-breadcrumb-links">
-          <a id="link_master_portal" href="https://drive.google.com/file/d/1ImvMVRxTst2lnkwxxJgCnGtWGbvueLUk/view?usp=drivesdk" class="nav-link-btn" title="Back to All Games Master Hub">
-            <span>🌐</span> Master Hub
+<!-- Navigation Bar -->
+<header class="top-nav">
+<div class="portal-container top-nav-inner">
+<div class="brand-group">
+<span class="brand-icon">⚓</span>
+<span class="brand-title">Assassin's Creed</span>
+<span class="brand-badge">Franchise Hub</span>
+</div>
+<!-- Actions & Mode Switcher -->
+<div class="nav-actions-group">
+<div class="nav-breadcrumb-links">
+<a class="nav-link-btn" href="../../index.html" id="link_master_portal" title="Back to All Games Master Hub">
+<span>🌐</span> Master Hub
           </a>
-          <a id="link_top_ac_folder" href="https://drive.google.com/drive/folders/13RblzI5E1_uyMM1ACDl_ut_QbL2Olq0D" target="_blank" class="nav-link-btn" title="Open Assassin's Creed Franchise Folder">
-            <span>🗂️</span> AC Folder
-          </a>
-        </div>
 
-        <div class="mode-toggle-group">
-          <span class="mode-label">Link Mode:</span>
-          <button class="mode-btn active" id="btnModeDrive" onclick="setLinkMode('drive')">Google Drive</button>
-          <button class="mode-btn" id="btnModeWeb" onclick="setLinkMode('web')">Web / Local</button>
-        </div>
+</div>
+
+</div>
+</div>
+</header>
+<main class="portal-container">
+<!-- Hero Section -->
+<section class="hero-banner">
+<div class="hero-badge-pill">
+<span>⚔️</span> Dedicated Franchise Portal • 100% Synchronization &amp; Naval Warfare
       </div>
-    </div>
-  </header>
-
-  <main class="portal-container">
-
-    <!-- Hero Section -->
-    <section class="hero-banner">
-      <div class="hero-badge-pill">
-        <span>⚔️</span> Dedicated Franchise Portal • 100% Synchronization &amp; Naval Warfare
-      </div>
-      <h1 class="hero-title">Assassin's Creed Guidebook Hub</h1>
-      <p class="hero-subtitle">
+<h1 class="hero-title">Assassin's Creed Guidebook Hub</h1>
+<p class="hero-subtitle">
         A centralized collection of interactive completion guides, naval upgrade trees, legendary ship strategies, and modern-day Animus Rift solutions for the <strong>Assassin's Creed</strong> series. Built in pure HTML5, CSS3, and vanilla JavaScript with persistent task tracking and authentic naval HUD design.
       </p>
-
-      <!-- Global Metrics -->
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <div class="metric-val">116 <span>tasks</span></div>
-          <div class="metric-lbl">Trackable Checklist Items</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-val">12 <span>sections</span></div>
-          <div class="metric-lbl">IGN Walkthrough Modules</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-val">5 <span>officers</span></div>
-          <div class="metric-lbl">Jackdaw Specialists &amp; Perks</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-val">4 <span>rifts</span></div>
-          <div class="metric-lbl">Animus Puzzles &amp; EGO Nodes</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Controls Bar -->
-    <section class="controls-bar">
-      <div class="filter-tags">
-        <button class="filter-btn active" data-filter="all" onclick="filterAC('all')">All Guides (2)</button>
-        <button class="filter-btn" data-filter="active" onclick="filterAC('active')">Active Release (v15) (1)</button>
-        <button class="filter-btn" data-filter="archive" onclick="filterAC('archive')">Archive Revisions (1)</button>
-      </div>
-
-      <div class="search-wrapper">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="acSearch" class="search-input" placeholder="Search memories, Jackdaw upgrades, legendary ships..." oninput="handleSearch(this.value)">
-      </div>
-    </section>
-
-    <!-- Guide Cards Grid -->
-    <div class="guides-grid" id="guidesGrid">
-
-      <!-- Guide 1: AC Black Flag Resynced (Active Release v15) -->
-      <article class="guide-card theme-v15" data-category="active" data-keywords="assassins creed iv black flag resynced pirate jackdaw naval edward kenway animus 100% sync legendary ships templar rifts v15 active">
-        <div>
-          <div class="card-top">
-            <span class="card-franchise-tag">⚓ Golden Age of Piracy</span>
-            <span class="card-version-badge">Release v15 • Active</span>
-          </div>
-          <h2 class="card-title">Assassin's Creed IV: Black Flag Resynced</h2>
-          <p class="card-subtitle">Complete IGN-grounded completion walkthrough, naval upgrade matrix, specialist officers, legendary ship tactics, Mayan &amp; Templar armors, and Animus Rift puzzles.</p>
-
-          <div class="card-pills">
-            <span class="pill">12 IGN Sections</span>
-            <span class="pill">116 Checkable Tasks</span>
-            <span class="pill">Naval Combat</span>
-            <span class="pill">Legendary Ships</span>
-            <span class="pill">5 Officers</span>
-            <span class="pill">4 Rifts &amp; EGO</span>
-          </div>
-
-          <div class="card-specs">
-            <div class="specs-grid">
-              <div class="spec-item">
-                <span class="spec-label">Trackable Progress</span>
-                <span class="spec-value" style="color: #f3a829;">116 Tasks</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Platform Focus</span>
-                <span class="spec-value">PC / Console</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Naval Officers</span>
-                <span class="spec-value">5 Specialists</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Story Scope</span>
-                <span class="spec-value">Seq 1–13 + 8 Epilogues</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-actions">
-          <a id="link_ac_launch" href="https://drive.google.com/file/d/1H43bHbvZ9TJtsXa0ie1qiSR2pofmBFJz/view?usp=drivesdk" target="_blank" class="btn-launch">
-            <span>⚔️</span> Launch Interactive Guide
+<!-- Global Metrics -->
+<div class="metrics-grid">
+<div class="metric-card">
+<div class="metric-val">116 <span>tasks</span></div>
+<div class="metric-lbl">Trackable Checklist Items</div>
+</div>
+<div class="metric-card">
+<div class="metric-val">12 <span>sections</span></div>
+<div class="metric-lbl">IGN Walkthrough Modules</div>
+</div>
+<div class="metric-card">
+<div class="metric-val">5 <span>officers</span></div>
+<div class="metric-lbl">Jackdaw Specialists &amp; Perks</div>
+</div>
+<div class="metric-card">
+<div class="metric-val">4 <span>rifts</span></div>
+<div class="metric-lbl">Animus Puzzles &amp; EGO Nodes</div>
+</div>
+</div>
+</section>
+<!-- Controls Bar -->
+<section class="controls-bar">
+<div class="filter-tags">
+<button class="filter-btn active" data-filter="all" onclick="filterAC('all')">All Guides (2)</button>
+<button class="filter-btn" data-filter="active" onclick="filterAC('active')">Active Release (v15) (1)</button>
+<button class="filter-btn" data-filter="archive" onclick="filterAC('archive')">Archive Revisions (1)</button>
+</div>
+<div class="search-wrapper">
+<span class="search-icon">🔍</span>
+<input class="search-input" id="acSearch" oninput="handleSearch(this.value)" placeholder="Search memories, Jackdaw upgrades, legendary ships..." type="text"/>
+</div>
+</section>
+<!-- Guide Cards Grid -->
+<div class="guides-grid" id="guidesGrid">
+<!-- Guide 1: AC Black Flag Resynced (Active Release v15) -->
+<article class="guide-card theme-v15" data-category="active" data-keywords="assassins creed iv black flag resynced pirate jackdaw naval edward kenway animus 100% sync legendary ships templar rifts v15 active">
+<div>
+<div class="card-top">
+<span class="card-franchise-tag">⚓ Golden Age of Piracy</span>
+<span class="card-version-badge">Release v15 • Active</span>
+</div>
+<h2 class="card-title">Assassin's Creed IV: Black Flag Resynced</h2>
+<p class="card-subtitle">Complete IGN-grounded completion walkthrough, naval upgrade matrix, specialist officers, legendary ship tactics, Mayan &amp; Templar armors, and Animus Rift puzzles.</p>
+<div class="card-pills">
+<span class="pill">12 IGN Sections</span>
+<span class="pill">116 Checkable Tasks</span>
+<span class="pill">Naval Combat</span>
+<span class="pill">Legendary Ships</span>
+<span class="pill">5 Officers</span>
+<span class="pill">4 Rifts &amp; EGO</span>
+</div>
+<div class="card-specs">
+<div class="specs-grid">
+<div class="spec-item">
+<span class="spec-label">Trackable Progress</span>
+<span class="spec-value" style="color: #f3a829;">116 Tasks</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Platform Focus</span>
+<span class="spec-value">PC / Console</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Naval Officers</span>
+<span class="spec-value">5 Specialists</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Story Scope</span>
+<span class="spec-value">Seq 1–13 + 8 Epilogues</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card-actions">
+<a class="btn-launch" href="black-flag-resynced/Assassin's Creed Black Flag Resynced Wiki_v15.html" id="link_ac_launch" target="_blank">
+<span>⚔️</span> Launch Interactive Guide
           </a>
-          <div class="secondary-links">
-            <a id="link_ac_drive" href="https://drive.google.com/file/d/1H43bHbvZ9TJtsXa0ie1qiSR2pofmBFJz/view?usp=drivesdk" target="_blank" class="btn-secondary">
-              📁 Drive File
-            </a>
-            <a id="link_ac_readme" href="https://drive.google.com/file/d/1W93md4TrnzJb7hT_-spKPwNuoNWr9IKl/view?usp=drivesdk" target="_blank" class="btn-secondary">
+<div class="secondary-links">
+
+<a class="btn-secondary" href="black-flag-resynced/README.md" id="link_ac_readme" target="_blank">
               📄 README.md
             </a>
-            <a id="link_v15_folder" href="https://drive.google.com/drive/folders/11WygZ7Mt5coMjf9fAE2LNLjPnzFu0iUS" target="_blank" class="btn-secondary" title="Open Black Flag Resynced Game Folder">
-              🗂️ Game Folder
-            </a>
-          </div>
-        </div>
-      </article>
 
-      <!-- Guide 2: Historical Archive (Release v14) -->
-      <article class="guide-card theme-v14" data-category="archive" data-keywords="assassins creed iv black flag resynced pirate jackdaw naval edward kenway v14 archive milestone">
-        <div>
-          <div class="card-top">
-            <span class="card-franchise-tag">📦 Historical Archive</span>
-            <span class="card-version-badge">Milestone v14</span>
-          </div>
-          <h2 class="card-title">Black Flag Resynced (v14 Archive)</h2>
-          <p class="card-subtitle">Previous stable release milestone of the comprehensive Black Flag Resynced completion guide preserved for version continuity and offline archival.</p>
-
-          <div class="card-pills">
-            <span class="pill">Preserved Milestone</span>
-            <span class="pill">12 Walkthrough Modules</span>
-            <span class="pill">Complete Naval Tree</span>
-            <span class="pill">Full Offline SPA</span>
-          </div>
-
-          <div class="card-specs">
-            <div class="specs-grid">
-              <div class="spec-item">
-                <span class="spec-label">Version Status</span>
-                <span class="spec-value" style="color: #00d4e6;">Archive v14</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Platform Focus</span>
-                <span class="spec-value">PC / Console</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Source Sequence</span>
-                <span class="spec-value">IGN Walkthrough</span>
-              </div>
-              <div class="spec-item">
-                <span class="spec-label">Format</span>
-                <span class="spec-value">Standalone HTML</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-actions">
-          <a id="link_v14_launch" href="https://drive.google.com/file/d/1_h6qZ2URE6TdWPA_EeGCSLOifAh3-huv/view?usp=drivesdk" target="_blank" class="btn-launch">
-            <span>📜</span> Launch v14 Archive
+</div>
+</div>
+</article>
+<!-- Guide 2: Historical Archive (Release v14) -->
+<article class="guide-card theme-v14" data-category="archive" data-keywords="assassins creed iv black flag resynced pirate jackdaw naval edward kenway v14 archive milestone">
+<div>
+<div class="card-top">
+<span class="card-franchise-tag">📦 Historical Archive</span>
+<span class="card-version-badge">Milestone v14</span>
+</div>
+<h2 class="card-title">Black Flag Resynced (v14 Archive)</h2>
+<p class="card-subtitle">Previous stable release milestone of the comprehensive Black Flag Resynced completion guide preserved for version continuity and offline archival.</p>
+<div class="card-pills">
+<span class="pill">Preserved Milestone</span>
+<span class="pill">12 Walkthrough Modules</span>
+<span class="pill">Complete Naval Tree</span>
+<span class="pill">Full Offline SPA</span>
+</div>
+<div class="card-specs">
+<div class="specs-grid">
+<div class="spec-item">
+<span class="spec-label">Version Status</span>
+<span class="spec-value" style="color: #00d4e6;">Archive v14</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Platform Focus</span>
+<span class="spec-value">PC / Console</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Source Sequence</span>
+<span class="spec-value">IGN Walkthrough</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Format</span>
+<span class="spec-value">Standalone HTML</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card-actions">
+<a class="btn-launch" href="black-flag-resynced/Assassin's Creed Black Flag Resynced Wiki_v14.html" id="link_v14_launch" target="_blank">
+<span>📜</span> Launch v14 Archive
           </a>
-          <div class="secondary-links">
-            <a id="link_v14_drive" href="https://drive.google.com/file/d/1_h6qZ2URE6TdWPA_EeGCSLOifAh3-huv/view?usp=drivesdk" target="_blank" class="btn-secondary">
-              📁 Drive File
-            </a>
-            <a id="link_v14_folder" href="https://drive.google.com/drive/folders/11WygZ7Mt5coMjf9fAE2LNLjPnzFu0iUS" target="_blank" class="btn-secondary" title="Open Black Flag Resynced Game Folder">
-              🗂️ Game Folder
-            </a>
-          </div>
-        </div>
-      </article>
+<div class="secondary-links">
 
-    </div>
 
-    <!-- Franchise Architecture & Deployment Drawer -->
-    <section class="repo-info-box">
-      <div class="repo-info-header" onclick="toggleRepoInfo()">
-        <h3><span>📁</span> Franchise Architecture &amp; Folder Hierarchy</h3>
-        <span class="toggle-arrow" id="repoToggleArrow">▾</span>
-      </div>
-      <div class="repo-info-body" id="repoInfoBody">
-        <div class="info-pane">
-          <h4>Assassin's Creed Directory Structure</h4>
-          <pre>Assassin's Creed/
+</div>
+</div>
+</article>
+</div>
+<!-- Franchise Architecture & Deployment Drawer -->
+<section class="repo-info-box">
+<div class="repo-info-header" onclick="toggleRepoInfo()">
+<h3><span>📁</span> Franchise Architecture &amp; Folder Hierarchy</h3>
+<span class="toggle-arrow" id="repoToggleArrow">▾</span>
+</div>
+<div class="repo-info-body" id="repoInfoBody">
+<div class="info-pane">
+<h4>Assassin's Creed Directory Structure</h4>
+<pre>Assassin's Creed/
 ├── index.html                               # AC Franchise Hub Portal
 ├── README.md                                # Franchise Overview Documentation
 │
@@ -830,39 +769,32 @@
     ├── Assassin's Creed Black Flag Resynced Wiki_v14.html # Preserved Archive (v14)
     ├── README.md                            # Game Guide Documentation
     └── README_archive_v1.md                 # Archived Documentation Copy</pre>
-        </div>
+</div>
+<div class="info-pane">
+<h4>GitHub Pages Relative Paths</h4>
+<ul>
+<li><strong>AC Franchise Hub</strong>: <code>games/assassins-creed/index.html</code></li>
+<li><strong>Franchise Overview</strong>: <code>games/assassins-creed/README.md</code></li>
+<li><strong>Active Release v15</strong>: <code>games/assassins-creed/black-flag-resynced/index.html</code></li>
+<li><strong>Archive v14</strong>: <code>games/assassins-creed/black-flag-resynced/archive/ac-black-flag-resynced-wiki-v14.html</code></li>
 
-        <div class="info-pane">
-          <h4>GitHub Pages Relative Paths</h4>
-          <ul>
-            <li><strong>AC Franchise Hub</strong>: <code>games/assassins-creed/index.html</code></li>
-            <li><strong>Franchise Overview</strong>: <code>games/assassins-creed/README.md</code></li>
-            <li><strong>Active Release v15</strong>: <code>games/assassins-creed/black-flag-resynced/index.html</code></li>
-            <li><strong>Archive v14</strong>: <code>games/assassins-creed/black-flag-resynced/archive/ac-black-flag-resynced-wiki-v14.html</code></li>
-            <li>Toggle between <strong>Google Drive Mode</strong> and <strong>Web / Local Mode</strong> in the top header.</li>
-          </ul>
-        </div>
-
-        <div class="info-pane">
-          <h4>Zero-Dependency Portability</h4>
-          <p>
+</ul>
+</div>
+<div class="info-pane">
+<h4>Zero-Dependency Portability</h4>
+<p>
             Built in 100% pure HTML5, CSS3, and vanilla JavaScript with zero external frameworks or CDNs required. All progress tracking is wrapped in an in-memory fallback around <code>localStorage</code>, fully compatible with desktop file systems and sandboxed mobile viewers.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <p>Assassin's Creed Guidebook Hub • Crafted for Charles Williams • Built with pure HTML5, CSS3, &amp; Vanilla JavaScript</p>
-      <p style="margin-top: 6px;">
-        Authoritative guides grounded in official strategy sequences. Explore the master <a id="link_footer_master" href="https://drive.google.com/file/d/1ImvMVRxTst2lnkwxxJgCnGtWGbvueLUk/view?usp=drivesdk" target="_blank">Games Master Hub</a> or the <a id="link_footer_ac_folder" href="https://drive.google.com/drive/folders/13RblzI5E1_uyMM1ACDl_ut_QbL2Olq0D" target="_blank">Assassin's Creed Drive Folder</a>.
-      </p>
-    </footer>
-
-  </main>
-
-  <script>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<p>Assassin's Creed Guidebook Hub • Crafted for Charles Williams • Built with pure HTML5, CSS3, &amp; Vanilla JavaScript</p>
+<p style="margin-top: 6px;">Authoritative guides grounded in official strategy sequences. Explore the master <a href="../../index.html" id="link_footer_master">Games Master Hub</a>.</p>
+</footer>
+</main>
+<script>
     /* Safe Storage Protocol Wrapper */
     const safeStorage = {
       _mem: {},
@@ -885,48 +817,7 @@
       }
     };
 
-    /* Link Mode Configuration */
-    const linkConfigs = {
-      drive: {
-        master_portal: "https://drive.google.com/file/d/1ImvMVRxTst2lnkwxxJgCnGtWGbvueLUk/view?usp=drivesdk",
-        ac_folder: "https://drive.google.com/drive/folders/13RblzI5E1_uyMM1ACDl_ut_QbL2Olq0D",
-        ac_launch: "https://drive.google.com/file/d/1H43bHbvZ9TJtsXa0ie1qiSR2pofmBFJz/view?usp=drivesdk",
-        ac_readme: "https://drive.google.com/file/d/1njhwGLa3BGCu73CQsxv0MH2qRIDr-eRV/view?usp=drivesdk",
-        ac_game_folder: "https://drive.google.com/drive/folders/11WygZ7Mt5coMjf9fAE2LNLjPnzFu0iUS",
-        v14_launch: "https://drive.google.com/file/d/1_h6qZ2URE6TdWPA_EeGCSLOifAh3-huv/view?usp=drivesdk"
-      },
-      web: {
-        master_portal: "../../index.html",
-        ac_folder: "./",
-        ac_launch: "black-flag-resynced/index.html",
-        ac_readme: "black-flag-resynced/README.md",
-        ac_game_folder: "black-flag-resynced/",
-        v14_launch: "black-flag-resynced/archive/Assassin's Creed Black Flag Resynced Wiki_v14.html"
-      }
-    };
-
-    function setLinkMode(mode) {
-      safeStorage.setItem('ac_portal_link_mode', mode);
-      document.getElementById('btnModeDrive').classList.toggle('active', mode === 'drive');
-      document.getElementById('btnModeWeb').classList.toggle('active', mode === 'web');
-
-      const cfg = linkConfigs[mode] || linkConfigs.drive;
-      
-      const setHref = (id, url) => {
-        const el = document.getElementById(id);
-        if (el) el.setAttribute('href', url);
-      };
-
-      setHref('link_master_portal', cfg.master_portal);
-      setHref('link_top_ac_folder', cfg.ac_folder);
-      setHref('link_footer_master', cfg.master_portal);
-      setHref('link_footer_ac_folder', cfg.ac_folder);
-      setHref('link_ac_launch', cfg.ac_launch);
-      setHref('link_ac_readme', cfg.ac_readme);
-      setHref('link_v15_folder', cfg.ac_game_folder);
-      setHref('link_v14_launch', cfg.v14_launch);
-      setHref('link_v14_folder', cfg.ac_game_folder);
-    }
+    
 
     /* Filter Cards */
     let currentFilter = 'all';
@@ -982,8 +873,7 @@
 
     /* Initialize Saved Mode */
     document.addEventListener('DOMContentLoaded', () => {
-      const savedMode = safeStorage.getItem('ac_portal_link_mode') || 'drive';
-      setLinkMode(savedMode);
+      
       const drawer = document.getElementById('repoInfoBody');
       if (drawer) drawer.style.display = 'none';
     });

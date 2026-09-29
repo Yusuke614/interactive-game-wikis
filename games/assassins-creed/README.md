@@ -10,7 +10,7 @@ A curated collection of offline-capable, interactive single-page application (SP
 
 | Title | Platform / Setting | Active Release | Scope & Tasks | Folder Location |
 | :--- | :---: | :---: | :---: | :--- |
-| [**Black Flag Resynced**](black-flag-resynced/) | PC Remaster / Caribbean Golden Age of Piracy | `v15` | 116 Tasks | `Black Flag Resynced/` — 12 IGN-grounded walkthrough modules, Sequences 1–13 (100% sync), 4 Animus Rifts & EGO solutions, Jackdaw upgrade trees & naval combat, 4 Legendary Ships, 5 Specialist Officers, 15 Naval Contracts, 4 Templar Hunts & 16 Mayan Stelae puzzles, crafting, and achievements. |
+| [**Black Flag Resynced**](Black%20Flag%20Resynced/) | PC Remaster / Caribbean Golden Age of Piracy | `v15` | 116 Tasks | `Black Flag Resynced/` — 12 IGN-grounded walkthrough modules, Sequences 1–13 (100% sync), 4 Animus Rifts & EGO solutions, Jackdaw upgrade trees & naval combat, 4 Legendary Ships, 5 Specialist Officers, 15 Naval Contracts, 4 Templar Hunts & 16 Mayan Stelae puzzles, crafting, and achievements. |
 
 ---
 
@@ -37,5 +37,4 @@ Assassin's Creed/
 * **Authoritative Source Grounding**: Sequenced directly from official IGN walkthroughs, memory synchronization checklists, and authentic Animus databases.
 * **Dedicated Controls Bar**: Real-time live search (`#wikiSearch` / `#portalSearch`), category filtering, and global Expand All / Collapse All toggle (`#toggleAllBtn`).
 * **Interactive Checklist Tracking**: Interactive checkable items using `safeStorage` wrapper compatible with desktop browsers, Android file viewers (`content://`), and local `file://` protocols.
-* **Dual-Mode Link Switcher**: Seamless switching between cloud-based Google Drive preview links and relative web deployment paths for GitHub Pages.
 * **Franchise-Authentic Aesthetics**: Caribbean naval warfare and Abstergo Animus visual palette (Abyssal Teal `#040e13`, Doubloon Gold `#f3a829`, and Animus Cyan `#00d4e6`).
