@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hyrule Chronicle | The Legend of Zelda Official Timeline (English)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0c0a08;
+      --bg-card: rgba(22, 18, 14, 0.88);
+      --bg-card-hover: rgba(32, 26, 20, 0.95);
+      --gold-primary: #d4af37;
+      --gold-light: #f3e5ab;
+      --gold-dark: #997d25;
+      --gold-border: rgba(212, 175, 55, 0.45);
+      --gold-glow: rgba(212, 175, 55, 0.25);
+      --text-main: #f0eae1;
+      --text-muted: #b8ac9a;
+      --text-gold: #e5c158;
+      
+      /* Branch thematic colors */
+      --color-unified: #d4af37;
+      --color-fallen: #c84b31;
+      --color-child: #795290;
+      --color-adult: #2d82b7;
+      --color-wild: #0fa389;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+        linear-gradient(180deg, #090807 0%, #120e0b 50%, #080706 100%);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Top Global Header */
+    .nintendo-bar {
+      background-color: #e60012;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nintendo-logo {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .portal-nav-bar {
+      background: rgba(14, 11, 8, 0.95);
+      border-bottom: 1px solid var(--gold-border);
+      backdrop-filter: blur(10px);
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 38px;
+      z-index: 999;
+    }
+
+    .portal-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .portal-logo-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.25rem;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      text-shadow: 0 0 12px var(--gold-glow);
+    }
+
+    .anniversary-badge {
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      letter-spacing: 1px;
+      border-radius: 2px;
+      background: rgba(212, 175, 55, 0.1);
+      font-family: 'Cinzel', serif;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: all 0.25s ease;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--gold-light);
+      background: rgba(212, 175, 55, 0.15);
+      border-bottom: 2px solid var(--gold-primary);
+    }
+
+    /* Hero Section */
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px 40px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-triforce {
+      width: 70px;
+      height: 60px;
+      margin: 0 auto 20px;
+      filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: #fff8e7;
+      text-shadow: 0 0 20px rgba(212, 175, 55, 0.4), 0 2px 4px rgba(0,0,0,0.8);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--gold-light);
+      max-width: 750px;
+      margin: 0 auto 24px;
+    }
+
+    .hero-callout-box {
+      border: 1px solid var(--gold-border);
+      background: radial-gradient(ellipse at center, rgba(35, 28, 20, 0.9) 0%, rgba(18, 14, 11, 0.95) 100%);
+      padding: 28px 36px;
+      max-width: 860px;
+      margin: 30px auto;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6), inset 0 0 20px rgba(212, 175, 55, 0.05);
+      border-radius: 3px;
+    }
+
+    .hero-callout-box::before, .hero-callout-box::after {
+      content: "◆";
+      position: absolute;
+      color: var(--gold-primary);
+      font-size: 10px;
+    }
+    .hero-callout-box::before { top: -6px; left: 50%; transform: translateX(-50%); }
+    .hero-callout-box::after { bottom: -6px; left: 50%; transform: translateX(-50%); }
+
+    .callout-heading {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      color: var(--gold-primary);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .prologue-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: #e8e2d5;
+      text-align: center;
+    }
+
+    /* Controls & Filter Toolbar */
+    .controls-panel {
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      padding: 16px 24px;
+      background: rgba(20, 16, 12, 0.9);
+      border: 1px solid var(--gold-border);
+      border-radius: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-btn {
+      background: rgba(30, 24, 18, 0.8);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      color: var(--text-muted);
+      padding: 8px 16px;
+      font-size: 0.82rem;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 1px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--gold-primary);
+      color: #0c0a08;
+      font-weight: 700;
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+    }
+
+    .search-input {
+      background: #090806;
+      border: 1px solid var(--gold-border);
+      color: var(--text-main);
+      padding: 8px 14px;
+      font-size: 0.85rem;
+      border-radius: 4px;
+      outline: none;
+      min-width: 220px;
+    }
+
+    .search-input:focus {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 8px var(--gold-glow);
+    }
+
+    /* Timeline Container & Cards */
+    .timeline-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      position: relative;
+    }
+
+    .timeline-spine {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--gold-primary) 0%, rgba(212, 175, 55, 0.3) 50%, var(--gold-primary) 100%);
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    .era-section-header {
+      text-align: center;
+      margin: 50px auto 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .era-pill {
+      display: inline-block;
+      background: #14100c;
+      border: 2px solid var(--gold-primary);
+      color: var(--gold-light);
+      padding: 8px 24px;
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+      border-radius: 30px;
+    }
+
+    .era-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* Cards Grid */
+    .timeline-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .chronicle-card {
+      background: var(--bg-card);
+      border: 1px solid var(--gold-border);
+      border-radius: 6px;
+      padding: 24px 28px;
+      position: relative;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .chronicle-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.8), 0 0 15px rgba(212, 175, 55, 0.15);
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      padding-bottom: 10px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .era-tag {
+      font-family: 'Cinzel', serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 3px;
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--gold-light);
+      border-left: 3px solid var(--gold-primary);
+    }
+
+    .source-game {
+      font-size: 0.85rem;
+      color: var(--text-gold);
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .card-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem;
+      color: #fff9ed;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .card-original-title {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .card-event-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .card-event-item {
+      padding-left: 20px;
+      position: relative;
+      font-size: 0.95rem;
+      color: #e4ded4;
+    }
+
+    .card-event-item::before {
+      content: "▶";
+      position: absolute;
+      left: 0;
+      top: 3px;
+      font-size: 0.65rem;
+      color: var(--gold-primary);
+    }
+
+    /* Event item title header */
+    .card-event-item > strong:first-child {
+      color: var(--gold-light);
+      display: block;
+      margin-bottom: 4px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* Inline emphasized terms inside event text */
+    .card-event-item strong,
+    strong, b {
+      color: var(--gold-light);
+      font-weight: 700;
+      display: inline;
+      font-family: inherit;
+      font-size: inherit;
+      letter-spacing: normal;
+    }
+
+    em, i {
+      display: inline;
+      font-style: italic;
+    }
+
+    /* Branch Container Styling */
+    .branch-container {
+      margin: 60px 0;
+      padding: 30px 24px;
+      border-radius: 8px;
+      background: rgba(16, 12, 10, 0.8);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .branch-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .branch-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .branch-desc {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .branch-fallen {
+      border-color: rgba(200, 75, 49, 0.5);
+      background: linear-gradient(180deg, rgba(35, 15, 12, 0.7) 0%, rgba(15, 11, 10, 0.9) 100%);
+    }
+    .branch-fallen .branch-title { color: #f07b65; }
+    .branch-fallen .era-tag { border-left-color: var(--color-fallen); color: #ff9d8a; background: rgba(200, 75, 49, 0.15); }
+
+    .branch-child {
+      border-color: rgba(121, 82, 144, 0.5);
+      background: linear-gradient(180deg, rgba(28, 18, 36, 0.7) 0%, rgba(14, 11, 18, 0.9) 100%);
+    }
+    .branch-child .branch-title { color: #c499e0; }
+    .branch-child .era-tag { border-left-color: var(--color-child); color: #dcb3f7; background: rgba(121, 82, 144, 0.15); }
+
+    .branch-adult {
+      border-color: rgba(45, 130, 183, 0.5);
+      background: linear-gradient(180deg, rgba(14, 27, 38, 0.7) 0%, rgba(10, 15, 20, 0.9) 100%);
+    }
+    .branch-adult .branch-title { color: #6db9ea; }
+    .branch-adult .era-tag { border-left-color: var(--color-adult); color: #9fd7f9; background: rgba(45, 130, 183, 0.15); }
+
+    .branch-wild {
+      border-color: rgba(15, 163, 137, 0.6);
+      background: linear-gradient(180deg, rgba(10, 32, 28, 0.7) 0%, rgba(8, 18, 16, 0.9) 100%);
+    }
+    .branch-wild .branch-title { color: #4de0c4; }
+    .branch-wild .era-tag { border-left-color: var(--color-wild); color: #7cf2dc; background: rgba(15, 163, 137, 0.15); }
+
+    /* Highlights Banner for 2026 Website Update */
+    .update-notice-card {
+      background: linear-gradient(135deg, rgba(30, 24, 16, 0.95), rgba(18, 14, 10, 0.95));
+      border: 2px solid var(--gold-primary);
+      border-radius: 6px;
+      padding: 24px 30px;
+      margin: 40px auto;
+      max-width: 1150px;
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+    }
+
+    .notice-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .notice-badge {
+      background: var(--gold-primary);
+      color: #0c0a08;
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      letter-spacing: 1px;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+
+    .notice-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      color: var(--gold-light);
+      letter-spacing: 1px;
+    }
+
+    .notice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-top: 16px;
+    }
+
+    .notice-col {
+      background: rgba(10, 8, 6, 0.6);
+      padding: 16px 20px;
+      border-left: 2px solid var(--gold-primary);
+      border-radius: 0 4px 4px 0;
+    }
+
+    .notice-col h4 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold-light);
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .notice-col p {
+      font-size: 0.88rem;
+      color: #cfc6b8;
+      line-height: 1.55;
+    }
+
+    /* Footer */
+    footer {
+      background: #060504;
+      border-top: 1px solid var(--gold-border);
+      padding: 40px 24px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: #8c8272;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--gold-light);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.2rem; }
+      .portal-nav-bar { flex-direction: column; gap: 12px; }
+      .nav-links { flex-wrap: wrap; justify-content: center; }
+      .chronicle-card { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Global Header -->
+  <header>
+    <div class="nintendo-bar">
+      <div class="nintendo-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6z"/>
+        </svg>
+        Nintendo
+      </div>
+      <div>Official Legend of Zelda Portal</div>
+    </div>
+
+    <div class="portal-nav-bar">
+      <div class="portal-brand">
+        <span class="portal-logo-title">The Legend of Zelda</span>
+        <span class="anniversary-badge">40th Anniversary Portal</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="https://www.nintendo.com/jp/character/zelda/index.html" target="_blank">Top</a></li>
+        <li><a href="#triforce">Triforce</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#chronicle" class="active">Chronicle (Active)</a></li>
+        <li><a href="#products">Products</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero-container" id="chronicle">
+    <!-- SVG Golden Triforce -->
+    <svg class="hero-triforce" viewBox="0 0 100 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,0 100,87 0,87" fill="#d4af37" stroke="#fdf4c8" stroke-width="2"/>
+      <polygon points="50,87 25,43.5 75,43.5" fill="#0c0a08"/>
+    </svg>
+
+    <h1 class="hero-title">The Hyrule Chronicle</h1>
+    <p class="hero-subtitle">The complete official history of Hyrule, the land that serves as the grand stage for The Legend of Zelda series.</p>
+    
+    <div class="hero-callout-box">
+      <div class="callout-heading">Tales of the Gods and the Hero of Time</div>
+      <p class="prologue-text">
+        "This world was created by three goddesses.<br>
+        The gods did not rule this world, but left its fate to the land, to order, and to the living creatures they created.<br>
+        Leaving behind the sacred golden relic of omnipotent power — the <strong>Triforce</strong>..."
+      </p>
+    </div>
+  </section>
+
+  <!-- 2026 Canon Updates Highlights Box -->
+  <section class="update-notice-card">
+    <div class="notice-header">
+      <span class="notice-badge">Official Canon Architecture</span>
+      <h3 class="notice-title">Key Revelations from the Official Hyrule Chronicle</h3>
+    </div>
+    <div class="notice-grid">
+      <div class="notice-col">
+        <h4>1. Pre-Creation Void (Null / Echoes of Wisdom)</h4>
+        <p>Officially establishes the <em>World of Nothingness</em> predating the Golden Goddesses' creation, where the primordial entity <strong>Null</strong> consumed forming realities before being sealed.</p>
+      </div>
+      <div class="notice-col">
+        <h4>2. The Dual Foundings of Hyrule</h4>
+        <p>The timeline establishes two distinct founding eras: the <strong>Original Founding</strong> by descendants of Goddess Hylia after the Era of Chaos, and <strong>King Rauru's Founding</strong> in the distant Wild Era.</p>
+      </div>
+      <div class="notice-col">
+        <h4>3. The Threefold Divergence</h4>
+        <p>Following the cataclysmic conflict in <em>Ocarina of Time</em>, time irrevocably branches into: the <strong>Hero Defeated (Decline)</strong> branch, the <strong>Child Era</strong>, and the <strong>Adult Era</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Filter Toolbar -->
+  <div class="controls-panel">
+    <div class="filter-tabs">
+      <button class="filter-btn active" onclick="filterEra('all')">All Eras</button>
+      <button class="filter-btn" onclick="filterEra('unified')">Era of Gods & Unified</button>
+      <button class="filter-btn" onclick="filterEra('fallen')">Hero Defeated (Decline)</button>
+      <button class="filter-btn" onclick="filterEra('child')">Child Era (Twilight & Shadow)</button>
+      <button class="filter-btn" onclick="filterEra('adult')">Adult Era (Winds & New Hyrule)</button>
+      <button class="filter-btn" onclick="filterEra('wild')">Era of the Wild (BotW / TotK)</button>
+    </div>
+    <input type="text" id="chronicleSearch" class="search-input" placeholder="Search events, games, characters..." onkeyup="searchChronicle()">
+  </div>
+
+  <!-- Timeline Main Body -->
+  <main class="timeline-wrapper">
+
+    <!-- ================================================================= -->
+    <!-- 1. ERA OF THE GODS & UNIFIED TIMELINE -->
+    <!-- ================================================================= -->
+    <div class="era-group" data-era="unified">
+      <div class="era-section-header">
+        <span class="era-pill" style="border-color: var(--color-unified); color: var(--gold-light);">Part I: The Myth of the Gods & The Unified Realm</span>
+        <p class="era-subtitle">From the primordial void and the dawn of creation to the decisive clash in the Temple of Time</p>
+      </div>
+
+      <div class="timeline-grid">
+        
+        <!-- Pre-Creation -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Before the Creation of Heaven and Earth</span>
+            <span class="source-game">The Legend of Zelda: Echoes of Wisdom (2024)</span>
+          </div>
+          <h2 class="card-title">The World of Nothingness (Null)</h2>
+          <div class="card-original-title">天地創造以前 ・ 無の世界</div>
+          <p>Before the heavens, earth, and physical life were molded, there was only boundless, empty void. In this darkness dwelt <strong>Null</strong>, a primordial devourer that instinctively consumed and annihilated anything that attempted to take form.</p>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>The Primordial Void</strong>
+              Null roamed the darkness, suffocating any nascent creations before light or law existed.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Creation Era -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Era of Creation</span>
+            <span class="source-game">The Legend of Zelda: A Link to the Past (1991)</span>
+          </div>
+          <h2 class="card-title">Creation of Heaven and Earth & The Triforce</h2>
+          <div class="card-original-title">創世の時代 ・ 天地創造</div>
+          <p>Three Golden Goddesses descended upon the formless chaos: <strong>Din</strong>, the Goddess of Power; <strong>Nayru</strong>, the Goddess of Wisdom; and <strong>Farore</strong>, the Goddess of Courage. Together, they cultivated the red earth, established science and natural order, gave life to spirits and beasts, and sealed Null away.</p>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>Birth of the World</strong>
+              Din cultivated the mountains and soil, Nayru poured wisdom and cosmic order over the land, and Farore brought forth all rich life and souls.
+            </li>
+            <li class="card-event-item">
+              <strong>The Sacred Golden Relic</strong>
+              Upon completing their genesis, the three goddesses departed for the heavens, leaving behind the omnipotent golden relic — the <strong>Triforce</strong> — anchored in the Sacred Realm to grant the wish of any mortal with a worthy spirit.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Skyward Sword: Goddess Hylia Era -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Era of the Goddess Hylia & Sky Era</span>
+            <span class="source-game">The Legend of Zelda: Skyward Sword (2011)</span>
+          </div>
+          <h2 class="card-title">Demise's Incursion & The Birth of the Master Sword</h2>
+          <div class="card-original-title">女神ハイリアの時代／天空時代 ・ スカイウォードソード</div>
+          <p>Goddess Hylia was entrusted with guarding the Triforce. When the Demon King <strong>Demise</strong> erupted from fissures in the earth leading an army of demonic hordes, Hylia enacted an extraordinary divine gambit.</p>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>Ascension to the Sky & Demise's Seal</strong>
+              To save the surviving humans from slaughter, Hylia gathered them onto a plot of earth and raised it into the heavens above the clouds, creating Skyloft. Hylia fought Demise and sealed him in the Sealed Grounds, but suffered grievous divine wounds.
+            </li>
+            <li class="card-event-item">
+              <strong>Hylia's Mortal Reincarnation</strong>
+              Knowing Demise's seal would not hold indefinitely, and because the divine cannot wield the Triforce, Goddess Hylia relinquished her divinity to be reincarnated as a mortal maiden: <strong>Zelda</strong>.
+            </li>
+            <li class="card-event-item">
+              <strong>Forging the Master Sword & The Eternal Curse</strong>
+              Guided by the spirit <strong>Fi</strong>, Link tempered the Goddess Sword with the Sacred Flames into the <strong>Master Sword</strong>. After slaying Demise in the past, Demise cursed their bloodlines: his demonic malice would reincarnate in an endless cycle, perpetually opposing those who possess the blood of the Goddess and the spirit of the Hero. Skyloft's people descended to repopulate the surface.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Era of Chaos & Prosperity -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Era of Chaos & Era of Prosperity</span>
+            <span class="source-game">The Legend of Zelda: Ocarina of Time (1998)</span>
+          </div>
+          <h2 class="card-title">Sealing of the Sacred Realm & Hyrule's First Founding</h2>
+          <div class="card-original-title">混沌の時代／繁栄の時代 ・ 聖地封印とハイラル王国建国</div>
+          <p>Knowledge of the omnipotent Triforce triggered a chaotic era of bloody wars among tribes seeking divine omnipotence.</p>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>Construction of the Temple of Time</strong>
+              The ancient Sage of Light, <strong>Rauru</strong>, built the Temple of Time directly over the ruins of the Sealed Temple, housing the Master Sword as the final lock securing the Door of Time and the gateway to the Sacred Realm.
+            </li>
+            <li class="card-event-item">
+              <strong>Original Founding of the Kingdom of Hyrule</strong>
+              Descendants of the mortal Zelda (reincarnation of Hylia) unified the surrounding peoples and founded the <strong>Kingdom of Hyrule</strong> to protect the Temple of Time and the Sacred Realm. The royal family adopted the crest of Goddess Hylia and the Triforce.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Force Era: Minish Cap & Four Swords -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Force Era</span>
+            <span class="source-game">The Legend of Zelda: The Minish Cap (2004) & Four Swords (2002)</span>
+          </div>
+          <h2 class="card-title">The Picori Legend & The Four Sword</h2>
+          <div class="card-original-title">フォースの時代 ・ ふしぎのぼうし／4つの剣</div>
+          <p>When evil creatures threatened to overrun the fledgling kingdom, the tiny Picori (Minish) descended from the heavens, gifting the legendary <strong>Picori Blade</strong> and the golden <strong>Light Force</strong> to a courageous human hero.</p>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>Rise and Defeat of Vaati</strong>
+              Centuries later, the corrupt Minish apprentice <strong>Vaati</strong> shattered the Picori Blade and petrified Princess Zelda. Young Link partnered with Ezlo, infused the blade with the four elemental crests to create the <strong>Four Sword</strong>, and defeated Vaati.
+            </li>
+            <li class="card-event-item">
+              <strong>Vaati's Resurgence & The Palace of Winds</strong>
+              In later generations, Vaati broke his seal and kidnapped Princess Zelda. Link once again drew the Four Sword, splitting into four identical heroes to vanquish Vaati and seal him inside the blade.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Era of the Hero of Time: Ocarina of Time -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Era of the Hero of Time</span>
+            <span class="source-game">The Legend of Zelda: Ocarina of Time (1998)</span>
+          </div>
+          <h2 class="card-title">The Hyrule Unification War & The Great Cataclysm</h2>
+          <div class="card-original-title">時の勇者の時代 ・ ゼルダの伝説 時のオカリナ</div>
+          <p>Following a devastating civil war that unified the diverse tribes under Hyrule's King, the Gerudo King of Thieves, <strong>Ganondorf</strong>, swore false allegiance to the throne while secretly scheming to plunder the Sacred Realm.</p>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>Opening the Door of Time</strong>
+              Princess Zelda foresaw Ganondorf's betrayal in prophetic dreams and tasked the Kokiri boy Link with gathering the three Spiritual Stones. When Link drew the Master Sword from the Temple of Time, his young soul was put into a seven-year slumber until he was worthy of wielding it.
+            </li>
+            <li class="card-event-item">
+              <strong>The Sacred Realm Corrupted into the Dark World</strong>
+              With the seal opened, Ganondorf seized the opportunity to invade the Sacred Realm. However, due to his imbalanced heart, the Triforce shattered into three pieces: <strong>Power</strong> remained with Ganondorf, while <strong>Wisdom</strong> went to Zelda and <strong>Courage</strong> to Link.
+            </li>
+            <li class="card-event-item">
+              <strong>The Fateful Confrontation</strong>
+              Awakening as the Hero of Time, Link liberated the Seven Sages alongside Sheik. At the peak of Ganon's Castle, Link and Ganondorf engaged in a world-altering duel that caused history to split into distinct realities.
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- 2. BRANCH A: HERO OF TIME IS DEFEATED (FALLEN HERO / DECLINE) -->
+    <!-- ================================================================= -->
+    <div class="era-group branch-container branch-fallen" data-era="fallen">
+      <div class="branch-header">
+        <h2 class="branch-title">Branch I: The Hero of Time is Defeated</h2>
+        <p class="branch-desc"><strong>The Decline of Hyrule and the Last Hero (ハイラルの衰退と最後の勇者)</strong><br>
+        In the climactic battle within Ganon's Tower, the Hero of Time falls. Ganondorf usurps the three Triforce crests, fully awakens as the monstrous Demon King Ganon, and plunges Hyrule into an epoch of constant strife and spiritual decay.</p>
+      </div>
+
+      <div class="timeline-grid">
+
+        <!-- The Imprisoning War & A Link to the Past -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Era of Light and Dark</span>
+            <span class="source-game">The Legend of Zelda: A Link to the Past (1991)</span>
+          </div>
+          <h2 class="card-title">The Imprisoning War & Defeat of Demon King Ganon</h2>
+          <div class="card-original-title">光と闇の時代 ・ 封印戦争／神々のトライフォース</div>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>The Imprisoning War</strong>
+              After defeating Link, Ganon was temporarily sealed in the corrupted Sacred Realm by Princess Zelda and the Seven Sages. Malice leaked out, prompting the King to deploy the Knights of Hyrule, who sacrificed their lives to hold off monsters while Sages cast a permanent barrier.
+            </li>
+            <li class="card-event-item">
+              <strong>Agahnim's Sacrifice & The Dark World</strong>
+              Centuries later, the dark sorcerer Agahnim captured the maidens descending from the Seven Sages. A new young hero named Link claimed the Master Sword, navigated the parallel Dark World, defeated Ganon with Silver Arrows, and reclaimed the entire Triforce to restore peace.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Oracle of Seasons / Ages & Link's Awakening -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Era of Light and Dark (Continued)</span>
+            <span class="source-game">Oracle of Seasons & Ages (2001) / Link's Awakening (1993)</span>
+          </div>
+          <h2 class="card-title">The Labrynna / Holodrum Trials & Koholint Island</h2>
+          <div class="card-original-title">ふしぎの木の実（大地の章・時空の章）／夢をみる島</div>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>Twinrova's Resurrection Plot</strong>
+              The Triforce summoned Link on trials to Holodrum and Labrynna. The surrogate mothers of Ganon, Twinrova, tried to light the Flames of Destruction, Sorrow, and Despair to resurrect Ganon. Link thwarted their plot and vanquished a mindless resurrected Ganon.
+            </li>
+            <li class="card-event-item">
+              <strong>The Wind Fish's Dream</strong>
+              Returning home to Hyrule across the sea, Link's vessel was destroyed in a violent storm. Stranded on Koholint Island, Link woke the slumbering deity, the <strong>Wind Fish</strong>, knowing that dissolving the dream would cause the island and its beloved inhabitants to vanish.
+            </li>
+          </ul>
+        </article>
+
+        <!-- A Link Between Worlds & Tri Force Heroes -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Golden Era</span>
+            <span class="source-game">A Link Between Worlds (2013) & Tri Force Heroes (2015)</span>
+          </div>
+          <h2 class="card-title">The Lorule Crisis & The Restoration of the Relic</h2>
+          <div class="card-original-title">黄金時代 ・ 神々のトライフォース2／トライフォース3銃士</div>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>The Crumbling Realm of Lorule</strong>
+              In the parallel world of Lorule, the royal family destroyed their Triforce to end civil war, causing their realm to collapse into ruin. Princess Hilda and sorcerer Yuga invaded Hyrule, resurrecting Ganon to steal Hyrule's Triforce.
+            </li>
+            <li class="card-event-item">
+              <strong>A Compassionate Wish</strong>
+              Link and Princess Zelda recovered the Triforce and used its omnipotent power to wish for the miraculous restoration of Lorule's sacred Triforce, saving both dimensions.
+            </li>
+            <li class="card-event-item">
+              <strong>The Hytopia Expedition</strong>
+              Link traveled to the kingdom of Hytopia, forming a totem trio with two other heroes to defeat Lady Maud and lift the curse placed on Princess Styla.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Echoes of Wisdom Placement -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Era of Rifts (New Canon Update)</span>
+            <span class="source-game">The Legend of Zelda: Echoes of Wisdom (2024)</span>
+          </div>
+          <h2 class="card-title">The Great Rifts & The Sealing of Null</h2>
+          <div class="card-original-title">知恵のかりもの ・ 裂け目の封殺と虚無の討滅</div>
+          <p>Catastrophic dimensional chasms ripped through the realm, swallowing townsfolk, the King of Hyrule, and the hero Link into the Still World.</p>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>Zelda's Solo Quest & The Tri Rod</strong>
+              Partnering with an ethereal emissary named <strong>Tri</strong>, Princess Zelda wielded the Tri Rod to replicate objects and foes (echoes), journeying through the rifts to rescue the captured populace.
+            </li>
+            <li class="card-event-item">
+              <strong>Vanquishing the Primordial Null</strong>
+              Deep within the rifts, Zelda rescued Link and joined forces with the three Golden Goddesses to defeat the primordial void entity <strong>Null</strong>, permanently restoring Hyrule's territorial stability.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Era of Decline: Tragedy of Zelda I, LoZ, AoL -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Era of Decline</span>
+            <span class="source-game">The Legend of Zelda (1986) & Zelda II: The Adventure of Link (1987)</span>
+          </div>
+          <h2 class="card-title">The Sleeping Princess & The Final Hero</h2>
+          <div class="card-original-title">衰退の時代 ・ 初代ゼルダ姫の悲劇／ゼルダの伝説／リンクの冒険</div>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>The Tragedy of Princess Zelda I</strong>
+              A wise king hid the Triforce of Courage before dying. His power-hungry son and a malicious magician interrogated Princess Zelda I; when she refused to disclose the location, the magician cast an eternal sleeping curse upon her. In grief, the prince decreed that all newborn royal princesses be named Zelda.
+            </li>
+            <li class="card-event-item">
+              <strong>The Invasion of Death Mountain</strong>
+              Centuries later, Hyrule was reduced to an unpopulated wasteland. Ganon invaded, stealing the Triforce of Power. Princess Zelda shattered the Triforce of Wisdom into eight shards before capture. A young traveler, Link, reassembled the shards and defeated Ganon in Spectacle Rock.
+            </li>
+            <li class="card-event-item">
+              <strong>The Great Palace of the Valley of Death</strong>
+              Six years later, Link discovered the Triforce crest glowing on his hand. Venturing into Greater Hyrule, he braved the treacherous Great Palace, conquered his own Shadow, retrieved the Triforce of Courage, and awakened Princess Zelda I from her millennia-long slumber.
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- 3. BRANCH B: HERO OF TIME IS VICTORIOUS - CHILD ERA -->
+    <!-- ================================================================= -->
+    <div class="era-group branch-container branch-child" data-era="child">
+      <div class="branch-header">
+        <h2 class="branch-title">Branch II-A: Hero Victorious — The Child Era</h2>
+        <p class="branch-desc"><strong>The Twilight Realm and the Legacy of the Hero (黄昏の世界と勇者の後裔)</strong><br>
+        After Ganon is sealed, Zelda sends Link back to his original childhood time. Armed with the memories of the future and bearing the Triforce of Courage, Link warns the young Princess and the King of Hyrule of Ganondorf's treasonous conspiracy before departing on a personal quest.</p>
+      </div>
+
+      <div class="timeline-grid">
+
+        <!-- Majora's Mask -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Child Era</span>
+            <span class="source-game">The Legend of Zelda: Majora's Mask (2000)</span>
+          </div>
+          <h2 class="card-title">The Parallel World of Termina & Majora's Mask</h2>
+          <div class="card-original-title">少年の時代 ・ ムジュラの仮面</div>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>Search for a Lost Friend</strong>
+              Searching for the fairy Navi who guided him during the Ocarina trials, Link and his mare Epona entered the Lost Woods and were ambushed by the Skull Kid wearing the cursed relic <strong>Majora's Mask</strong>.
+            </li>
+            <li class="card-event-item">
+              <strong>The Three-Day Cycle</strong>
+              In the doomed realm of Termina, Link wielded mask transformations and the Song of Time over a repeating 72-hour cycle, summoning the Four Giants to stop the terrifying Moon from destroying Clock Town.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Twilight Princess -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Twilight Era</span>
+            <span class="source-game">The Legend of Zelda: Twilight Princess (2006)</span>
+          </div>
+          <h2 class="card-title">The Twilight Invasion & Midna's Redemption</h2>
+          <div class="card-original-title">黄昏の時代 ・ トワイライトプリンセス</div>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>The Execution of Ganondorf</strong>
+              Warned by child Link, the Ancient Sages arrested Ganondorf and attempted his execution at the Arbiter's Grounds. Unexpectedly triggering the Triforce of Power, Ganondorf slew the Sage of Water before being hurriedly banished into the <strong>Twilight Realm</strong> via the Mirror of Twilight.
+            </li>
+            <li class="card-event-item">
+              <strong>Usurper King Zant & The Wolf Hero</strong>
+              Ganondorf allied with the embittered Twili sorcerer Zant to envelop Hyrule in twilight gloom. A farmer boy named Link transformed into a Sacred Blue-Eyed Beast (Wolf), partnered with the deposed Twili princess <strong>Midna</strong>, wielded the restored Master Sword, and impaled Ganondorf through the chest.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Four Swords Adventures -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Shadow Era</span>
+            <span class="source-game">The Legend of Zelda: Four Swords Adventures (2004)</span>
+          </div>
+          <h2 class="card-title">The Reincarnated Ganondorf & The Dark Mirror</h2>
+          <div class="card-original-title">影の時代 ・ ゼルダの伝説 4つの剣+</div>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>The Rise of Ganondorf II</strong>
+              Centuries later, a new Gerudo male reincarnated with the name Ganondorf. Defying village law, he purloined the wicked Trident from the ancient pyramid and stole the Dark Mirror to forge Shadow Link clones.
+            </li>
+            <li class="card-event-item">
+              <strong>The Quad-Hero Triumph</strong>
+              Link pulled the Four Sword from its sanctuary shrine, dividing into four warriors to dismantle the shadow invasion, slay the newly formed Demon King Ganon, and seal him securely within the Four Sword.
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- 4. BRANCH C: HERO OF TIME IS VICTORIOUS - ADULT ERA -->
+    <!-- ================================================================= -->
+    <div class="era-group branch-container branch-adult" data-era="adult">
+      <div class="branch-header">
+        <h2 class="branch-title">Branch II-B: Hero Victorious — The Adult Era</h2>
+        <p class="branch-desc"><strong>The Hero of Winds and the New World (風の勇者と新世界)</strong><br>
+        In the future left behind when Princess Zelda returned Link to his childhood, the Hero of Time is gone from the timeline. Peace endures for centuries until Ganon breaks his ancient seal, precipitating a catastrophic flood and the founding of a New Hyrule.</p>
+      </div>
+
+      <div class="timeline-grid">
+
+        <!-- The Great Flood & The Wind Waker -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Era without a Hero & Era of the Great Sea</span>
+            <span class="source-game">The Legend of Zelda: The Wind Waker (2002)</span>
+          </div>
+          <h2 class="card-title">The Great Deluge & The Hero of Winds</h2>
+          <div class="card-original-title">勇者なき時代／大海原の時代 ・ 風のタクト</div>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>The Great Flood</strong>
+              When Ganon broke out of the Evil Realm, no hero appeared to rescue the kingdom. In desperation, King Daphnes Nohansen Hyrule and the citizens prayed to the gods. The gods unleashed apocalyptic rains, drowning old Hyrule beneath the boundless Great Sea to seal Ganon beneath the ocean floor.
+            </li>
+            <li class="card-event-item">
+              <strong>Voyage of the King of Red Lions</strong>
+              Centuries later, an island boy named Link embarked on the Great Sea aboard a talking red boat. Link proved his courage, gathered the Triforce shards, reawakened the Master Sword's holy light, and discovered that the pirate girl Tetra was the rightful heir to the Royal Family.
+            </li>
+            <li class="card-event-item">
+              <strong>The King's Final Wish</strong>
+              Atop sunken Hyrule Castle, King Daphnes touched the complete Triforce first, wishing for old Hyrule to be washed away forever so the young generation could discover their own future. Link pierced Ganondorf's skull with the Master Sword, turning him to stone.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Phantom Hourglass -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Era of the Great Voyage</span>
+            <span class="source-game">The Legend of Zelda: Phantom Hourglass (2007)</span>
+          </div>
+          <h2 class="card-title">The Ghost Ship & The Realm of the Ocean King</h2>
+          <div class="card-original-title">夢幻の砂時計 ・ 幽霊船と海の王の世界</div>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>Venture into the Mystical Fog</strong>
+              Tetra and Link set sail with their pirate fleet in search of new horizons. While boarding an eerie Ghost Ship veiled in thick fog, Tetra was abducted into a parallel sea domain governed by the Ocean King.
+            </li>
+            <li class="card-event-item">
+              <strong>Confronting Bellum</strong>
+              With the eccentric captain Linebeck and the spirit-channeling Phantom Hourglass, Link navigated the Temple of the Ocean King and eradicated the life-force parasite Bellum.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Spirit Tracks -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Era of New Hyrule</span>
+            <span class="source-game">The Legend of Zelda: Spirit Tracks (2009)</span>
+          </div>
+          <h2 class="card-title">Discovery of the Sacred Tracks & New Hyrule</h2>
+          <div class="card-original-title">新世界・新生ハイラル王国 ・ 大地の汽笛</div>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>Establishment of New Hyrule</strong>
+              Tetra and her crew discovered a vast, fertile continent laced with ancient energy tracks built by the spirits to tether the Demon King Malladus. There, they founded the <strong>New Kingdom of Hyrule</strong>.
+            </li>
+            <li class="card-event-item">
+              <strong>The Phantom Princess & Demon King Malladus</strong>
+              A century later, Chancellor Cole detached Princess Zelda's spirit from her physical body to host the resurrected Malladus. Royal locomotive engineer Link and the spirited phantom of Zelda teamed up, piloting the Spirit Train and brandishing the Lokomo Sword to destroy Malladus.
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+
+
+    <!-- ================================================================= -->
+    <!-- 5. ERA OF THE WILD: THE DISTANT FUTURE & UNIFIED HORIZON -->
+    <!-- ================================================================= -->
+    <div class="era-group branch-container branch-wild" data-era="wild">
+      <div class="branch-header">
+        <h2 class="branch-title">The Distant Future: The Era of the Wild</h2>
+        <p class="branch-desc"><strong>The Mythological Age of Zonai, Calamity, and Upheaval (遥か未来・ワイルドの時代)</strong><br>
+        Set tens of thousands of years beyond the ancient legends of the past. All prior historical currents fade into myth, giving rise to an era defined by the ancient Zonai, the cataclysmic Great Calamity, and the emergence of the Secret Stones.</p>
+      </div>
+
+      <div class="timeline-grid">
+
+        <!-- King Rauru's Founding & The Imprisoning War (TotK Past) -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Era of Myth & King Rauru's Founding</span>
+            <span class="source-game">The Legend of Zelda: Tears of the Kingdom (Backstory)</span>
+          </div>
+          <h2 class="card-title">Descent of the Zonai & The Second Founding</h2>
+          <div class="card-original-title">神話の時代／建国の時代 ・ 初代国王ラウルと封印戦</div>
+          <p>The divine goat-like Zonai descended from the sky. The first King of this era, <strong>King Rauru</strong>, wed the Hylian priestess <strong>Queen Sonia</strong>, establishing a renewed Kingdom of Hyrule.</p>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>Ganondorf's Betrayal & The Secret Stones</strong>
+              The Gerudo warlord Ganondorf pretended fealty before assassinating Sonia, stealing her Secret Stone of Time, and metamorphosing into the dreaded Demon King.
+            </li>
+            <li class="card-event-item">
+              <strong>Rauru's Eternal Sacrifice Beneath Hyrule Castle</strong>
+              Outmatched in battle, King Rauru sacrificed his mortal life to pin Ganondorf's chest with his right arm, sealing the Demon King deep within the foundations beneath Hyrule Castle for tens of thousands of years.
+            </li>
+            <li class="card-event-item">
+              <strong>Princess Zelda's Draconic Vow</strong>
+              Having fallen backwards through time from the modern era, Princess Zelda swallowed her Secret Stone in the forbidden ritual of Draconification, transforming into the immortal <strong>Light Dragon</strong> to absorb sacred energy and heal the Master Sword across millenia.
+            </li>
+          </ul>
+        </article>
+
+        <!-- 10,000 Years Ago Sheikah Calamity & 100 Years Ago -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Age of Ancient Sheikah Technology</span>
+            <span class="source-game">The Legend of Zelda: Breath of the Wild (Backstory)</span>
+          </div>
+          <h2 class="card-title">The First Calamity & The Fall of the Champions</h2>
+          <div class="card-original-title">1万年前の厄災封印／100年前の大厄災</div>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>The 10,000-Year Ancient Victory</strong>
+              As Ganondorf's leaking hatred manifested as <strong>Calamity Ganon</strong>, the technologically advanced Sheikah constructed four colossal Divine Beasts and armies of autonomous Guardians. Together with the ancient princess and knight, they easily repelled Ganon.
+            </li>
+            <li class="card-event-item">
+              <strong>The Cataclysmic Fall 100 Years Ago</strong>
+              When Calamity Ganon unexpectedly re-emerged, it hijacked the Guardians and Divine Beasts. King Rhoam and the four Champions (Mipha, Daruk, Revali, Urbosa) perished, Link was mortally wounded and placed in stasis within the Shrine of Resurrection, and Princess Zelda awakened her sealing power to lock Ganon in Hyrule Castle for a century.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Breath of the Wild -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Era of the Wild</span>
+            <span class="source-game">The Legend of Zelda: Breath of the Wild (2017)</span>
+          </div>
+          <h2 class="card-title">Awakening of the Knight & Calamity's End</h2>
+          <div class="card-original-title">ゼルダの伝説 ブレス オブ ザ ワイルド</div>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>Reclaiming the Divine Beasts</strong>
+              Link awoke with amnesia, explored the vast wilderness of post-apocalyptic Hyrule, liberated the spirits of the fallen Champions, and reclaimed the Master Sword from the Great Deku Tree.
+            </li>
+            <li class="card-event-item">
+              <strong>Destruction of Calamity Ganon</strong>
+              Storming Hyrule Castle with the combined firepower of the four Divine Beasts, Link defeated Calamity Ganon and Dark Beast Ganon, liberating Princess Zelda after 100 agonizing years of vigilance.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Tears of the Kingdom -->
+        <article class="chronicle-card">
+          <div class="card-meta">
+            <span class="era-tag">Era of the Upheaval</span>
+            <span class="source-game">The Legend of Zelda: Tears of the Kingdom (2023)</span>
+          </div>
+          <h2 class="card-title">The Upheaval & The Vanquishing of the Demon Dragon</h2>
+          <div class="card-original-title">ゼルダの伝説 ティアーズ オブ ザ キングダム</div>
+          <ul class="card-event-list">
+            <li class="card-event-item">
+              <strong>The Rupturing of the Seal</strong>
+              Exploring the gloomy catacombs beneath Hyrule Castle, Link and Zelda stumbled upon Rauru's weakening seal. Ganondorf awoke, corroding Link's arm, shattering the Master Sword with Gloom, and thrusting Hyrule Castle into the sky. Zelda disappeared into the distant past.
+            </li>
+            <li class="card-event-item">
+              <strong>Sky, Surface, and Depths</strong>
+              Gifted with Rauru's mystical right arm and new powers (Ultrahand, Fuse, Ascend, Recall), Link traversed the Sky Islands, subterranean Depths, and restored Hyrule's four elemental Sages.
+            </li>
+            <li class="card-event-item">
+              <strong>Reclaiming the Sacred Blade & Defeating the Demon Dragon</strong>
+              High above the clouds, Link retrieved the restored Master Sword from the horns of the Light Dragon. Penetrating the deepest Gloom beneath the castle, Link fought Demon King Ganondorf. When Ganondorf swallowed his Secret Stone to become the apocalyptic <strong>Demon Dragon</strong>, Link and the Light Dragon destroyed him. Channeling ancestral power, Link and Rauru's spirit returned Princess Zelda to human form.
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="https://www.nintendo.com/jp/character/zelda/chronicle/index.html" target="_blank">Official Japanese Source (Nintendo Japan)</a>
+      <a href="https://www.nintendo.com" target="_blank">Nintendo.com</a>
+      <a href="https://zelda.nintendo.com" target="_blank">The Legend of Zelda Official Portal</a>
+    </div>
+    <p>© Nintendo. The Legend of Zelda, characters, and trademarks are property of Nintendo Co., Ltd.</p>
+    <p style="margin-top: 8px; color: #6e6456;">English localization & recreation of the official Nintendo Japan Hyrule Chronicle.</p>
+  </footer>
+
+  <!-- Script for Interactive Filtering & Search -->
+  <script>
+    function filterEra(era) {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const eraGroups = document.querySelectorAll('.era-group');
+      eraGroups.forEach(group => {
+        if (era === 'all') {
+          group.style.display = 'block';
+        } else if (group.dataset.era === era) {
+          group.style.display = 'block';
+        } else {
+          group.style.display = 'none';
+        }
+      });
+    }
+
+    function searchChronicle() {
+      const query = document.getElementById('chronicleSearch').value.toLowerCase();
+      const cards = document.querySelectorAll('.chronicle-card');
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
