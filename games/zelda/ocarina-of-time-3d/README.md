@@ -7,8 +7,9 @@ An interactive, single-page completion guide and mechanics reference for **The L
 ## 🗡️ Overview & Quick Specs
 
 * **Game**: *The Legend of Zelda: Ocarina of Time 3D* (Nintendo 3DS / Remaster)
-* **Current Version**: `v1` (`The Legend of Zelda Ocarina of Time 3D Wiki_v1.html`)
-* **Trackable Tasks**: 100+ interactive checkable items (Heart Pieces, Skulltulas, Songs, Dungeons)
+* **Current Version**: `v2` (`The Legend of Zelda Ocarina of Time 3D Wiki_v2.html`)
+* **Trackable Tasks**: 125 interactive checkable items (100% synchronized with pre-populated static counter)
+* **Cross-Section Navigation**: Standardized Previous and Next section navigation buttons across all 10 section pages with responsive mobile stacking (`@media (max-width: 600px)`) and loop-back to Section 1 (Heart Pieces, Skulltulas, Songs, Dungeons)
 * **Authoritative Source**: [IGN Ocarina of Time 3D Wiki](https://www.ign.com/wikis/the-legend-of-zelda-ocarina-of-time-3d)
 * **Hosting Format**: Pure HTML5 / CSS3 / Vanilla JS single-page application (SPA)
 
