@@ -59,11 +59,13 @@ An interactive, single-page completion guide and mechanics reference for **Assas
 Assassin's Creed/
 ├── index.html                               # AC Franchise Hub Portal
 ├── README.md                                # Franchise Overview Documentation
-└── Black Flag Resynced/
+└── black-flag-resynced/
+    ├── Assassin's Creed Black Flag Resynced Wiki_v16.html # Active interactive guide (v16)
     ├── README.md                            # AC Black Flag Guide Documentation (this file)
-    ├── Assassin's Creed Black Flag Resynced Wiki_v15.html # Active interactive guide (v15)
-    ├── Assassin's Creed Black Flag Resynced Wiki_v14.html # Preserved milestone archive (v14)
-    └── README_archive_v1.md                 # Archived documentation copy
+    └── archive/
+        ├── Assassin's Creed Black Flag Resynced Wiki_v15.html # Preserved milestone archive (v15)
+        ├── Assassin's Creed Black Flag Resynced Wiki_v14.html # Preserved milestone archive (v14)
+        └── README_archive_v15.md            # Archived documentation copy
 ```
 
 ## ⚡ Controls & Interactivity
