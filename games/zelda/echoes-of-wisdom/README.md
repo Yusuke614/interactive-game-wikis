@@ -7,8 +7,12 @@ An interactive, single-page completion guide and mechanics reference for **The L
 ## ✦ Overview & Quick Specs
 
 * **Game**: *The Legend of Zelda: Echoes of Wisdom* (Nintendo Switch)
-* **Current Version**: `v1` (`The Legend of Zelda Echoes of Wisdom Wiki_v1.html`)
-* **Trackable Tasks**: 92 interactive checkable items (Main Quests, Dungeons, Bosses, Echoes, Automatons, Heart Pieces, Upgrades)
+🌐 **Franchise Hub Portal:** [index.html](../index.html)
+
+* **Current Version**: `v7` (`The Legend of Zelda Echoes of Wisdom Wiki_v7.html`)
+* **Trackable Tasks**: 465 interactive checkable items (including all 10 Regional Province Allocation milestones) (Main Quests, Dungeons, Bosses, all 127 individual Echoes, all 69 Smoothie Recipes + 3 milestones, all 40 Heart Pieces, all 25 Stamps, Great Fairy expansions, 4 Fairy Bottles, all 6 Automatons + 7 winding/studio upgrades, 51 Might Crystals source categories & Lueburry Forge tiers, 28 Accessories, 11 Outfits, 4 Mini-Games, 12 Slumber Dojo trials, and Settlement Quests)
+* **Interactive Map**: [IGN Interactive Hyrule Map (Might Crystals Filter)](https://www.ign.com/maps/the-legend-of-zelda-echoes-of-wisdom/hyrule?filter=11659)
+* **Cross-Section Navigation**: Standardized Previous and Next section navigation buttons implemented across all 12 section pages with responsive mobile stacking and loop-back to Section 1
 * **Authoritative Source**: [IGN Echoes of Wisdom Wiki](https://www.ign.com/wikis/the-legend-of-zelda-echoes-of-wisdom)
 * **Hosting Format**: Pure HTML5 / CSS3 / Vanilla JS single-page application (SPA)
 
@@ -62,6 +66,22 @@ An interactive, single-page completion guide and mechanics reference for **The L
 | **Header Emblem** | Glowing Tri Fairy Star Crest | `✦` | Main title header emblem |
 
 ---
+
+---
+
+## 📁 Folder Structure
+
+```text
+Echoes of Wisdom/
+├── README.md                                         # Echoes of Wisdom Guide Documentation (this file)
+├── The Legend of Zelda Echoes of Wisdom Wiki_v7.html # Active comprehensive interactive guide (v7)
+├── The Legend of Zelda Echoes of Wisdom Wiki_v6.html # Preserved milestone archive (v6)
+├── The Legend of Zelda Echoes of Wisdom Wiki_v5.html # Preserved milestone archive (v5)
+├── The Legend of Zelda Echoes of Wisdom Wiki_v4.html # Preserved milestone archive (v4)
+├── The Legend of Zelda Echoes of Wisdom Wiki_v3.html # Preserved milestone archive (v3)
+├── The Legend of Zelda Echoes of Wisdom Wiki_v2.html # Preserved milestone archive (v2)
+└── The Legend of Zelda Echoes of Wisdom Wiki_v1.html # Preserved milestone archive (v1)
+```
 
 ## ⚡ Controls & Interactivity
 
