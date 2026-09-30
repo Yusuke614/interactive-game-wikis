@@ -2,12 +2,14 @@
 
 An interactive, single-page completion guide and mechanics reference for **Assassin's Creed IV: Black Flag Resynced**. Grounded directly on the official IGN walkthrough sequence and styled with the authentic aesthetic of the Caribbean Golden Age of Piracy and the Abstergo Animus interface.
 
+🌐 **Franchise Hub Portal:** [index.html](../index.html)
+
 ---
 
 ## ⚓ Overview & Quick Specs
 
 * **Game**: *Assassin's Creed IV: Black Flag* / *Resynced* (Remaster / Mod Overhaul)
-* **Current Version**: `v15` (`Assassin's Creed Black Flag Resynced Wiki_v15.html`)
+* **Current Version**: `v16` (`Assassin's Creed Black Flag Resynced Wiki_v16.html`)
 * **Trackable Tasks**: 116 persistent interactive checkable items
 * **Authoritative Source**: [IGN Assassin's Creed Black Flag Resynced Wiki](https://www.ign.com/wikis/assassins-creed-black-flag-resynced)
 * **Hosting Format**: Pure HTML5 / CSS3 / Vanilla JS single-page application (SPA)
