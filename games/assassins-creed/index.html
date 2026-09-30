@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Assassin's Creed • Franchise Portal &amp; Guidebook Hub</title>
+<title>Assassin's Creed Franchise Hub • Interactive Game Wikis &amp; Completion Portals</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&amp;family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
@@ -586,7 +586,49 @@
       .search-wrapper { max-width: 100%; }
       .top-nav-inner { flex-direction: column; align-items: flex-start; }
     }
-  </style>
+  
+.guide-card.theme-v16 {
+      border-top: 4px solid var(--accent-gold);
+    }
+    .guide-card.theme-v16:hover {
+      border-color: var(--accent-gold);
+      box-shadow: 0 16px 36px rgba(243, 168, 41, 0.2);
+    }
+    .guide-card.theme-v15,
+    .guide-card.theme-v14 {
+      border-top: 4px solid var(--accent-cyan);
+    }
+    .guide-card.theme-v15:hover,
+    .guide-card.theme-v14:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 16px 36px rgba(0, 212, 230, 0.2);
+    }
+
+    .theme-v16 .card-franchise-tag { color: var(--accent-gold); }
+    .theme-v15 .card-franchise-tag,
+    .theme-v14 .card-franchise-tag { color: var(--accent-cyan); }
+
+    .theme-v16 .btn-launch {
+      background: linear-gradient(135deg, #f3a829, #d97706);
+      color: #000;
+      box-shadow: 0 4px 14px rgba(243, 168, 41, 0.3);
+    }
+    .theme-v16 .btn-launch:hover {
+      background: linear-gradient(135deg, #fbbf24, #f3a829);
+      box-shadow: 0 6px 20px rgba(243, 168, 41, 0.45);
+    }
+
+    .theme-v15 .btn-launch,
+    .theme-v14 .btn-launch {
+      background: linear-gradient(135deg, #00d4e6, #0284c7);
+      color: #000;
+      box-shadow: 0 4px 14px rgba(0, 212, 230, 0.3);
+    }
+    .theme-v15 .btn-launch:hover,
+    .theme-v14 .btn-launch:hover {
+      background: linear-gradient(135deg, #38bdf8, #00d4e6);
+      box-shadow: 0 6px 20px rgba(0, 212, 230, 0.45);
+    }</style>
 </head>
 <body>
 <!-- Navigation Bar -->
@@ -603,9 +645,7 @@
 <a class="nav-link-btn" href="../../index.html" id="link_master_portal" title="Back to All Games Master Hub">
 <span>🌐</span> Master Hub
           </a>
-
 </div>
-
 </div>
 </div>
 </header>
@@ -622,7 +662,7 @@
 <!-- Global Metrics -->
 <div class="metrics-grid">
 <div class="metric-card">
-<div class="metric-val">116 <span>tasks</span></div>
+<div class="metric-val">115 <span>tasks</span></div>
 <div class="metric-lbl">Trackable Checklist Items</div>
 </div>
 <div class="metric-card">
@@ -642,9 +682,9 @@
 <!-- Controls Bar -->
 <section class="controls-bar">
 <div class="filter-tags">
-<button class="filter-btn active" data-filter="all" onclick="filterAC('all')">All Guides (2)</button>
-<button class="filter-btn" data-filter="active" onclick="filterAC('active')">Active Release (v15) (1)</button>
-<button class="filter-btn" data-filter="archive" onclick="filterAC('archive')">Archive Revisions (1)</button>
+<button class="filter-btn active" data-filter="all" onclick="filterAC('all')">All Editions (3)</button>
+<button class="filter-btn" data-filter="active" onclick="filterAC('active')">Active Release (v16) (1)</button>
+<button class="filter-btn" data-filter="archive" onclick="filterAC('archive')">Historical Archives (2)</button>
 </div>
 <div class="search-wrapper">
 <span class="search-icon">🔍</span>
@@ -653,28 +693,27 @@
 </section>
 <!-- Guide Cards Grid -->
 <div class="guides-grid" id="guidesGrid">
-<!-- Guide 1: AC Black Flag Resynced (Active Release v15) -->
-<article class="guide-card theme-v15" data-category="active" data-keywords="assassins creed iv black flag resynced pirate jackdaw naval edward kenway animus 100% sync legendary ships templar rifts v15 active">
+<!-- Guide 1: AC Black Flag Resynced (Active Release v16) -->
+<article class="guide-card theme-v16" data-category="active" data-keywords="assassins creed iv black flag resynced pirate jackdaw naval edward kenway animus 100% sync legendary ships templar rifts v16 active responsive navigation">
 <div>
 <div class="card-top">
 <span class="card-franchise-tag">⚓ Golden Age of Piracy</span>
-<span class="card-version-badge">Release v15 • Active</span>
+<span class="card-version-badge">Release v16 • Active</span>
 </div>
 <h2 class="card-title">Assassin's Creed IV: Black Flag Resynced</h2>
-<p class="card-subtitle">Complete IGN-grounded completion walkthrough, naval upgrade matrix, specialist officers, legendary ship tactics, Mayan &amp; Templar armors, and Animus Rift puzzles.</p>
+<p class="card-subtitle">Complete IGN-grounded completion walkthrough, naval upgrade matrix, specialist officers, legendary ship tactics, Animus Rift puzzles, and standardized cross-section navigation with mobile responsiveness.</p>
 <div class="card-pills">
 <span class="pill">12 IGN Sections</span>
-<span class="pill">116 Checkable Tasks</span>
+<span class="pill">115 Checkable Tasks</span>
 <span class="pill">Naval Combat</span>
 <span class="pill">Legendary Ships</span>
-<span class="pill">5 Officers</span>
-<span class="pill">4 Rifts &amp; EGO</span>
+<span class="pill">Vault Armors</span>
 </div>
 <div class="card-specs">
 <div class="specs-grid">
 <div class="spec-item">
 <span class="spec-label">Trackable Progress</span>
-<span class="spec-value" style="color: #f3a829;">116 Tasks</span>
+<span class="spec-value" style="color: #f3a829;">115 Tasks</span>
 </div>
 <div class="spec-item">
 <span class="spec-label">Platform Focus</span>
@@ -692,19 +731,55 @@
 </div>
 </div>
 <div class="card-actions">
-<a class="btn-launch" href="black-flag-resynced/Assassin's Creed Black Flag Resynced Wiki_v15.html" id="link_ac_launch" target="_blank">
+<a class="btn-launch" href="black-flag-resynced/Assassin's Creed Black Flag Resynced Wiki_v16.html" id="link_ac_launch" target="_blank">
 <span>⚔️</span> Launch Interactive Guide
-          </a>
+        </a>
 <div class="secondary-links">
-
 <a class="btn-secondary" href="black-flag-resynced/README.md" id="link_ac_readme" target="_blank">
-              📄 README.md
-            </a>
-
+            📄 README.md
+          </a>
 </div>
 </div>
 </article>
-<!-- Guide 2: Historical Archive (Release v14) -->
+<!-- Guide 2: Historical Archive (Release v15) -->
+<article class="guide-card theme-v15" data-category="archive" data-keywords="assassins creed iv black flag resynced pirate jackdaw naval edward kenway v15 archive milestone">
+<div>
+<div class="card-top">
+<span class="card-franchise-tag">📦 Historical Archive</span>
+<span class="card-version-badge">Milestone v15</span>
+</div>
+<h2 class="card-title">Black Flag Resynced (v15 Archive)</h2>
+<p class="card-subtitle">Previous release milestone preserved for historical reference and progression comparison.</p>
+<div class="card-pills">
+<span class="pill">12 Sections</span>
+<span class="pill">115 Tasks</span>
+<span class="pill">Archive Milestone</span>
+</div>
+<div class="card-specs">
+<div class="specs-grid">
+<div class="spec-item">
+<span class="spec-label">Status</span>
+<span class="spec-value" style="color: #00d4e6;">Archive v15</span>
+</div>
+<div class="spec-item">
+<span class="spec-label">Archived On</span>
+<span class="spec-value">September 2026</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card-actions">
+<a class="btn-launch" href="black-flag-resynced/Assassin's Creed Black Flag Resynced Wiki_v15.html" id="link_v15_launch" target="_blank">
+<span>📜</span> Launch v15 Archive
+        </a>
+<div class="secondary-links">
+<a class="btn-secondary" href="black-flag-resynced/README_archive_v15.md" target="_blank">
+            📄 v15 Docs
+          </a>
+</div>
+</div>
+</article>
+<!-- Guide 3: Historical Archive (Release v14) -->
 <article class="guide-card theme-v14" data-category="archive" data-keywords="assassins creed iv black flag resynced pirate jackdaw naval edward kenway v14 archive milestone">
 <div>
 <div class="card-top">
@@ -712,30 +787,20 @@
 <span class="card-version-badge">Milestone v14</span>
 </div>
 <h2 class="card-title">Black Flag Resynced (v14 Archive)</h2>
-<p class="card-subtitle">Previous stable release milestone of the comprehensive Black Flag Resynced completion guide preserved for version continuity and offline archival.</p>
+<p class="card-subtitle">Legacy release milestone of the comprehensive Black Flag Resynced completion guide preserved for historical reference.</p>
 <div class="card-pills">
-<span class="pill">Preserved Milestone</span>
-<span class="pill">12 Walkthrough Modules</span>
-<span class="pill">Complete Naval Tree</span>
-<span class="pill">Full Offline SPA</span>
+<span class="pill">12 Sections</span>
+<span class="pill">Archive Milestone</span>
 </div>
 <div class="card-specs">
 <div class="specs-grid">
 <div class="spec-item">
-<span class="spec-label">Version Status</span>
+<span class="spec-label">Status</span>
 <span class="spec-value" style="color: #00d4e6;">Archive v14</span>
 </div>
 <div class="spec-item">
-<span class="spec-label">Platform Focus</span>
-<span class="spec-value">PC / Console</span>
-</div>
-<div class="spec-item">
-<span class="spec-label">Source Sequence</span>
-<span class="spec-value">IGN Walkthrough</span>
-</div>
-<div class="spec-item">
-<span class="spec-label">Format</span>
-<span class="spec-value">Standalone HTML</span>
+<span class="spec-label">Archived On</span>
+<span class="spec-value">September 2026</span>
 </div>
 </div>
 </div>
@@ -743,11 +808,7 @@
 <div class="card-actions">
 <a class="btn-launch" href="black-flag-resynced/Assassin's Creed Black Flag Resynced Wiki_v14.html" id="link_v14_launch" target="_blank">
 <span>📜</span> Launch v14 Archive
-          </a>
-<div class="secondary-links">
-
-
-</div>
+        </a>
 </div>
 </article>
 </div>
@@ -775,9 +836,8 @@
 <ul>
 <li><strong>AC Franchise Hub</strong>: <code>games/assassins-creed/index.html</code></li>
 <li><strong>Franchise Overview</strong>: <code>games/assassins-creed/README.md</code></li>
-<li><strong>Active Release v15</strong>: <code>games/assassins-creed/black-flag-resynced/index.html</code></li>
+<li><strong>Active Release v16</strong>: <code>games/assassins-creed/black-flag-resynced/index.html</code></li>
 <li><strong>Archive v14</strong>: <code>games/assassins-creed/black-flag-resynced/archive/ac-black-flag-resynced-wiki-v14.html</code></li>
-
 </ul>
 </div>
 <div class="info-pane">

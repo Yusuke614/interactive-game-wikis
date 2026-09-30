@@ -10,7 +10,7 @@ A curated collection of offline-capable, interactive single-page application (SP
 
 | Title | Platform / Setting | Active Release | Scope & Tasks | Folder Location |
 | :--- | :---: | :---: | :---: | :--- |
-| [**Black Flag Resynced**](Black%20Flag%20Resynced/) | PC Remaster / Caribbean Golden Age of Piracy | `v15` | 116 Tasks | `Black Flag Resynced/` — 12 IGN-grounded walkthrough modules, Sequences 1–13 (100% sync), 4 Animus Rifts & EGO solutions, Jackdaw upgrade trees & naval combat, 4 Legendary Ships, 5 Specialist Officers, 15 Naval Contracts, 4 Templar Hunts & 16 Mayan Stelae puzzles, crafting, and achievements. |
+| [**Black Flag Resynced**](Black%20Flag%20Resynced/) | PC Remaster / Caribbean Golden Age of Piracy | `v16` | 115 Tasks | `Black Flag Resynced/` — 12 IGN-grounded walkthrough modules, Sequences 1–13 (100% sync), 4 Animus Rifts & EGO solutions, Jackdaw upgrade trees & naval combat, 4 Legendary Ships, 5 Specialist Officers, 15 Naval Contracts, 4 Templar Hunts & 16 Mayan Stelae puzzles, crafting, and achievements. |
 
 ---
 
@@ -24,10 +24,11 @@ Assassin's Creed/
 ├── README.md                                # Franchise overview (this file)
 │
 └── Black Flag Resynced/
-    ├── Assassin's Creed Black Flag Resynced Wiki_v15.html # Active interactive guide (v15)
+    ├── Assassin's Creed Black Flag Resynced Wiki_v16.html # Active interactive guide (v16)
+    ├── Assassin's Creed Black Flag Resynced Wiki_v15.html # Preserved milestone archive (v15)
     ├── Assassin's Creed Black Flag Resynced Wiki_v14.html # Preserved milestone archive (v14)
     ├── README.md                            # Dedicated Black Flag Resynced guide documentation
-    └── README_archive_v1.md                 # Archived documentation copy
+    └── README_archive_v15.md                # Archived documentation copy
 ```
 
 ---
