@@ -7,7 +7,6 @@ An interactive, single-page completion guide and mechanics reference for **The L
 ## ✦ Overview & Quick Specs
 
 * **Game**: *The Legend of Zelda: Echoes of Wisdom* (Nintendo Switch)
-🌐 **Franchise Hub Portal:** [index.html](../index.html)
 
 * **Current Version**: `v7` (`The Legend of Zelda Echoes of Wisdom Wiki_v7.html`)
 * **Trackable Tasks**: 465 interactive checkable items (including all 10 Regional Province Allocation milestones) (Main Quests, Dungeons, Bosses, all 127 individual Echoes, all 69 Smoothie Recipes + 3 milestones, all 40 Heart Pieces, all 25 Stamps, Great Fairy expansions, 4 Fairy Bottles, all 6 Automatons + 7 winding/studio upgrades, 51 Might Crystals source categories & Lueburry Forge tiers, 28 Accessories, 11 Outfits, 4 Mini-Games, 12 Slumber Dojo trials, and Settlement Quests)
