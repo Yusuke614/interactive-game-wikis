@@ -2,7 +2,7 @@
 
 A curated collection of offline-capable, interactive single-page application (SPA) game wikis, walkthrough guides, and canon chronicles for **The Legend of Zelda** franchise. Grounded directly on authoritative IGN guides and official Nintendo publications, with persistent task tracking, live search, and franchise-specific aesthetics.
 
-🌐 **Franchise Hub Portal:** [index.html](index.html)
+🌐 **Live GitHub Pages Portal:** [https://yusuke614.github.io/interactive-game-wikis/](https://yusuke614.github.io/interactive-game-wikis/)
 
 ---
 
@@ -10,9 +10,9 @@ A curated collection of offline-capable, interactive single-page application (SP
 
 | Title | Platform / Type | Active Release | Scope & Tasks | Folder Location |
 | :--- | :---: | :---: | :---: | :--- |
-| [**Ocarina of Time 3D**](Ocarina%20of%20Time%203D/) | Nintendo 3DS | `v2` | 125 Tasks | `Ocarina of Time 3D/` — 12 IGN-grounded sections, 36 Heart Pieces, 100 Gold Skulltulas, songs & warp tunes, Biggoron trading sequence, Master Quest notes, Hyrule/Triforce theme. |
-| [**Echoes of Wisdom**](Echoes%20of%20Wisdom/) | Nintendo Switch | `v7` | 465 Tasks | `Echoes of Wisdom/` — All 15 main quests, 8 dungeons & Still Worlds, complete 127 Echoes compendium, all 40 Pieces of Heart, all 25 Stamp Stands, Great Fairy expansions, 4 Fairy Bottles, 6 Dampé automatons, 150 Might Crystals, 28 accessories, and 12 Slumber Dojo trials. |
-| [**The Hyrule Chronicle (English)**](The%20Hyrule%20Chronicle/) | Official Japanese Canon Timeline Translation | `v5` | 5 Canonical Eras | `The Hyrule Chronicle/` — Full translation of Nintendo's official Japanese 40th anniversary timeline. Establishes the pre-creation Null void (*Echoes of Wisdom*), the Dual Foundings of Hyrule, the Threefold Split, and the Era of the Wild (*BotW* / *TotK*). |
+| [**Ocarina of Time 3D**](ocarina-of-time-eD/) | Nintendo 3DS | `v2` | 125 Tasks | `Ocarina of Time 3D/` — 12 IGN-grounded sections, 36 Heart Pieces, 100 Gold Skulltulas, songs & warp tunes, Biggoron trading sequence, Master Quest notes, Hyrule/Triforce theme. |
+| [**Echoes of Wisdom**](echoes-of-wisdom/) | Nintendo Switch | `v7` | 465 Tasks | `Echoes of Wisdom/` — All 15 main quests, 8 dungeons & Still Worlds, complete 127 Echoes compendium, all 40 Pieces of Heart, all 25 Stamp Stands, Great Fairy expansions, 4 Fairy Bottles, 6 Dampé automatons, 150 Might Crystals, 28 accessories, and 12 Slumber Dojo trials. |
+| [**The Hyrule Chronicle (English)**](the-hyrule-chronicle/) | Official Japanese Canon Timeline Translation | `v5` | 5 Canonical Eras | `The Hyrule Chronicle/` — Full translation of Nintendo's official Japanese 40th anniversary timeline. Establishes the pre-creation Null void (*Echoes of Wisdom*), the Dual Foundings of Hyrule, the Threefold Split, and the Era of the Wild (*BotW* / *TotK*). |
 
 ---
 
