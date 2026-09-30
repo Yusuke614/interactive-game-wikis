@@ -10,7 +10,7 @@ A curated collection of offline-capable, interactive single-page application (SP
 
 | Title | Platform / Type | Active Release | Scope & Tasks | Folder Location |
 | :--- | :---: | :---: | :---: | :--- |
-| [**Ocarina of Time 3D**](ocarina-of-time-eD/) | Nintendo 3DS | `v2` | 125 Tasks | `Ocarina of Time 3D/` — 12 IGN-grounded sections, 36 Heart Pieces, 100 Gold Skulltulas, songs & warp tunes, Biggoron trading sequence, Master Quest notes, Hyrule/Triforce theme. |
+| [**Ocarina of Time 3D**](ocarina-of-time-3d/) | Nintendo 3DS | `v2` | 125 Tasks | `Ocarina of Time 3D/` — 12 IGN-grounded sections, 36 Heart Pieces, 100 Gold Skulltulas, songs & warp tunes, Biggoron trading sequence, Master Quest notes, Hyrule/Triforce theme. |
 | [**Echoes of Wisdom**](echoes-of-wisdom/) | Nintendo Switch | `v7` | 465 Tasks | `Echoes of Wisdom/` — All 15 main quests, 8 dungeons & Still Worlds, complete 127 Echoes compendium, all 40 Pieces of Heart, all 25 Stamp Stands, Great Fairy expansions, 4 Fairy Bottles, 6 Dampé automatons, 150 Might Crystals, 28 accessories, and 12 Slumber Dojo trials. |
 | [**The Hyrule Chronicle (English)**](the-hyrule-chronicle/) | Official Japanese Canon Timeline Translation | `v5` | 5 Canonical Eras | `The Hyrule Chronicle/` — Full translation of Nintendo's official Japanese 40th anniversary timeline. Establishes the pre-creation Null void (*Echoes of Wisdom*), the Dual Foundings of Hyrule, the Threefold Split, and the Era of the Wild (*BotW* / *TotK*). |
 
