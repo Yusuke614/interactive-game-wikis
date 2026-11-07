@@ -10,7 +10,7 @@ A curated collection of offline-capable, interactive single-page application (SP
 
 | Title | Platform / Type | Active Release | Scope & Tasks | Folder Location |
 | :--- | :---: | :---: | :---: | :--- |
-| [**Ocarina of Time 3D**](ocarina-of-time-3d/) | Nintendo 3DS | `v2` | 125 Tasks | `ocarina-of-time-3d/` — 12 IGN-grounded sections, 36 Heart Pieces, 100 Gold Skulltulas, songs & warp tunes, Biggoron trading sequence, Master Quest notes, Hyrule/Triforce theme. |
+| [**Ocarina of Time (Remake & 3D)**](ocarina-of-time-3d/) | Switch 2 & 3DS | `v10` | 159 Tasks | `ocarina-of-time-3d/` — 12 IGN Remake-grounded sections, 2026 Switch 2 overhauls, 5 Empty Bottles, 36 Heart Pieces, 100 Gold Skulltulas, songs & warp tunes, Biggoron trading sequence, Master Quest notes, Hyrule/Triforce theme. |
 | [**Echoes of Wisdom**](echoes-of-wisdom/) | Nintendo Switch | `v7` | 465 Tasks | `echoes-of-wisdom/` — All 15 main quests, 8 dungeons & Still Worlds, complete 127 Echoes compendium, all 40 Pieces of Heart, all 25 Stamp Stands, Great Fairy expansions, 4 Fairy Bottles, 6 Dampé automatons, 150 Might Crystals, 28 accessories, and 12 Slumber Dojo trials. |
 | [**The Hyrule Chronicle (English)**](the-hyrule-chronicle/) | Official Japanese Canon Timeline Translation | `v5` | 5 Canonical Eras | `the-hyrule-chronicle/` — Full translation of Nintendo's official Japanese 40th anniversary timeline. Establishes the pre-creation Null void (*Echoes of Wisdom*), the Dual Foundings of Hyrule, the Threefold Split, and the Era of the Wild (*BotW* / *TotK*). |
 
@@ -26,11 +26,12 @@ The Legend of Zelda/
 ├── README.md                                # Zelda franchise overview (this file)
 │
 ├── ocarina-of-time-3d/
-│   ├── The Legend of Zelda Ocarina of Time 3D Wiki_v2.html   # Active interactive guide (v2)
-│   └── README.md                            # Dedicated OoT 3D guide documentation
+│   ├── The Legend of Zelda Ocarina of Time Remake Wiki_v10.html # Active interactive guide (v10)
+│   ├── The Legend of Zelda Ocarina of Time 3D Wiki_v2.html     # Preserved milestone archive (v2)
+│   └── README.md                                               # Dedicated OoT Remake & 3D documentation
 │
 ├── echoes-of-wisdom/
-│   ├── The Legend of Zelda Echoes of Wisdom Wiki_v7.html     # Active comprehensive interactive guide (v7)
+│   ├── The Legend of Zelda Echoes of Wisdom Wiki_v10.html     # Active comprehensive interactive guide (v10)
 │   ├── The Legend of Zelda Echoes of Wisdom Wiki_v6.html     # Preserved milestone archive (v6)
 │   ├── The Legend of Zelda Echoes of Wisdom Wiki_v5.html     # Preserved milestone archive (v5)
 │   ├── The Legend of Zelda Echoes of Wisdom Wiki_v4.html     # Preserved milestone archive (v4)
