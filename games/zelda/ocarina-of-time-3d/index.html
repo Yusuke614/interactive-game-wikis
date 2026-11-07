@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Legend of Zelda: Ocarina of Time 3D • Complete Interactive Guidebook (v2)</title>
+<title>The Legend of Zelda: Ocarina of Time Remake — Complete 100% Interactive Wiki &amp; Walkthrough Guide (Switch 2 &amp; 3DS)</title>
 <style>
     :root {
       --bg-dark: #070e0a;
@@ -700,7 +700,167 @@
       .pager-btn.next-btn {
         margin-left: 0;
       }
-    }</style>
+    }
+    /* Differentiated Version Banners & Card Styles */
+    .version-group-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 24px 0 14px 0;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border-left: 5px solid;
+    }
+    .version-group-header.remake-group {
+      background: linear-gradient(90deg, rgba(230, 126, 34, 0.18), rgba(12, 24, 19, 0.4));
+      border-left-color: #e67e22;
+      border: 1px solid rgba(230, 126, 34, 0.3);
+      border-left-width: 5px;
+    }
+    .version-group-header.n3ds-group {
+      background: linear-gradient(90deg, rgba(52, 152, 219, 0.18), rgba(12, 24, 19, 0.4));
+      border-left-color: #3498db;
+      border: 1px solid rgba(52, 152, 219, 0.3);
+      border-left-width: 5px;
+    }
+    .version-group-title {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .version-group-header.remake-group .version-group-title {
+      color: #f39c12;
+    }
+    .version-group-header.n3ds-group .version-group-title {
+      color: #5dade2;
+    }
+    .version-group-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-left: auto;
+    }
+    .sub-card.card-remake {
+      border: 1px solid rgba(230, 126, 34, 0.35);
+      background: linear-gradient(145deg, #121c16, #0e1813);
+      box-shadow: 0 4px 12px rgba(230, 126, 34, 0.05);
+    }
+    .sub-card.card-remake:hover {
+      border-color: #f39c12;
+      box-shadow: 0 6px 18px rgba(230, 126, 34, 0.15);
+    }
+    .sub-card.card-3ds {
+      border: 1px solid rgba(52, 152, 219, 0.3);
+      background: linear-gradient(145deg, #0d1b1d, #0b1716);
+      box-shadow: 0 4px 12px rgba(52, 152, 219, 0.05);
+    }
+    .sub-card.card-3ds:hover {
+      border-color: #5dade2;
+      box-shadow: 0 6px 18px rgba(52, 152, 219, 0.15);
+    }
+    .badge-remake {
+      background: rgba(230, 126, 34, 0.2);
+      color: #f39c12;
+      border: 1px solid #f39c12;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+    }
+    .badge-3ds {
+      background: rgba(52, 152, 219, 0.2);
+      color: #5dade2;
+      border: 1px solid #3498db;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+    }
+
+  
+    /* Switch 2 Ocarina Button Badges */
+    .note-sw2 {
+      display: inline-block;
+      font-weight: 800;
+      font-size: 11px;
+      padding: 2px 7px;
+      margin: 1px 2px;
+      border-radius: 4px;
+      text-align: center;
+      line-height: 1.2;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .note-sw2-l { background: #34495e; color: #ecf0f1; border: 1px solid #7f8c8d; }  /* Low D */
+    .note-sw2-r { background: #e67e22; color: #fff; border: 1px solid #d35400; }     /* F */
+    .note-sw2-a { background: #27ae60; color: #fff; border: 1px solid #2ecc71; }     /* A */
+    .note-sw2-y { background: #f39c12; color: #000; border: 1px solid #f1c40f; }     /* B */
+    .note-sw2-x { background: #2980b9; color: #fff; border: 1px solid #3498db; }     /* High D */
+    .song-notes-container {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 290px;
+    }
+    .song-notes-row {
+      display: flex;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+    }
+    .song-notes-row.sw2-notes-row {
+      display: inline-flex;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      align-items: center;
+      gap: 3px;
+    }
+    .platform-tag {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      margin-right: 4px;
+    }
+    .platform-tag.tag-sw2 {
+      background: rgba(230, 126, 34, 0.25);
+      color: #f39c12;
+      border: 1px solid #e67e22;
+    }
+    .platform-tag.tag-3ds {
+      background: rgba(52, 152, 219, 0.25);
+      color: #5dade2;
+      border: 1px solid #3498db;
+    }
+    .ocarina-callout-box {
+      background: #0f1c16;
+      border: 1px solid var(--triforce-gold);
+      border-left: 5px solid var(--triforce-gold);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+    }
+    .ocarina-callout-box h4 {
+      margin: 0 0 6px 0;
+      color: var(--triforce-gold);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+    }
+    .ocarina-callout-box p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--text-main);
+    }
+
+  </style>
 </head>
 <body>
 <div class="wiki-container">
@@ -708,12 +868,10 @@
 <header>
 <div class="header-top">
 <div class="title-group">
-<h1><span class="triforce-crest">▲</span> The Legend of Zelda: Ocarina of Time 3D <span class="tag">Complete Interactive Guide (v2)</span></h1>
-<div class="subtitle">Complete Encyclopedia &amp; Walkthrough • Clickable Section Pages (IGN Wiki Order) • All 36 Heart Pieces • All 100 Gold Skulltulas • Master Quest • Ocarina Songs</div>
+<h1><span class="triforce-crest">▲</span> The Legend of Zelda: Ocarina of Time <span class="tag">Remake &amp; 3D Interactive Guide (v7)</span></h1>
+<div class="subtitle">Complete Encyclopedia &amp; Walkthrough • Grounded on the Updated IGN Remake Wiki • 2026 Switch 2 Overhauls &amp; 3DS Features • All 36 Heart Pieces • All 100 Gold Skulltulas • All 5 Bottles • Master Quest</div>
 </div>
-<div class="source-badge">
-        Source: <a href="https://www.ign.com/wikis/the-legend-of-zelda-ocarina-of-time-3d" rel="noopener" target="_blank">IGN OoT 3D Wiki Guide</a>
-</div>
+<div class="source-badge">Source: <a href="https://www.ign.com/wikis/ocarina-of-time-remake" rel="noopener" target="_blank">IGN OoT Remake Wiki</a> &amp; <a href="https://www.ign.com/wikis/the-legend-of-zelda-ocarina-of-time-3d" rel="noopener" target="_blank">IGN 3D Guide</a></div>
 </div>
 <!-- Overview Stats Grid -->
 <div class="stats-grid">
@@ -734,12 +892,12 @@
 <div class="lbl">Ocarina Melodies &amp; Warps</div>
 </div>
 <div class="stat-card">
-<div class="val">Master Quest</div>
-<div class="lbl">Mirrored Mode &amp; Harder Dungeons</div>
+<div class="val">Remake Overhauls</div>
+<div class="lbl">Switch 2 &amp; 3DS Mechanics</div>
 </div>
 <div class="stat-card">
-<div class="val">Boss Challenge</div>
-<div class="lbl">3DS Boss Rush Mode</div>
+<div class="val">5 Bottles</div>
+<div class="lbl">All Empty Bottles (New #1 in Castle Town)</div>
 </div>
 </div>
 <!-- Progress Tracker -->
@@ -747,7 +905,7 @@
 <div class="progress-bar-fill" id="progressBar"></div>
 </div>
 <div class="progress-text">
-<span id="progressStats">Checklist Progress: 0 / 125 completed (0%)</span>
+<span id="progressStats">Checklist Progress: 0 / 159 completed (0%)</span>
 <span>Hyrule Completion Tracker (Saves to Browser)</span>
 </div>
 </header>
@@ -770,7 +928,7 @@
 <div class="mobile-section-select">
 <label for="pageSelectDropdown" style="font-size:13px; font-weight:600; color:var(--triforce-gold);">Select Section:</label>
 <select id="pageSelectDropdown" onchange="showPage(this.value)">
-<option value="sec_basics">1: Basics &amp; 3DS Features</option>
+<option value="sec_basics">1: Basics, Controls &amp; Remake Features</option>
 <option value="sec_walkthrough_child">2: Main Walkthrough - Child Era</option>
 <option value="sec_walkthrough_adult">3: Main Walkthrough - Adult Era</option>
 <option value="sec_master_quest">4: Master Quest Walkthrough</option>
@@ -784,7 +942,7 @@
 </div>
 <div class="page-tabs" id="pageTabs">
 <button class="page-tab active" data-page-id="sec_basics" onclick="showPage('sec_basics')">
-<span class="tab-num">1</span> <span class="tab-icon">⚙️</span> <span class="tab-title">Basics &amp; 3DS Features</span>
+<span class="tab-num">1</span> <span class="tab-icon">⚙️</span> <span class="tab-title">Basics &amp; Remake Features</span>
 </button>
 <button class="page-tab" data-page-id="sec_walkthrough_child" onclick="showPage('sec_walkthrough_child')">
 <span class="tab-num">2</span> <span class="tab-icon">🗡️</span> <span class="tab-title">Child Era Walkthrough</span>
@@ -820,84 +978,137 @@
 <div class="section-header active" onclick="toggleSection(this)">
 <div class="section-title-group">
 <span class="collapse-arrow">►</span>
-<div class="section-title">1. Basics, Controls &amp; 3DS Version Differences</div>
+<div class="section-title">1. Basics, Controls, 3DS &amp; Switch 2 Remake Overhauls</div>
 </div>
-<span class="badge badge-gold">3DS Remaster Overhauls</span>
+<span class="badge badge-gold">IGN Remake &amp; 3DS Overhauls</span>
 </div>
 <div class="section-content">
-<p><em>The Legend of Zelda: Ocarina of Time 3D</em> remasters the timeless Nintendo 64 classic for the Nintendo 3DS at a silky 30 frames per second with stereoscopic 3D, refined textures, updated character models, and a host of quality-of-life gameplay enhancements:</p>
+<p>Grounded on the updated <strong><a href="https://www.ign.com/wikis/ocarina-of-time-remake" rel="noopener" target="_blank">IGN Ocarina of Time Remake Wiki</a></strong> and comprehensive strategy coverage, this section clearly differentiates the brand-new <strong>2026 Nintendo Switch 2 Remake</strong> additions from the foundation <strong>Nintendo 3DS</strong> features. The remake brings modern 3D camera controls, rebalanced economy, streamlined dungeon puzzles, physical combat logic, full English voice acting, and exclusive quests while preserving the core classic adventure:</p>
+<!-- GROUP 1: SWITCH 2 REMAKE EXCLUSIVE OVERHAULS -->
+<div class="version-group-header remake-group">
+<div class="version-group-title">
+<span>🌟</span> 2026 Nintendo Switch 2 Remake Features &amp; Additions
+  </div>
+<div class="version-group-desc">Exclusive to the 2026 Remake release</div>
+</div>
 <div class="card-grid">
-<div class="sub-card">
+<div class="sub-card card-remake">
 <div class="sub-card-header">
-<span class="sub-card-title">Touchscreen Inventory &amp; Gear</span>
-<span class="badge badge-green">QoL Upgrade</span>
+<span class="sub-card-title">Expanded Wallets (200 / 500 / 1,000R) &amp; Economy</span>
+<span class="badge badge-remake">Remake Exclusive</span>
 </div>
-<p>The 3DS bottom screen provides instant access to your item inventory, equipment, map, and ocarina songs. You can equip the <strong>Iron Boots</strong> and <strong>Hover Boots</strong> as toggleable button items on the touchscreen without ever pausing the game—radically streamlining the Water Temple!</p>
+<p>Link's starting wallet holds <strong>200 Rupees</strong> right from the start (up from 99 on N64/3DS), the <strong>Adult's Wallet</strong> (10 Skulltulas) holds <strong>500 Rupees</strong>, and the <strong>Giant's Wallet</strong> (30 Skulltulas) holds a massive <strong>1,000 Rupees</strong>! While jumping across Kokiri water pillars no longer spawns a Blue Rupee, generous Blue Rupees are hidden behind Link's House, behind Mido's house, and on the shop awning (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Kokiri_Forest_Walkthrough" rel="noopener" target="_blank">IGN Kokiri Forest Guide</a>).</p>
 </div>
-<div class="sub-card">
+<div class="sub-card card-remake">
+<div class="sub-card-header">
+<span class="sub-card-title">Full 3D Free Camera in Castle Town</span>
+<span class="badge badge-remake">Remake Exclusive</span>
+</div>
+<p>Castle Town is no longer restricted to fixed pre-rendered camera angles! Link enjoys complete 360-degree free camera control with zero loading screens from the town drawbridge, through Market Square, all the way to the Temple of Time. Meet new NPCs including the market advisor offering budget tips.</p>
+</div>
+<div class="sub-card card-remake">
+<div class="sub-card-header">
+<span class="sub-card-title">Water Temple Streamlining &amp; Instant Boots</span>
+<span class="badge badge-remake">Remake Exclusive</span>
+</div>
+<p>Series producer Eiji Aonuma addressed long-standing "overdue homework" on the Water Temple. Redundant small key requirements have been consolidated, obscure rooms moved to optional completionist paths, water-level guidance lights enhanced, and the Iron Boots can be toggled on-the-fly without opening the pause menu!</p>
+</div>
+<div class="sub-card card-remake">
+<div class="sub-card-header">
+<span class="sub-card-title">Overhauled Combat &amp; Enemy Telegraphing</span>
+<span class="badge badge-remake">Remake Exclusive</span>
+</div>
+<p>Enemies adhere to physical logic: Skulltulas spin around to expose their soft weak underbelly when whacked with a blade (rather than flipping randomly), Floormasters telegraph descending ceiling attacks with bright color-changing spotlights, Stalfos fight over shallow acid pools, and Death Mountain Crater burns Link with dynamic smoldering flares instead of a static timer.</p>
+</div>
+<div class="sub-card card-remake">
+<div class="sub-card-header">
+<span class="sub-card-title">Full English Voice Acting &amp; Deeper Dialogue</span>
+<span class="badge badge-remake">Remake Exclusive</span>
+</div>
+<p>Features a stellar English voice cast including <strong>Erica Mendez</strong> (Princess Zelda &amp; Sheik), <strong>Matt Mercer</strong> (Ganondorf), and <strong>Lisa Reimold</strong> (Navi). Cutscenes feature enriched dialogue, sharper conversational responses, and real-time casting of Great Fairy spells like Din's Fire.</p>
+</div>
+<div class="sub-card card-remake">
+<div class="sub-card-header">
+<span class="sub-card-title">5th Empty Bottle, 5-Big-Poe Rule &amp; Songbook</span>
+<span class="badge badge-remake">Remake Exclusive</span>
+</div>
+<p>Adds a brand-new <strong>5th Empty Bottle</strong> inside the Castle Town Potion Shop (catch an escaped bug for a free Red Potion + bottle), and reduces the Ghost Shop Bottle #5 requirement to just <strong>5 out of 10 Big Poes (500 points)</strong> (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/All_Empty_Bottle_Locations" rel="noopener" target="_blank">IGN Bottles Guide</a>). Pressing <code>D-Pad Left</code> equips the Ocarina and pressing <code>ZL</code> opens the instant Songbook.</p>
+</div>
+<div class="sub-card card-remake">
+<div class="sub-card-header">
+<span class="sub-card-title">Business Scrub Seeds &amp; Persistent Ruto</span>
+<span class="badge badge-remake">Remake Exclusive</span>
+</div>
+<p>Dungeon chests in <a href="https://www.ign.com/wikis/ocarina-of-time-remake/Dodongo_Cavern_Dungeon_Walkthrough" rel="noopener" target="_blank">Dodongo's Cavern</a> and Death Mountain Crater reward <strong>Business Scrub Seeds</strong>—consumable items you can throw down almost anywhere to summon an emergency merchant for health, Deku Seeds, or Sticks! Plus, in <a href="https://www.ign.com/wikis/ocarina-of-time-remake/Lord_Jabu-Jabu%27s_Belly_Dungeon_Walkthrough" rel="noopener" target="_blank">Lord Jabu-Jabu's Belly</a>, Princess Ruto stays wherever you leave her sitting even if you exit the dungeon.</p>
+</div><div class="sub-card card-remake">
+<div class="sub-card-header">
+<span class="sub-card-title">HUD Skulltula Gem &amp; Swapped Great Fairies</span>
+<span class="badge badge-remake">Remake Exclusive</span>
+</div>
+<p>The 20-Skulltula <strong>Stone of Agony</strong> adds an active <strong>HUD Gem Indicator</strong> that flashes faster as you approach any hidden Gold Skulltula (even if gated by nighttime, soft soil, or trees). Furthermore, the Death Mountain Summit Great Fairy asks for a <strong>25-Rupee offering</strong> and grants <strong>Din's Fire + Magic Meter</strong> immediately, while the Hyrule Castle Great Fairy teaches the <strong>Spin Attack</strong> (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Dodongo_Cavern_Dungeon_Walkthrough" rel="noopener" target="_blank">IGN Dodongo Cavern Guide</a>).</p>
+</div></div>
+<!-- GROUP 2: NINTENDO 3DS REMASTER FOUNDATION FEATURES -->
+<div class="version-group-header n3ds-group">
+<div class="version-group-title">
+<span>🎮</span> Nintendo 3DS Remaster Foundation Features
+  </div>
+<div class="version-group-desc">Carried forward from the 2011 3DS remaster</div>
+</div>
+<div class="card-grid">
+<div class="sub-card card-3ds">
+<div class="sub-card-header">
+<span class="sub-card-title">Touchscreen Inventory &amp; Gear Layout</span>
+<span class="badge badge-3ds">3DS Feature</span>
+</div>
+<p>The 3DS dual-screen design provides instant touch access to your item inventory, gear equipment, dungeon map, and ocarina melodies. Dedicated button slots allow equipping the Iron Boots and Hover Boots as toggle items rather than pausing the game.</p>
+</div>
+<div class="sub-card card-3ds">
 <div class="sub-card-header">
 <span class="sub-card-title">Gyroscope First-Person Aiming</span>
-<span class="badge badge-blue">Precision Control</span>
+<span class="badge badge-3ds">3DS Feature</span>
 </div>
-<p>When using the Fairy Slingshot, Fairy Bow, Boomerang, or Hookshot/Longshot, you can aim with pinpoint precision by tilting the Nintendo 3DS console using internal gyroscopes (or using the Circle Pad if preferred).</p>
+<p>When drawing the Fairy Slingshot, Fairy Bow, Boomerang, or Hookshot/Longshot, players can aim with pinpoint precision by physically tilting the Nintendo 3DS console using internal gyroscopes (or using the Circle Pad).</p>
 </div>
-<div class="sub-card">
+<div class="sub-card card-3ds">
 <div class="sub-card-header">
 <span class="sub-card-title">Sheikah Stones &amp; Hint Visions</span>
-<span class="badge badge-gold">New 3DS Feature</span>
+<span class="badge badge-3ds">3DS Feature</span>
 </div>
-<p>Two glowing green <strong>Sheikah Stones</strong> are located in Hyrule—one right outside Link's treehouse in Kokiri Forest, and one inside the Temple of Time. Crawling inside lets players view short "Vision" movie clips revealing puzzle hints and hidden Heart Pieces if they are stuck.</p>
+<p>Two glowing green <strong>Sheikah Stones</strong> are located in Hyrule—one right outside Link's treehouse in Kokiri Forest, and one inside the Temple of Time. Crawling inside lets players view short "Vision" movie clips revealing puzzle hints and hidden Heart Pieces.</p>
 </div>
-<div class="sub-card">
+<div class="sub-card card-3ds">
 <div class="sub-card-header">
 <span class="sub-card-title">The Shard of Agony</span>
-<span class="badge badge-purple">Secret Detector</span>
+<span class="badge badge-3ds">3DS Feature</span>
 </div>
 <p>Replaces the N64 rumble pak "Stone of Agony". Obtained after collecting 20 Gold Skulltula tokens, this crystalline shard appears in the top-left screen corner and beeps with increasing visual frequency when Link is near hidden grottoes or subterranean holes.</p>
 </div>
-<div class="sub-card">
+<div class="sub-card card-3ds">
 <div class="sub-card-header">
 <span class="sub-card-title">Boss Challenge &amp; Gauntlet Mode</span>
-<span class="badge badge-red">Combat Mode</span>
+<span class="badge badge-3ds">3DS Feature</span>
 </div>
 <p>After clearing the Forest Temple as Adult Link, returning to Link's treehouse bed in Kokiri Forest allows you to choose between taking a nap to restore hearts or entering <strong>Boss Challenge Mode</strong> to battle previously defeated bosses with timed records or run the ultimate 8-boss Gauntlet!</p>
 </div>
-<div class="sub-card">
+<div class="sub-card card-3ds">
 <div class="sub-card-header">
 <span class="sub-card-title">Master Quest (Mirror World)</span>
-<span class="badge badge-gold">Full Extra Campaign</span>
+<span class="badge badge-3ds">3DS Feature</span>
 </div>
 <p>Unlocked upon beating the main campaign. The entire world of Hyrule is mirrored east-to-west, enemies deal double damage, and all dungeons feature completely redesigned, challenging puzzles and altered item layouts.</p>
 </div>
 </div>
 <h3>Essential Beginner Milestones</h3>
-<div class="check-item" data-task-id="basic_kokiri_sword">
-<input onchange="updateTask(this)" type="checkbox"/>
-<div class="check-item-content">
-<strong>Find the Kokiri Sword:</strong> Crawl through the hole in the Forest Training Center, dodge the giant rolling boulder, and open the treasure chest.
-        </div>
-</div>
-<div class="check-item" data-task-id="basic_deku_shield">
-<input onchange="updateTask(this)" type="checkbox"/>
-<div class="check-item-content">
-<strong>Buy the Deku Shield (40 Rupees):</strong> Hop across the water platforms near the shop and explore Kokiri homes to collect 40 Rupees, then purchase the shield from the Kokiri Shop.
-        </div>
-</div>
-<div class="check-item" data-task-id="basic_first_bottle">
-<input onchange="updateTask(this)" type="checkbox"/>
-<div class="check-item-content">
-<strong>Win the First Empty Bottle:</strong> Visit Lon Lon Ranch and win Talon's Super Cucco-catching minigame (catch 3 specific chickens within 30 seconds) to earn Lon Lon Milk in an Empty Bottle.
-        </div>
-</div>
-<div class="check-item" data-task-id="basic_hylian_shield_free">
-<input onchange="updateTask(this)" type="checkbox"/>
-<div class="check-item-content">
-<strong>Acquire the Free Hylian Shield:</strong> Go to the Kakariko Graveyard at night, pull the grave with flowers in front of it during the first row, and drop into the crypt to find a free Hylian Shield in a chest.
-        </div>
-</div>
+<div class="check-item" data-task-id="basic_kokiri_sword"><input onchange="updateTask(this)" type="checkbox"/><div class="check-item-content"><strong>Find the Kokiri Sword:</strong> Crawl through the hole in the Forest Training Center, dodge the giant rolling boulder, and open the treasure chest.</div></div>
+<div class="check-item" data-task-id="basic_deku_shield"><input onchange="updateTask(this)" type="checkbox"/><div class="check-item-content"><strong>Buy the Deku Shield (40 Rupees):</strong> With your starting <strong>200-Rupee Wallet</strong> in the Remake, grab the Blue Rupees behind Link's House, behind Mido's house, and on the shop awning (water pillars no longer give a Blue Rupee) and buy the Deku Shield (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Kokiri_Forest_Walkthrough" rel="noopener" target="_blank">IGN Kokiri Walkthrough</a>).</div></div>
+<div class="check-item" data-task-id="basic_first_bottle"><input onchange="updateTask(this)" type="checkbox"/><div class="check-item-content"><strong>Claim Your First 2 Empty Bottles Early:</strong> In the Remake, visit the <strong>Castle Town Potion Shop</strong> and catch the escaped bug for the shopkeeper to get <strong>Bottle #1</strong> pre-filled with a free Red Potion, then win Talon's Super Cucco minigame at Lon Lon Ranch for <strong>Bottle #2</strong> (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/All_Empty_Bottle_Locations" rel="noopener" target="_blank">IGN All Empty Bottle Locations</a>).</div></div>
+<div class="check-item" data-task-id="basic_hylian_shield_free"><input onchange="updateTask(this)" type="checkbox"/><div class="check-item-content"><strong>Acquire the Free Hylian Shield:</strong> Go to the Kakariko Graveyard at night, pull the grave with flowers in front of it during the first row, and drop into the crypt to find a free Hylian Shield in a chest.</div></div>
 <!-- Page Navigation Footer -->
-
-<div class="page-nav-footer"><div></div><button class="pager-btn next-btn" onclick="showPage('sec_walkthrough_child')">Next: Child Era Walkthrough →</button></div></div>
+<div class="page-nav-footer">
+<div></div>
+<button class="pager-btn next-btn" onclick="showPage('sec_walkthrough_child')">Next: Child Era Walkthrough →</button>
+</div>
+</div>
 </section>
 <!-- SECTION 2: Child Era Walkthrough -->
 <section class="wiki-section wiki-page" data-category="walkthrough" id="sec_walkthrough_child">
@@ -926,64 +1137,53 @@
 <td style="text-align:center; vertical-align:middle;">
 <input onchange="updateMission(this)" type="checkbox"/>
 </td>
-<td><strong>Inside the Great Deku Tree</strong><br/><small style="color:var(--text-muted);">Kokiri Forest</small></td>
+<td><strong><a href="https://www.ign.com/wikis/ocarina-of-time-remake/Great_Deku_Tree_Dungeon_Walkthrough" rel="noopener" target="_blank">Inside the Great Deku Tree</a></strong><br/><small style="color:var(--text-muted);">Kokiri Forest • <a href="https://www.ign.com/wikis/ocarina-of-time-remake/Kokiri_Forest_Walkthrough" rel="noopener" target="_blank">Kokiri Walkthrough</a></small></td>
 <td><strong>Fairy Slingshot</strong><br/><span class="badge badge-green">Kokiri's Emerald</span></td>
-<td>
-                • Climb the vine walls to the 3rd floor; open the chest for the Fairy Slingshot.<br/>
-                • Shoot the ladder down with the slingshot; leap from the top floor into the central floor web to break down into B1.<br/>
-                • Light a Deku Stick to burn the webs blocking the water canal and northern chamber.<br/>
-                • Deflect the Deku Scrubs' nuts in order: <strong>231</strong> (Middle = 3, Right = 1, Left = 2) to unlock the boss lair.<br/>
-                • <strong>Boss: Queen Gohma:</strong> Stun Gohma when her eye turns red using the Slingshot or a Deku Nut; slash her eye repeatedly with Jump Attacks.
-              </td>
-<td><strong>Pro-Tip:</strong> Throwing a Deku Nut when Gohma climbs the ceiling instantly stuns her, causing her to fall directly in front of Link for immediate sword attacks.</td>
+<td>• Climb the vine walls to 2F for the <strong>Dungeon Map</strong>, then enter the western door, bounce a Deku Scrub's nut back with your shield, and claim the <strong>Fairy Slingshot</strong> (hold <code>ZL</code> to snap-target and <code>ZR</code> or gyro to aim).<br/>
+• Strike Skulltulas with your sword to make them spin, wait for their underbelly to show, and slash twice (or use one Jump Attack). Crawl through the hidden grass tunnel behind the <strong>Compass</strong> chest for bonus Deku Nuts.<br/>
+• Leap from the 3F walkway into the central floor web to break down into B1, shoot the Gold Skulltula on the vine wall, and light a Deku Stick to burn the webs leading to B2.<br/>
+• Deflect the three Deku Scrubs' nuts in the exact Remake sequence <strong>2 - 3 - 1</strong> (<strong>Middle first, Right second, Left third</strong>) to unseal the boss door.<br/>
+• <strong>Boss — Queen Gohma:</strong> Pull out your Fairy Slingshot to shoot Gohma's eye from afar before she drops larva eggs (or shoot the eggs before they hatch). Slash or Jump Attack her stunned eye (~3 cycles) to claim your Heart Container and the <strong>Spiritual Stone of the Forest</strong>.</td>
+<td><strong>Pro-Tip:</strong> Before entering the Great Deku Tree, grab the early <a href="https://www.ign.com/wikis/ocarina-of-time-remake/Item_Bag_Expansion_to_Get_Early" rel="noopener" target="_blank">Lost Woods Item Bag Expansions</a>: shoot the hanging target right of the Kokiri entrance 3 times for the <strong>Deku Seed Bag (40/50)</strong> and deflect the bridge Business Scrub's nut for the <strong>Deku Stick Upgrade (20)</strong>.</td>
 </tr>
 <tr class="mission-row" data-task-id="child_hyrule_castle">
 <td style="text-align:center; vertical-align:middle;">
 <input onchange="updateMission(this)" type="checkbox"/>
 </td>
-<td><strong>Hyrule Castle &amp; Lon Lon Ranch</strong><br/><small style="color:var(--text-muted);">Hyrule Field</small></td>
-<td><strong>Zelda's Letter &amp; Epona's Song</strong><br/><span class="badge badge-gold">Weird Egg</span></td>
-<td>
-                • Meet Malon outside the Castle Town gates to receive the Weird Egg.<br/>
-                • Wait for dawn for the egg to hatch into a Pocket Cucco; use it to wake up sleeping Talon at the castle moat.<br/>
-                • Push the milk crates into the moat to leap across into the courtyard.<br/>
-                • Sneak past royal guards through garden hedges without being seen; meet Princess Zelda in the royal courtyard.<br/>
-                • Receive Zelda's Letter and learn <strong>Zelda's Lullaby</strong> from Impa.<br/>
-                • Visit Lon Lon Ranch, play your Ocarina for Malon in the corral to learn <strong>Epona's Song</strong>.
-              </td>
-<td><strong>Pro-Tip:</strong> Rolling past the castle guards during their turning pauses covers distance twice as fast as walking, significantly reducing detection risk.</td>
+<td><strong><a href="https://www.ign.com/wikis/ocarina-of-time-remake/Spiritual_Stone_of_Fire_-_Kakariko_Village_Walkthrough" rel="noopener" target="_blank">Hyrule Castle, Kakariko &amp; Lon Lon Ranch</a></strong><br/><small style="color:var(--text-muted);">Hyrule Field &amp; Castle Town</small></td>
+<td><strong>Zelda's Letter &amp; Epona's Song</strong><br/><span class="badge badge-gold">Bottle #1 &amp; #2</span></td>
+<td>• Receive the <strong>Fairy Ocarina</strong> from Saria on the Kokiri bridge and explore Hyrule Castle Town with the Remake's <strong>full 3D free-roaming camera</strong>.<br/>
+• Enter the <strong>Castle Town Potion Shop</strong> and catch the escaped bug for the shopkeeper to earn the Remake-exclusive <strong>Empty Bottle #1 (with free Red Potion)</strong> (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/All_Empty_Bottle_Locations" rel="noopener" target="_blank">IGN Bottle Guide</a>).<br/>
+• Meet Malon outside the castle gate for the <strong>Weird Egg</strong>; let it hatch at dawn into the Pocket Cucco, wake Talon by the castle moat, and push the milk crates into the water to hop across.<br/>
+• Sneak past the royal courtyard guards to meet Princess Zelda, receive <strong>Zelda's Letter</strong>, and learn <strong>Zelda's Lullaby</strong> (<code>L</code> <code>X</code> <code>Y</code> <code>L</code> <code>X</code> <code>Y</code>) from Impa.<br/>
+• Visit <strong>Lon Lon Ranch</strong> to win Talon's Super Cucco game for <strong>Empty Bottle #2</strong> and learn <strong>Epona's Song</strong> (<code>X</code> <code>L</code> <code>Y</code> <code>X</code> <code>L</code> <code>Y</code>) from Malon, then show Zelda's Letter to the Kakariko Death Mountain gate guard and learn <strong>Saria's Song</strong> (<code>R</code> <code>Y</code> <code>L</code> <code>R</code> <code>Y</code> <code>L</code>) in the Sacred Forest Meadow.</td>
+<td><strong>Pro-Tip:</strong> While in Kakariko Village, round up all 7 Cuccos for Anju to claim <strong>Empty Bottle #3</strong>, and pull the flower-adorned grave at night in the Kakariko Graveyard to get the <strong>Hylian Shield</strong> for free!</td>
 </tr>
 <tr class="mission-row" data-task-id="child_dodongo_cavern">
 <td style="text-align:center; vertical-align:middle;">
 <input onchange="updateMission(this)" type="checkbox"/>
 </td>
-<td><strong>Dodongo's Cavern</strong><br/><small style="color:var(--text-muted);">Death Mountain Trail</small></td>
-<td><strong>Bomb Bag (20 Bombs)</strong><br/><span class="badge badge-red">Goron's Ruby</span></td>
-<td>
-                • Play Zelda's Lullaby for Darunia in Goron City, then play Saria's Song to cheer him up and receive the <strong>Goron's Bracelet</strong>.<br/>
-                • Pick up the Bomb Flower above Dodongo's Cavern and toss it down to blow open the boulder entrance.<br/>
-                • Defeat Lizalfos in the lava room using shield parries and jump attacks.<br/>
-                • Acquire the <strong>Bomb Bag</strong> from the treasure chest on 2F.<br/>
-                • Drop bombs into the giant skull's two hollow eye sockets from the bridge above to unlock the mouth door.<br/>
-                • <strong>Boss: King Dodongo:</strong> When Dodongo inhales to breathe fire, toss a Bomb or Bomb Flower directly into his gaping mouth; when he collapses stunned, strike him with sword slashes.
-              </td>
-<td><strong>Pro-Tip:</strong> Stand on the inner side of the lava ring when Dodongo rolls around the perimeter—he will roll right past without hitting you.</td>
+<td><strong><a href="https://www.ign.com/wikis/ocarina-of-time-remake/Dodongo_Cavern_Dungeon_Walkthrough" rel="noopener" target="_blank">Dodongo's Cavern &amp; Death Mountain</a></strong><br/><small style="color:var(--text-muted);">Death Mountain Trail &amp; Goron City</small></td>
+<td><strong>Bomb Bag, Din's Fire &amp; Business Scrub Seeds</strong><br/><span class="badge badge-red">Goron's Ruby</span></td>
+<td>• Play <strong>Zelda's Lullaby</strong> at Darunia's door in Goron City, then play <strong>Saria's Song</strong> to cheer him up and earn the <strong>Goron's Bracelet</strong>.<br/>
+• Toss a Bomb Flower down from the ledge to blast open <strong>Dodongo's Cavern</strong>; use Bomb Flowers (`R` button) to destroy Beamos and open the western alcove for the <strong>Dungeon Map</strong> and southern Armos room for the <strong>Compass</strong>.<br/>
+• Defeat the two Lizalfos mini-bosses to claim your first <strong>Business Scrub Seed</strong> (an emergency portable shop summon) and solve the two eye-switch flame platforms to claim the <strong>Bomb Bag (20 Bombs)</strong>.<br/>
+• Drop bombs into both eye sockets of the giant Dodongo skull bridge so it "sees red," grab the second <strong>Business Scrub Seed</strong> behind the 2F west cracked wall, and push the stone block into the floor switch to reach the lair.<br/>
+• <strong>Boss — King Dodongo:</strong> Toss a bomb into his open inhaling mouth, slash or Jump Attack while stunned, and retreat to the wide corner platforms by the lava when he rolls. Slice the newly spawned <strong>Baby Dodongos</strong> when he slams into walls (3 cycles total).</td>
+<td><strong>Pro-Tip:</strong> Immediately after clearing Dodongo's Cavern, climb to the Death Mountain Summit, bomb the cracked wall left of Kaepora Gaebora, play Zelda's Lullaby, and pay the <strong>25-Rupee offering</strong> to unlock the <strong>Magic Meter + Din's Fire</strong> (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Dodongo_Cavern_Dungeon_Walkthrough" rel="noopener" target="_blank">IGN Dodongo Walkthrough</a>)! Also grab the two Death Mountain Crater Pieces of Heart (cliffside alcove + 100-Rupee Business Scrub).</td>
 </tr>
 <tr class="mission-row" data-task-id="child_jabu_jabu">
 <td style="text-align:center; vertical-align:middle;">
 <input onchange="updateMission(this)" type="checkbox"/>
 </td>
-<td><strong>Inside Jabu-Jabu's Belly</strong><br/><small style="color:var(--text-muted);">Zora's Fountain</small></td>
+<td><strong><a href="https://www.ign.com/wikis/ocarina-of-time-remake/Lord_Jabu-Jabu%27s_Belly_Dungeon_Walkthrough" rel="noopener" target="_blank">Inside Lord Jabu-Jabu's Belly</a></strong><br/><small style="color:var(--text-muted);">Zora's Domain, Lake Hylia &amp; Zora's Fountain</small></td>
 <td><strong>Boomerang</strong><br/><span class="badge badge-blue">Zora's Sapphire</span></td>
-<td>
-                • Catch a fish in a bottle and present it to Lord Jabu-Jabu in Zora's Fountain to be sucked inside.<br/>
-                • Carry Princess Ruto through the digestive corridors; use her as a counterweight on floor switches.<br/>
-                • Defeat the mini-boss <strong>Big Octo</strong> by hitting his exposed green weak-point from behind with the Boomerang.<br/>
-                • Acquire the <strong>Boomerang</strong> from the chest to stun electric enemies and retrieve distant items.<br/>
-                • Sever the three parasitic tentacles in the ceiling chambers.<br/>
-                • <strong>Boss: Barinade:</strong> Stun Barinade with the Boomerang, slice the attached jellyfish tentacles, then repeatedly stun and slash its central body.
-              </td>
-<td><strong>Pro-Tip:</strong> When carrying Princess Ruto, throwing her across gaps or onto switches keeps her from wandering back to earlier rooms.</td>
+<td>• Dive from the Zora's Domain waterfall for the <strong>Silver Scale</strong>, swim through the Lake Hylia shortcut tunnel to retrieve <strong>Ruto's Letter (Empty Bottle #4)</strong>, show it to King Zora, and offer a bottled Fish to enter <strong>Lord Jabu-Jabu's Belly</strong>.<br/>
+• Escort Princess Ruto through the belly: in the <strong>Switch 2 Remake</strong>, Ruto <strong>dutifully stays wherever you leave her sitting</strong>—even if you leave the dungeon entirely to run errands!<br/>
+• Dive into the underwater passage opposite the blue elevator pedestal to find an underwater Business Scrub selling Sticks, Nuts, and <strong>Business Scrub Seeds</strong>. Use Ruto to hold down the switch in the Stinger room and clear them with Slingshot or Din's Fire to claim the <strong>Boomerang</strong>.<br/>
+• Sever the red, blue, and green parasitic ceiling tentacles, defeat the <strong>Bigocto</strong> mini-boss by targeting its rear weak spot, and curve the Boomerang around the barrier on the high vine pillar to open the boss door.<br/>
+• <strong>Boss — Barinade:</strong> Sever the ceiling tentacles with the Boomerang, sweep away the spinning Bari jellyfish, and repeatedly stun Barinade's core as it flies and shoots lightning to earn the Heart Container and <strong>Zora's Sapphire</strong>.</td>
+<td><strong>Pro-Tip:</strong> After finishing Jabu-Jabu's Belly, stop by Kakariko's Cursed Spider House with 30 Gold Skulltula Tokens to claim the Remake's upgraded <strong>Giant's Wallet (1,000 Rupees capacity)</strong>, and finish the Happy Mask Shop sidequest to unlock the <strong>Mask of Truth</strong> for reading NPC thoughts and Sheikah Stones (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Lord_Jabu-Jabu%27s_Belly_Dungeon_Walkthrough" rel="noopener" target="_blank">IGN Jabu-Jabu Guide</a>)!</td>
 </tr>
 <tr class="mission-row" data-task-id="child_temple_of_time">
 <td style="text-align:center; vertical-align:middle;">
@@ -1004,9 +1204,8 @@
 </table>
 </div>
 <!-- Page Navigation Footer -->
-
 <div class="page-nav-footer">
-<button class="pager-btn prev-btn" onclick="showPage('sec_basics')">← Previous: Basics &amp; 3DS Features</button>
+<button class="pager-btn prev-btn" onclick="showPage('sec_basics')">← Previous: Basics &amp; Remake Features</button>
 <span class="pager-indicator">Section 2 of 10</span>
 <button class="pager-btn next-btn" onclick="showPage('sec_walkthrough_adult')">Next: Adult Era Walkthrough →</button>
 </div></div>
@@ -1038,16 +1237,15 @@
 <td style="text-align:center; vertical-align:middle;">
 <input onchange="updateMission(this)" type="checkbox"/>
 </td>
-<td><strong>Forest Temple</strong><br/><small style="color:var(--text-muted);">Sacred Forest Meadow</small></td>
-<td><strong>Fairy Bow</strong><br/><span class="badge badge-green">Forest Medallion</span></td>
-<td>
-                • Acquire the <strong>Hookshot</strong> from Dampé's ghost race in the Kakariko Graveyard.<br/>
-                • Meet Sheik at the Sacred Forest Meadow to learn the <strong>Minuet of Forest</strong>.<br/>
-                • Infiltrate the twisted corridors; defeat the Stalfos in the courtyard to claim the <strong>Fairy Bow</strong>.<br/>
-                • Shoot the eye switches and defeat the four Poe Sisters (Meg, Joelle, Beth, Amy) to unseal the elevator.<br/>
-                • <strong>Boss: Phantom Ganon:</strong> Ride your eyes across the wall paintings; shoot the real Phantom Ganon with arrows as he emerges from the canvas. In Phase 2, play "energy tennis" by deflecting his lightning orbs with sword swings.
-              </td>
-<td><strong>Pro-Tip:</strong> When Phantom Ganon creates illusions in the paintings, look for the painting that is slightly lighter with a purple vortex portal—that is the real one.</td>
+<td><strong>Forest Temple</strong><br/><small style="color:var(--text-muted);">Kakariko Graveyard &amp; Sacred Forest Meadow</small></td>
+<td><strong>Fairy Bow &amp; Hookshot</strong><br/><span class="badge badge-green">Forest Medallion</span></td>
+<td>• Race Dampé's ghost in the Kakariko Graveyard to acquire the <strong>Hookshot</strong>, then meet Sheik at the Sacred Forest Meadow to learn the <strong>Minuet of Forest</strong> (<code>L</code> <code>X</code> <code>L</code> <code>Y</code> <code>A</code> <code>Y</code>).<br/>
+• Enter the Forest Temple and climb the entrance tree for a Small Key; in the Remake, courtyard Stalfos arenas replace instant-reset bottomless pits with shallow acid hazards.<br/>
+• Activate the Remake's <strong>new vertical elevator shortcut</strong> after the block-pushing puzzle room so you can travel directly between floors without repeating long climbs.<br/>
+• Defeat the Stalfos trio to claim the <strong>Fairy Bow</strong>, watch for color-changing ceiling spotlights that telegraph descending <strong>Floormasters</strong>, and shoot eye switches to untwist the corridors.<br/>
+• Hunt the four Poe Sisters (Joelle, Beth, Amy, and Meg) to ride the central elevator down to the basement.<br/>
+• <strong>Boss — Phantom Ganon:</strong> In Phase 1, shoot the real Phantom Ganon with the Fairy Bow as he rides out of the purple vortex painting (fake copies turn back or lack the dark aura); in Phase 2, volley his lightning orbs back with your sword and rush in for Jump Attacks!</td>
+<td><strong>Pro-Tip:</strong> After awakening Saria as the Forest Sage, return to the Temple of Time to learn the <strong>Prelude of Light</strong> (<code>X</code> <code>Y</code> <code>X</code> <code>Y</code> <code>A</code> <code>X</code>) from Sheik and unlock time travel back to the Child Era (<a href="https://www.ign.com/articles/29-new-changes-in-the-zelda-ocarina-of-time-remake-redesigned-puzzles-updated-miniboss-fights-and-deeper-dialogue" rel="noopener" target="_blank">IGN 29 Remake Changes</a>).</td>
 </tr>
 <tr class="mission-row" data-task-id="adult_fire_temple">
 <td style="text-align:center; vertical-align:middle;">
@@ -1069,16 +1267,14 @@
 <td style="text-align:center; vertical-align:middle;">
 <input onchange="updateMission(this)" type="checkbox"/>
 </td>
-<td><strong>Ice Cavern &amp; Water Temple</strong><br/><small style="color:var(--text-muted);">Lake Hylia</small></td>
+<td><strong>Ice Cavern &amp; Water Temple</strong><br/><small style="color:var(--text-muted);">Zora's Fountain &amp; Lake Hylia</small></td>
 <td><strong>Longshot &amp; Iron Boots</strong><br/><span class="badge badge-blue">Water Medallion</span></td>
-<td>
-                • Explore the <strong>Ice Cavern</strong> behind Zora's Fountain; collect Blue Fire in bottles to thaw King Zora and claim the <strong>Iron Boots</strong> and <strong>Zora Tunic</strong>.<br/>
-                • Meet Sheik at Lake Hylia to learn the <strong>Serenade of Water</strong>.<br/>
-                • Enter the Water Temple; regulate the 3 water levels using Zelda's Lullaby at the wall markers.<br/>
-                • Defeat your mirror reflection <strong>Dark Link</strong> in the misty room to acquire the <strong>Longshot</strong>.<br/>
-                • <strong>Boss: Morpha:</strong> Stay on the corner platform; pull Morpha's red amoeba nucleus out of the water tentacles using the Longshot and slash it repeatedly.
-              </td>
-<td><strong>Pro-Tip:</strong> In the 3DS version, colored lines and icons on the walls guide you to the three water-level alteration points, completely removing the N64 confusion!</td>
+<td>• Traverse the <strong>Ice Cavern</strong> behind Zora's Fountain: bottle <strong>Blue Fire</strong>, defeat the Wolfos mini-boss to claim the <strong>Iron Boots</strong> (mapped to <code>D-Pad Up/Down</code> in the Remake), learn the <strong>Serenade of Water</strong> (<code>L</code> <code>R</code> <code>Y</code> <code>Y</code> <code>A</code>) from Sheik, and thaw King Zora for the free <strong>Zora Tunic</strong>.<br/>
+• Enter the <strong>Water Temple</strong> beneath Lake Hylia: the Remake streamlines navigation with illuminated visual route pipes leading to the 3 water-level Triforce crests and fewer tedious small-key backtracks.<br/>
+• Duel your mirror reflection <strong>Dark Link</strong> in the illusion room: in the Remake, Dark Link breaks out of crouch-stab loops and uses active shield parries, requiring spacing, Din's Fire, or the Megaton Hammer to win the <strong>Longshot</strong>.<br/>
+• Navigate the underground river vortexes and rising statue room to obtain the Boss Key.<br/>
+• <strong>Boss — Morpha:</strong> Stand in the dry corner of the arena to avoid grasping water tentacles, pull the red amoeba nucleus out of the water with the Longshot, and corner-slash it repeatedly!</td>
+<td><strong>Pro-Tip:</strong> Once the Water Temple is cleared and Lake Hylia fills with water, stand on the stone slab above the warp pad at dawn and shoot an arrow directly into the rising sun to unlock the <strong>Fire Arrows</strong>!</td>
 </tr>
 <tr class="mission-row" data-task-id="adult_shadow_temple">
 <td style="text-align:center; vertical-align:middle;">
@@ -1130,7 +1326,6 @@
 </table>
 </div>
 <!-- Page Navigation Footer -->
-
 <div class="page-nav-footer">
 <button class="pager-btn prev-btn" onclick="showPage('sec_walkthrough_child')">← Previous: Child Era Walkthrough</button>
 <span class="pager-indicator">Section 3 of 10</span>
@@ -1207,7 +1402,6 @@
 </div>
 </div>
 <!-- Page Navigation Footer -->
-
 <div class="page-nav-footer">
 <button class="pager-btn prev-btn" onclick="showPage('sec_walkthrough_adult')">← Previous: Adult Era Walkthrough</button>
 <span class="pager-indicator">Section 4 of 10</span>
@@ -1456,7 +1650,6 @@
 </table>
 </div>
 <!-- Page Navigation Footer -->
-
 <div class="page-nav-footer">
 <button class="pager-btn prev-btn" onclick="showPage('sec_master_quest')">← Previous: Master Quest Guide</button>
 <span class="pager-indicator">Section 5 of 10</span>
@@ -1480,21 +1673,21 @@
 <span class="sub-card-title">10 Tokens Reward</span>
 <span class="badge badge-gold">Wallet Upgrade</span>
 </div>
-<p><strong>Adult's Wallet:</strong> Increases maximum rupee carrying capacity from 99 to <strong>200 Rupees</strong>.</p>
+<p><strong>Adult's Wallet:</strong> Increases maximum rupee carrying capacity from 200 to <strong>500 Rupees</strong> in the Switch 2 Remake (99 to 200 Rupees in 3DS/N64).</p>
 </div>
 <div class="sub-card">
 <div class="sub-card-header">
 <span class="sub-card-title">20 Tokens Reward</span>
-<span class="badge badge-purple">Secret Detector</span>
+<span class="badge badge-purple">HUD Skulltula Radar</span>
 </div>
-<p><strong>Shard of Agony:</strong> Vibrates visually and beeps with increasing speed near hidden holes and secrets in the 3DS version.</p>
+<p><strong>Stone / Shard of Agony:</strong> In the Switch 2 Remake, both the gem and an icon on your HUD flash whenever a Gold Skulltula is hiding in the area—flashing faster as you get close, even if hidden by night, soft soil, or trees (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Dodongo_Cavern_Dungeon_Walkthrough" rel="noopener" target="_blank">IGN Remake Guide</a>)!</p>
 </div>
 <div class="sub-card">
 <div class="sub-card-header">
 <span class="sub-card-title">30 Tokens Reward</span>
-<span class="badge badge-gold">Max Wallet</span>
+<span class="badge badge-gold">Max Wallet (1,000R)</span>
 </div>
-<p><strong>Giant's Wallet:</strong> Increases maximum rupee carrying capacity to <strong>500 Rupees</strong>.</p>
+<p><strong>Giant's Wallet:</strong> Increases maximum rupee carrying capacity to <strong>1,000 Rupees</strong> in the Switch 2 Remake (500 Rupees in 3DS/N64) (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Lord_Jabu-Jabu%27s_Belly_Dungeon_Walkthrough" rel="noopener" target="_blank">IGN Jabu-Jabu Guide</a>).</p>
 </div>
 <div class="sub-card">
 <div class="sub-card-header">
@@ -1618,7 +1811,6 @@
 <div class="check-item" data-task-id="gs_over_colossus_2"><input onchange="updateTask(this)" type="checkbox"/><div class="check-item-content"><strong>Desert Colossus #2:</strong> On the oasis palm tree (Night, Adult Hookshot).</div></div>
 </div>
 <!-- Page Navigation Footer -->
-
 <div class="page-nav-footer">
 <button class="pager-btn prev-btn" onclick="showPage('sec_heart_pieces')">← Previous: All 36 Heart Pieces</button>
 <span class="pager-indicator">Section 6 of 10</span>
@@ -1632,18 +1824,69 @@
 <span class="collapse-arrow">►</span>
 <div class="section-title">7. Ocarina Songs &amp; Warp Melodies</div>
 </div>
-<span class="badge badge-blue">12 Sacred Melodies + Scarecrow</span>
+<span class="badge badge-blue">12 Melodies + Scarecrow (Switch 2 &amp; 3DS / N64 Controls)</span>
 </div>
 <div class="section-content">
-<p>Playing melodies on the <strong>Fairy Ocarina</strong> and the sacred <strong>Ocarina of Time</strong> allows Link to manipulate time and weather, awaken spirits, communicate with sages, and instantly teleport to temples across Hyrule:</p>
-<h3>Non-Warp Action Songs</h3>
+<p>Playing melodies on the <strong>Fairy Ocarina</strong> and the sacred <strong>Ocarina of Time</strong> allows Link to manipulate time, summon the sun and rain storms, awaken sages, call your loyal horse Epona, and teleport across Hyrule.</p><div class="ocarina-callout-box">
+<h4>🎵 Nintendo Switch 2 Remake Ocarina Control Scheme &amp; Mic Audio Input</h4>
+<p style="margin-bottom: 12px; color: var(--text-main); font-size: 13.5px; line-height: 1.5;">
+    The 2026 Nintendo Switch 2 Remake thoroughly overhauls and modernizes the Ocarina experience with dedicated button shortcuts, an instant on-screen songbook overlay, pitch bending, and optional real-time microphone audio input:
+  </p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 10px;">
+<!-- Sub-Panel 1: Button Controls & Layout -->
+<div style="background: rgba(0,0,0,0.35); border: 1px solid var(--card-border); border-radius: 6px; padding: 14px 16px;">
+<h5 style="color: var(--triforce-gold); margin: 0 0 8px 0; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">🎮 Button Mapping &amp; In-Game Songbook</h5>
+<ul style="margin: 0; padding-left: 18px; font-size: 12.5px; line-height: 1.65; color: var(--text-main);">
+<li><strong>Draw / Play Ocarina:</strong> Press <strong>D-Pad Left</strong> (D-Pad Right is reserved for Navi).</li>
+<li><strong>Quick-Access Songbook:</strong> Press <strong>ZL</strong> while holding the Ocarina to pull up your learned songs and note sequences on-screen without pausing!</li>
+<li><strong>5-Pitch Layout:</strong>
+<div style="margin: 5px 0 6px 0;">
+<span class="note-sw2 note-sw2-l">L</span> Low D  | 
+            <span class="note-sw2 note-sw2-r">R</span> F  | 
+            <span class="note-sw2 note-sw2-a">A</span> A  | 
+            <span class="note-sw2 note-sw2-y">Y</span> B  | 
+            <span class="note-sw2 note-sw2-x">X</span> High D
+          </div>
+</li>
+<li style="color: #f39c12; font-size: 12px;"><em>Notice for N64/3DS veterans:</em> <strong>A</strong> plays the middle note (A), while the lowest note (D) is played with the <strong>L</strong> shoulder button!</li>
+</ul>
+</div>
+<!-- Sub-Panel 2: Pitch Bends & Acoustics -->
+<div style="background: rgba(0,0,0,0.35); border: 1px solid var(--card-border); border-radius: 6px; padding: 14px 16px;">
+<h5 style="color: #5dade2; margin: 0 0 8px 0; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">🎼 Pitch Bends, Vibrato &amp; Dynamics</h5>
+<ul style="margin: 0; padding-left: 18px; font-size: 12.5px; line-height: 1.65; color: var(--text-main);">
+<li><strong>Pitch Bends (Sharp / Flat):</strong> Tilt the <strong>Left Control Stick Up</strong> to raise pitch by a half-step (♯), or tilt <strong>Down</strong> to lower pitch by a half-step (♭).</li>
+<li><strong>Vibrato / Modulation:</strong> Rapidly wiggle the <strong>Left Control Stick Left &amp; Right</strong> while holding a note to introduce expressive acoustic vibrato.</li>
+<li><strong>Volume &amp; Tone Dynamics:</strong> Modulate acoustic note volume and pressure with <strong>ZR</strong> to play soft or loud dynamics.</li>
+</ul>
+</div>
+<!-- Sub-Panel 3: Microphone Audio Input -->
+<div style="background: rgba(0,0,0,0.35); border: 1px solid var(--card-border); border-radius: 6px; padding: 14px 16px; grid-column: 1 / -1;">
+<h5 style="color: #2ecc71; margin: 0 0 8px 0; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;">🎙️ Microphone Audio Input (Humming, Whistling &amp; Real Instruments)</h5>
+<p style="margin: 0 0 8px 0; font-size: 12.5px; line-height: 1.5; color: var(--text-main);">
+        Toggle <strong>"Microphone Input"</strong> to ON in the game's Options menu. An <em>"Inputting audio..."</em> HUD prompt appears whenever the Ocarina is drawn, letting the Switch 2's built-in console microphone analyze musical pitches in real time:
+      </p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; line-height: 1.6; color: var(--text-main);">
+<div style="flex: 1; min-width: 250px;">
+          • <strong>Humming &amp; Whistling:</strong> Hum, whistle, or sing the 5 solfège pitches (D, F, A, B, High D) directly toward the microphone.<br/>
+          • <strong>Real Physical Instruments:</strong> Play melodies on acoustic guitars, keyboards, recorders, flutes, or the official Nintendo Store physical Ocarina of Time!
+        </div>
+<div style="flex: 1; min-width: 250px;">
+          • <strong>Minus (-) Button:</strong> Practice audio input and test humming pitch calibration before performing.<br/>
+          • <strong>Plus (+) Button:</strong> Reset audio input to immediately clear any mis-detected pitch notes.<br/>
+          • <strong>Hybrid Play:</strong> Seamlessly hum opening notes and finish the song using physical buttons!
+        </div>
+</div>
+</div>
+</div>
+</div><h3>Non-Warp Action Songs</h3>
 <div class="table-container">
 <table>
 <thead>
 <tr>
 <th style="width: 44px; text-align: center;">Done</th>
 <th>Song Title</th>
-<th>3DS Notes (Touch / Buttons)</th>
+<th>Melody Inputs (Switch 2 &amp; 3DS / N64)</th>
 <th>How to Learn</th>
 <th>Magic Function &amp; Effect</th>
 </tr>
@@ -1652,49 +1895,49 @@
 <tr class="mission-row" data-task-id="song_zeldas_lullaby">
 <td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
 <td><strong>Zelda's Lullaby</strong></td>
-<td><span class="notes-sequence"><span class="note-c-left">◄</span> <span class="note-c-up">▲</span> <span class="note-c-right">►</span> <span class="note-c-left">◄</span> <span class="note-c-up">▲</span> <span class="note-c-right">►</span></span><br/><small>X - A - Y - X - A - Y</small></td>
+<td><div class="song-notes-container"><div class="song-notes-row sw2-notes-row" style="flex-wrap: nowrap; white-space: nowrap;"><span class="platform-tag tag-sw2" style="white-space: nowrap; flex-shrink: 0;">Switch 2</span><span class="note-sw2 note-sw2-y">Y</span><span class="note-sw2 note-sw2-x">X</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-y">Y</span><span class="note-sw2 note-sw2-x">X</span><span class="note-sw2 note-sw2-a">A</span></div><div class="song-notes-row" style="color: var(--text-muted); font-size: 11px; margin-top: 2px;"><span class="platform-tag tag-3ds">Classic</span><span>3DS: X - A - Y - X - A - Y | N64: ◄ ▲ ► ◄ ▲ ►</span></div><div class="song-notes-row" style="color: #8fa097; font-size: 11px; font-style: italic;">Pitch / Mic Hum: B, High D, A, B, High D, A</div></div></td>
 <td>Taught by Impa after meeting Princess Zelda in the royal courtyard.</td>
 <td>Opens doors bearing the Royal Crest of Hyrule; solves ancient royal puzzles and lowers/raises water levels.</td>
 </tr>
 <tr class="mission-row" data-task-id="song_eponas_song">
 <td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
 <td><strong>Epona's Song</strong></td>
-<td><span class="notes-sequence"><span class="note-c-up">▲</span> <span class="note-c-left">◄</span> <span class="note-c-right">►</span> <span class="note-c-up">▲</span> <span class="note-c-left">◄</span> <span class="note-c-right">►</span></span><br/><small>A - X - Y - A - X - Y</small></td>
+<td><div class="song-notes-container"><div class="song-notes-row sw2-notes-row" style="flex-wrap: nowrap; white-space: nowrap;"><span class="platform-tag tag-sw2" style="white-space: nowrap; flex-shrink: 0;">Switch 2</span><span class="note-sw2 note-sw2-x">X</span><span class="note-sw2 note-sw2-y">Y</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-x">X</span><span class="note-sw2 note-sw2-y">Y</span><span class="note-sw2 note-sw2-a">A</span></div><div class="song-notes-row" style="color: var(--text-muted); font-size: 11px; margin-top: 2px;"><span class="platform-tag tag-3ds">Classic</span><span>3DS: A - X - Y - A - X - Y | N64: ▲ ◄ ► ▲ ◄ ►</span></div><div class="song-notes-row" style="color: #8fa097; font-size: 11px; font-style: italic;">Pitch / Mic Hum: High D, B, A, High D, B, A</div></div></td>
 <td>Taught by Malon at Lon Lon Ranch after showing her your Ocarina.</td>
 <td>Summons Epona across Hyrule Field; causes cows to refill an Empty Bottle with Lon Lon Milk.</td>
 </tr>
 <tr class="mission-row" data-task-id="song_sarias_song">
 <td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
 <td><strong>Saria's Song</strong></td>
-<td><span class="notes-sequence"><span class="note-c-down">▼</span> <span class="note-c-right">►</span> <span class="note-c-left">◄</span> <span class="note-c-down">▼</span> <span class="note-c-right">►</span> <span class="note-c-left">◄</span></span><br/><small>R - Y - X - R - Y - X</small></td>
+<td><div class="song-notes-container"><div class="song-notes-row sw2-notes-row" style="flex-wrap: nowrap; white-space: nowrap;"><span class="platform-tag tag-sw2" style="white-space: nowrap; flex-shrink: 0;">Switch 2</span><span class="note-sw2 note-sw2-r">R</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-y">Y</span><span class="note-sw2 note-sw2-r">R</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-y">Y</span></div><div class="song-notes-row" style="color: var(--text-muted); font-size: 11px; margin-top: 2px;"><span class="platform-tag tag-3ds">Classic</span><span>3DS: R - Y - X - R - Y - X | N64: ▼ ► ◄ ▼ ► ◄</span></div><div class="song-notes-row" style="color: #8fa097; font-size: 11px; font-style: italic;">Pitch / Mic Hum: F, A, B, F, A, B</div></div></td>
 <td>Taught by Saria in the Sacred Forest Meadow.</td>
 <td>Telepathically speaks with Saria for hints; cheers up Darunia to receive the Goron's Bracelet.</td>
 </tr>
 <tr class="mission-row" data-task-id="song_suns_song">
 <td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
 <td><strong>Sun's Song</strong></td>
-<td><span class="notes-sequence"><span class="note-c-right">►</span> <span class="note-c-down">▼</span> <span class="note-c-up">▲</span> <span class="note-c-right">►</span> <span class="note-c-down">▼</span> <span class="note-c-up">▲</span></span><br/><small>Y - R - A - Y - R - A</small></td>
+<td><div class="song-notes-container"><div class="song-notes-row sw2-notes-row" style="flex-wrap: nowrap; white-space: nowrap;"><span class="platform-tag tag-sw2" style="white-space: nowrap; flex-shrink: 0;">Switch 2</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-r">R</span><span class="note-sw2 note-sw2-x">X</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-r">R</span><span class="note-sw2 note-sw2-x">X</span></div><div class="song-notes-row" style="color: var(--text-muted); font-size: 11px; margin-top: 2px;"><span class="platform-tag tag-3ds">Classic</span><span>3DS: Y - R - A - Y - R - A | N64: ► ▼ ▲ ► ▼ ▲</span></div><div class="song-notes-row" style="color: #8fa097; font-size: 11px; font-style: italic;">Pitch / Mic Hum: A, F, High D, A, F, High D</div></div></td>
 <td>Learned from the stone epitaph inside the Royal Family's Tomb in Kakariko.</td>
 <td>Instantly shifts time between night and day; permanently freezes ReDead and Gibdo zombies!</td>
 </tr>
 <tr class="mission-row" data-task-id="song_song_of_time">
 <td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
 <td><strong>Song of Time</strong></td>
-<td><span class="notes-sequence"><span class="note-c-right">►</span> <span class="note-a">A</span> <span class="note-c-down">▼</span> <span class="note-c-right">►</span> <span class="note-a">A</span> <span class="note-c-down">▼</span></span><br/><small>Y - L - R - Y - L - R</small></td>
+<td><div class="song-notes-container"><div class="song-notes-row sw2-notes-row" style="flex-wrap: nowrap; white-space: nowrap;"><span class="platform-tag tag-sw2" style="white-space: nowrap; flex-shrink: 0;">Switch 2</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-l">L</span><span class="note-sw2 note-sw2-r">R</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-l">L</span><span class="note-sw2 note-sw2-r">R</span></div><div class="song-notes-row" style="color: var(--text-muted); font-size: 11px; margin-top: 2px;"><span class="platform-tag tag-3ds">Classic</span><span>3DS: Y - L - R - Y - L - R | N64: ► A ▼ ► A ▼</span></div><div class="song-notes-row" style="color: #8fa097; font-size: 11px; font-style: italic;">Pitch / Mic Hum: A, D, F, A, D, F</div></div></td>
 <td>Learned from Princess Zelda's memory upon retrieving the Ocarina of Time from the castle moat.</td>
 <td>Opens the Door of Time in the Temple of Time; moves blue Time Blocks with the royal crest.</td>
 </tr>
 <tr class="mission-row" data-task-id="song_song_of_storms">
 <td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
 <td><strong>Song of Storms</strong></td>
-<td><span class="notes-sequence"><span class="note-a">A</span> <span class="note-c-down">▼</span> <span class="note-c-up">▲</span> <span class="note-a">A</span> <span class="note-c-down">▼</span> <span class="note-c-up">▲</span></span><br/><small>L - R - A - L - R - A</small></td>
+<td><div class="song-notes-container"><div class="song-notes-row sw2-notes-row" style="flex-wrap: nowrap; white-space: nowrap;"><span class="platform-tag tag-sw2" style="white-space: nowrap; flex-shrink: 0;">Switch 2</span><span class="note-sw2 note-sw2-l">L</span><span class="note-sw2 note-sw2-r">R</span><span class="note-sw2 note-sw2-x">X</span><span class="note-sw2 note-sw2-l">L</span><span class="note-sw2 note-sw2-r">R</span><span class="note-sw2 note-sw2-x">X</span></div><div class="song-notes-row" style="color: var(--text-muted); font-size: 11px; margin-top: 2px;"><span class="platform-tag tag-3ds">Classic</span><span>3DS: L - R - A - L - R - A | N64: A ▼ ▲ A ▼ ▲</span></div><div class="song-notes-row" style="color: #8fa097; font-size: 11px; font-style: italic;">Pitch / Mic Hum: D, F, High D, D, F, High D</div></div></td>
 <td>Taught by the furious Windmill Musician in Kakariko Village as Adult Link.</td>
 <td>Summons rain and lightning; drains the Kakariko Well as child; reveals secret hidden grottoes!</td>
 </tr>
 <tr class="mission-row" data-task-id="song_scarecrow">
 <td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
 <td><strong>Scarecrow's Song</strong></td>
-<td><span class="notes-sequence">Custom 8-Note Melody</span></td>
+<td><div class="song-notes-container"><div class="song-notes-row sw2-notes-row" style="flex-wrap: nowrap; white-space: nowrap;"><span class="platform-tag tag-sw2" style="white-space: nowrap; flex-shrink: 0;">Switch 2</span><span style="color:var(--triforce-gold); font-size:12px;">Custom 8-Note Sequence (Choose any 2+ notes from L, R, A, Y, X)</span></div><div class="song-notes-row" style="color: var(--text-muted); font-size: 11px; margin-top: 2px;"><span class="platform-tag tag-3ds">Classic</span><span>3DS / N64: Custom 8-Note Sequence</span></div><div class="song-notes-row" style="color: #8fa097; font-size: 11px; font-style: italic;">Pitch / Mic Hum: Player-Composed Melody</div></div></td>
 <td>Play an 8-note melody for Pierre at Lake Hylia as Child, then play it again as Adult.</td>
 <td>Summons Pierre the Scarecrow at distant ledges, creating a Hookshot/Longshot grapple target!</td>
 </tr>
@@ -1708,7 +1951,7 @@
 <tr>
 <th style="width: 44px; text-align: center;">Done</th>
 <th>Warp Song</th>
-<th>3DS Notes (Touch / Buttons)</th>
+<th>Melody Inputs (Switch 2 &amp; 3DS / N64)</th>
 <th>Warp Destination</th>
 <th>Where Learned</th>
 </tr>
@@ -1717,42 +1960,42 @@
 <tr class="mission-row" data-task-id="song_minuet">
 <td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
 <td><strong>Minuet of Forest</strong></td>
-<td><span class="notes-sequence"><span class="note-a">A</span> <span class="note-c-up">▲</span> <span class="note-c-left">◄</span> <span class="note-c-right">►</span> <span class="note-c-left">◄</span> <span class="note-c-right">►</span></span><br/><small>L - A - X - Y - X - Y</small></td>
+<td><div class="song-notes-container"><div class="song-notes-row sw2-notes-row" style="flex-wrap: nowrap; white-space: nowrap;"><span class="platform-tag tag-sw2" style="white-space: nowrap; flex-shrink: 0;">Switch 2</span><span class="note-sw2 note-sw2-l">L</span><span class="note-sw2 note-sw2-x">X</span><span class="note-sw2 note-sw2-y">Y</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-y">Y</span><span class="note-sw2 note-sw2-a">A</span></div><div class="song-notes-row" style="color: var(--text-muted); font-size: 11px; margin-top: 2px;"><span class="platform-tag tag-3ds">Classic</span><span>3DS: L - A - X - Y - X - Y | N64: A ▲ ◄ ► ◄ ►</span></div><div class="song-notes-row" style="color: #8fa097; font-size: 11px; font-style: italic;">Pitch / Mic Hum: D, High D, B, A, B, A</div></div></td>
 <td>Sacred Forest Meadow</td>
 <td>Taught by Sheik outside the Forest Temple entrance.</td>
 </tr>
 <tr class="mission-row" data-task-id="song_bolero">
 <td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
 <td><strong>Bolero of Fire</strong></td>
-<td><span class="notes-sequence"><span class="note-c-down">▼</span> <span class="note-a">A</span> <span class="note-c-down">▼</span> <span class="note-a">A</span> <span class="note-c-right">►</span> <span class="note-c-down">▼</span> <span class="note-c-right">►</span> <span class="note-c-down">▼</span></span><br/><small>R - L - R - L - Y - R - Y - R</small></td>
+<td><div class="song-notes-container"><div class="song-notes-row sw2-notes-row" style="flex-wrap: nowrap; white-space: nowrap;"><span class="platform-tag tag-sw2" style="white-space: nowrap; flex-shrink: 0;">Switch 2</span><span class="note-sw2 note-sw2-r">R</span><span class="note-sw2 note-sw2-l">L</span><span class="note-sw2 note-sw2-r">R</span><span class="note-sw2 note-sw2-l">L</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-r">R</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-r">R</span></div><div class="song-notes-row" style="color: var(--text-muted); font-size: 11px; margin-top: 2px;"><span class="platform-tag tag-3ds">Classic</span><span>3DS: R - L - R - L - Y - R - Y - R | N64: ▼ A ▼ A ► ▼ ► ▼</span></div><div class="song-notes-row" style="color: #8fa097; font-size: 11px; font-style: italic;">Pitch / Mic Hum: F, D, F, D, A, F, A, F</div></div></td>
 <td>Death Mountain Crater</td>
 <td>Taught by Sheik in the Crater outside the Fire Temple.</td>
 </tr>
 <tr class="mission-row" data-task-id="song_serenade">
 <td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
 <td><strong>Serenade of Water</strong></td>
-<td><span class="notes-sequence"><span class="note-a">A</span> <span class="note-c-down">▼</span> <span class="note-c-right">►</span> <span class="note-c-right">►</span> <span class="note-c-left">◄</span></span><br/><small>L - R - Y - Y - X</small></td>
+<td><div class="song-notes-container"><div class="song-notes-row sw2-notes-row" style="flex-wrap: nowrap; white-space: nowrap;"><span class="platform-tag tag-sw2" style="white-space: nowrap; flex-shrink: 0;">Switch 2</span><span class="note-sw2 note-sw2-l">L</span><span class="note-sw2 note-sw2-r">R</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-y">Y</span></div><div class="song-notes-row" style="color: var(--text-muted); font-size: 11px; margin-top: 2px;"><span class="platform-tag tag-3ds">Classic</span><span>3DS: L - R - Y - Y - X | N64: A ▼ ► ► ◄</span></div><div class="song-notes-row" style="color: #8fa097; font-size: 11px; font-style: italic;">Pitch / Mic Hum: D, F, A, A, B</div></div></td>
 <td>Lake Hylia</td>
 <td>Taught by Sheik in the Ice Cavern after getting Iron Boots.</td>
 </tr>
 <tr class="mission-row" data-task-id="song_nocturne">
 <td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
 <td><strong>Nocturne of Shadow</strong></td>
-<td><span class="notes-sequence"><span class="note-c-left">◄</span> <span class="note-c-right">►</span> <span class="note-c-right">►</span> <span class="note-a">A</span> <span class="note-c-left">◄</span> <span class="note-c-right">►</span> <span class="note-c-down">▼</span></span><br/><small>X - Y - Y - L - X - Y - R</small></td>
+<td><div class="song-notes-container"><div class="song-notes-row sw2-notes-row" style="flex-wrap: nowrap; white-space: nowrap;"><span class="platform-tag tag-sw2" style="white-space: nowrap; flex-shrink: 0;">Switch 2</span><span class="note-sw2 note-sw2-y">Y</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-l">L</span><span class="note-sw2 note-sw2-y">Y</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-r">R</span></div><div class="song-notes-row" style="color: var(--text-muted); font-size: 11px; margin-top: 2px;"><span class="platform-tag tag-3ds">Classic</span><span>3DS: X - Y - Y - L - X - Y - R | N64: ◄ ► ► A ◄ ► ▼</span></div><div class="song-notes-row" style="color: #8fa097; font-size: 11px; font-style: italic;">Pitch / Mic Hum: B, A, A, D, B, A, F</div></div></td>
 <td>Graveyard (Shadow Temple)</td>
 <td>Taught by Sheik in burning Kakariko Village.</td>
 </tr>
 <tr class="mission-row" data-task-id="song_requiem">
 <td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
 <td><strong>Requiem of Spirit</strong></td>
-<td><span class="notes-sequence"><span class="note-a">A</span> <span class="note-c-down">▼</span> <span class="note-a">A</span> <span class="note-c-right">►</span> <span class="note-c-down">▼</span> <span class="note-a">A</span></span><br/><small>L - R - L - Y - R - L</small></td>
+<td><div class="song-notes-container"><div class="song-notes-row sw2-notes-row" style="flex-wrap: nowrap; white-space: nowrap;"><span class="platform-tag tag-sw2" style="white-space: nowrap; flex-shrink: 0;">Switch 2</span><span class="note-sw2 note-sw2-l">L</span><span class="note-sw2 note-sw2-r">R</span><span class="note-sw2 note-sw2-l">L</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-r">R</span><span class="note-sw2 note-sw2-l">L</span></div><div class="song-notes-row" style="color: var(--text-muted); font-size: 11px; margin-top: 2px;"><span class="platform-tag tag-3ds">Classic</span><span>3DS: L - R - L - Y - R - L | N64: A ▼ A ► ▼ A</span></div><div class="song-notes-row" style="color: #8fa097; font-size: 11px; font-style: italic;">Pitch / Mic Hum: D, F, D, A, F, D</div></div></td>
 <td>Desert Colossus</td>
 <td>Taught by Sheik at the Desert Colossus pedestal.</td>
 </tr>
 <tr class="mission-row" data-task-id="song_prelude">
 <td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
 <td><strong>Prelude of Light</strong></td>
-<td><span class="notes-sequence"><span class="note-c-up">▲</span> <span class="note-c-right">►</span> <span class="note-c-up">▲</span> <span class="note-c-right">►</span> <span class="note-c-left">◄</span> <span class="note-c-up">▲</span></span><br/><small>A - Y - A - Y - X - A</small></td>
+<td><div class="song-notes-container"><div class="song-notes-row sw2-notes-row" style="flex-wrap: nowrap; white-space: nowrap;"><span class="platform-tag tag-sw2" style="white-space: nowrap; flex-shrink: 0;">Switch 2</span><span class="note-sw2 note-sw2-x">X</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-x">X</span><span class="note-sw2 note-sw2-a">A</span><span class="note-sw2 note-sw2-y">Y</span><span class="note-sw2 note-sw2-x">X</span></div><div class="song-notes-row" style="color: var(--text-muted); font-size: 11px; margin-top: 2px;"><span class="platform-tag tag-3ds">Classic</span><span>3DS: A - Y - A - Y - X - A | N64: ▲ ► ▲ ► ◄ ▲</span></div><div class="song-notes-row" style="color: #8fa097; font-size: 11px; font-style: italic;">Pitch / Mic Hum: High D, A, High D, A, B, High D</div></div></td>
 <td>Temple of Time</td>
 <td>Taught by Sheik in the Temple of Time after clearing Forest Temple.</td>
 </tr>
@@ -1760,7 +2003,6 @@
 </table>
 </div>
 <!-- Page Navigation Footer -->
-
 <div class="page-nav-footer">
 <button class="pager-btn prev-btn" onclick="showPage('sec_gold_skulltulas')">← Previous: All 100 Gold Skulltulas</button>
 <span class="pager-indicator">Section 7 of 10</span>
@@ -1774,102 +2016,224 @@
 <span class="collapse-arrow">►</span>
 <div class="section-title">8. Equipment, Capacity Upgrades &amp; Great Fairy Fountains</div>
 </div>
-<span class="badge badge-gold">Swords, Shields &amp; Magic</span>
+<span class="badge badge-gold">All Gear Trackable • 6 Fairies</span>
 </div>
 <div class="section-content">
-<p>Equipping specialized tunics, heavy boots, durable shields, and receiving divine blessings from the Great Fairies grants Link elemental resistance, magic spells, and enhanced defensive resilience:</p>
+<p>Every sword, shield, tunic, boot, spell, bag expansion, wallet, quiver, and Great Fairy Fountain in <strong><a href="https://www.ign.com/wikis/ocarina-of-time-remake" rel="noopener" target="_blank">The Legend of Zelda: Ocarina of Time Remake</a></strong> is individually trackable below—check off each upgrade as you collect it across Hyrule:</p>
 <div class="card-grid">
+<!-- Card 1: Swords & Blades -->
 <div class="sub-card">
 <div class="sub-card-header">
 <span class="sub-card-title">Swords &amp; Blades</span>
-<span class="badge badge-green">Offense</span>
+<span class="badge badge-green">4 Weapons</span>
 </div>
-<p>
-            • <strong>Kokiri Sword:</strong> Young Link's standard blade found in the Forest Training Center.<br/>
-            • <strong>Master Sword:</strong> The legendary Blade of Evil's Bane drawn from the Temple of Time.<br/>
-            • <strong>Giant's Knife (200 Rupees):</strong> Two-handed blade bought in Goron City; breaks after 8 strikes!<br/>
-            • <strong>Biggoron's Sword:</strong> Unbreakable legendary two-handed sword dealing double Master Sword damage!
-          </p>
+<div class="check-item" data-task-id="eq_kokiri_sword">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Kokiri Sword:</strong> Young Link's starting blade found inside the Kokiri Forest Training Center boulder maze (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Kokiri_Forest_Walkthrough" rel="noopener" target="_blank">IGN Kokiri Guide</a>).</div>
 </div>
+<div class="check-item" data-task-id="eq_master_sword">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Master Sword:</strong> The legendary Blade of Evil's Bane drawn from the Pedestal of Time after collecting all 3 Spiritual Stones.</div>
+</div>
+<div class="check-item" data-task-id="eq_giants_knife">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Giant's Knife (200 Rupees):</strong> Optional two-handed blade purchased from Medigoron in Goron City (breaks after 8 hits).</div>
+</div>
+<div class="check-item" data-task-id="eq_biggoron_sword">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Biggoron's Sword:</strong> Unbreakable two-handed blade dealing double Master Sword damage, earned from the 11-step trading quest!</div>
+</div>
+</div>
+<!-- Card 2: Shields -->
 <div class="sub-card">
 <div class="sub-card-header">
 <span class="sub-card-title">Shields</span>
-<span class="badge badge-blue">Defense</span>
+<span class="badge badge-blue">3 Shields</span>
 </div>
-<p>
-            • <strong>Deku Shield:</strong> Wooden shield; burns to ash when touching fire.<br/>
-            • <strong>Hylian Shield:</strong> Heavy steel shield that deflects physical attacks and fireballs.<br/>
-            • <strong>Mirror Shield:</strong> Polished mirror surface found in Spirit Temple; absorbs and reflects light and magic beams!
-          </p>
+<div class="check-item" data-task-id="eq_deku_shield">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Deku Shield (40 Rupees):</strong> Bought at the Kokiri Shop; deflects Deku Scrub nuts but burns if touched by fire.</div>
 </div>
+<div class="check-item" data-task-id="eq_hylian_shield">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Hylian Shield (80R / Free in Graveyard):</strong> Steel shield that blocks fire and Death Mountain boulders (free inside Kakariko Graveyard flower grave at night).</div>
+</div>
+<div class="check-item" data-task-id="eq_mirror_shield">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Mirror Shield:</strong> Found on the Desert Colossus ledge via the Spirit Temple; reflects light and absorbs/fires elemental blasts in the Twinrova fight.</div>
+</div>
+</div>
+<!-- Card 3: Tunics & Boots -->
 <div class="sub-card">
 <div class="sub-card-header">
 <span class="sub-card-title">Tunics &amp; Boots</span>
-<span class="badge badge-red">Elemental Gear</span>
+<span class="badge badge-red">5 Elemental Gear</span>
 </div>
-<p>
-            • <strong>Goron Tunic:</strong> Crimson tunic granting total heat immunity in volcanoes.<br/>
-            • <strong>Zora Tunic:</strong> Sapphire tunic allowing Link to breathe underwater indefinitely.<br/>
-            • <strong>Iron Boots:</strong> Heavy boots used to sink into deep waters and resist strong winds.<br/>
-            • <strong>Hover Boots:</strong> Golden boots that glide horizontally across midair chasms.
-          </p>
+<div class="check-item" data-task-id="eq_kokiri_gear">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Kokiri Tunic &amp; Kokiri Boots:</strong> Link's default forest tunic and boots equipped from the start of the adventure.</div>
 </div>
+<div class="check-item" data-task-id="eq_goron_tunic">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Goron Tunic:</strong> Crimson fireproof tunic gifted by rolling Goron Link in Adult Goron City (or bought for 200 Rupees).</div>
+</div>
+<div class="check-item" data-task-id="eq_zora_tunic">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Zora Tunic:</strong> Sapphire tunic gifted by King Zora after thawing him with Blue Fire (or bought for 300 Rupees) for infinite underwater breathing.</div>
+</div>
+<div class="check-item" data-task-id="eq_iron_boots">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Iron Boots:</strong> Claimed in the Ice Cavern to walk underwater; mapped to instant <code>D-Pad Up/Down</code> toggle in the Switch 2 Remake!</div>
+</div>
+<div class="check-item" data-task-id="eq_hover_boots">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Hover Boots:</strong> Claimed in the Shadow Temple to glide across chasms; mapped to instant <code>D-Pad Up/Down</code> toggle in the Switch 2 Remake!</div>
+</div>
+</div>
+<!-- Card 4: Strength Gauntlets, Diving Scales & Spells -->
 <div class="sub-card">
 <div class="sub-card-header">
-<span class="sub-card-title">Great Fairy Spells</span>
-<span class="badge badge-purple">Magic</span>
+<span class="sub-card-title">Gauntlets, Scales &amp; Magic</span>
+<span class="badge badge-purple">6 Upgrades</span>
 </div>
-<p>
-            • <strong>Din's Fire:</strong> Massive expanding dome of flame that burns all surroundings.<br/>
-            • <strong>Farore's Wind:</strong> Creates warp points inside dungeons to teleport back instantly.<br/>
-            • <strong>Nayru's Love:</strong> Protective crystalline barrier rendering Link temporarily invulnerable to damage.
-          </p>
+<div class="check-item" data-task-id="eq_goron_bracelet">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Goron's Bracelet:</strong> Gifted by Darunia in Goron City after playing Saria's Song; allows Child Link to lift Bomb Flowers.</div>
+</div>
+<div class="check-item" data-task-id="eq_silver_gauntlets">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Silver Gauntlets:</strong> Claimed outside the Spirit Temple at Desert Colossus (Child phase) to push massive stone blocks as Adult Link.</div>
+</div>
+<div class="check-item" data-task-id="eq_golden_gauntlets">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Golden Gauntlets:</strong> Found inside the Shadow Barrier room of Ganon's Castle; lifts colossal black/grey stone monoliths.</div>
+</div>
+<div class="check-item" data-task-id="eq_silver_scale">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Silver Scale:</strong> Won from the Zora's Domain waterfall diving game as Child Link; increases diving depth to 6 seconds.</div>
+</div>
+<div class="check-item" data-task-id="eq_golden_scale">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Golden Scale:</strong> Catch a 15+ pound fish at the Lake Hylia Fishing Pond as Adult Link; increases diving depth to 9 seconds.</div>
+</div>
+<div class="check-item" data-task-id="eq_lens_of_truth">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Lens of Truth:</strong> Claimed after defeating Dead Hand in the drained Bottom of the Well in Kakariko Village; reveals invisible walls and chests.</div>
 </div>
 </div>
-<h3>Great Fairy Fountains Locations</h3>
+<!-- Card 5: Early Item Bag Expansions (Sticks, Seeds & Nuts) -->
+<div class="sub-card card-remake">
+<div class="sub-card-header">
+<span class="sub-card-title">Item Bag Expansions (Sticks, Seeds &amp; Nuts)</span>
+<span class="badge badge-remake">6 Expansions</span>
+</div>
+<div class="check-item" data-task-id="eq_stick_20">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Deku Stick Bag #1 (20 Sticks):</strong> Deflect the Lost Woods bridge Business Scrub's nut and buy for 40 Rupees (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Item_Bag_Expansion_to_Get_Early" rel="noopener" target="_blank">IGN Bag Guide</a>).</div>
+</div>
+<div class="check-item" data-task-id="eq_stick_30">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Deku Stick Bag #2 (30 Sticks):</strong> Wear the <strong>Skull Mask</strong> inside the Lost Woods Forest Stage butterfly grotto for a free upgrade to 30 Sticks (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Item_Bag_Expansion_to_Get_Early" rel="noopener" target="_blank">IGN Bag Guide</a>).</div>
+</div>
+<div class="check-item" data-task-id="eq_seed_40">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Deku Seed Bullet Bag #1 (40 Seeds):</strong> Shoot the hanging target right of the Kokiri Lost Woods entrance 3 times in a row (100 points) (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Item_Bag_Expansion_to_Get_Early" rel="noopener" target="_blank">IGN Bag Guide</a>).</div>
+</div>
+<div class="check-item" data-task-id="eq_seed_50">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Deku Seed Bullet Bag #2 (50 Seeds):</strong> Win the Castle Town Shooting Gallery minigame with a perfect 10/10 score (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Item_Bag_Expansion_to_Get_Early" rel="noopener" target="_blank">IGN Bag Guide</a>).</div>
+</div>
+<div class="check-item" data-task-id="eq_nut_30">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Deku Nut Upgrade #1 (30 Nuts):</strong> Bomb the cracked boulder outside the Sacred Forest Meadow entrance in Lost Woods and buy from the Business Scrub for 40 Rupees (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Dodongo_Cavern_Dungeon_Walkthrough" rel="noopener" target="_blank">IGN Dodongo Guide</a>).</div>
+</div>
+<div class="check-item" data-task-id="eq_nut_40">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Deku Nut Upgrade #2 (40 Nuts):</strong> Wear the <strong>Mask of Truth</strong> inside the Lost Woods Forest Stage grotto as Child Link.</div>
+</div>
+</div>
+<!-- Card 6: Wallets, Bomb Bags, Quivers, Elemental Arrows & Scrub Seeds -->
+<div class="sub-card card-remake">
+<div class="sub-card-header">
+<span class="sub-card-title">Wallets, Bomb Bags, Quivers &amp; Arrows</span>
+<span class="badge badge-gold">9 Upgrades</span>
+</div>
+<div class="check-item" data-task-id="eq_wallet_adult">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Adult's Wallet (500 Rupees in Remake / 200R in 3DS):</strong> Claimed at Kakariko's House of Skulltula after collecting 10 Gold Skulltula Tokens.</div>
+</div>
+<div class="check-item" data-task-id="eq_wallet_giant">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Giant's Wallet (1,000 Rupees in Remake / 500R in 3DS):</strong> Claimed at Kakariko's House of Skulltula after collecting 30 Gold Skulltula Tokens (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Lord_Jabu-Jabu%27s_Belly_Dungeon_Walkthrough" rel="noopener" target="_blank">IGN Jabu-Jabu Guide</a>).</div>
+</div>
+<div class="check-item" data-task-id="eq_bomb_30">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Big Bomb Bag (30 Bombs):</strong> Stop the rolling Goron inside the Goron City tunnel with a bomb (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Dodongo_Cavern_Dungeon_Walkthrough" rel="noopener" target="_blank">IGN Dodongo Guide</a>).</div>
+</div>
+<div class="check-item" data-task-id="eq_bomb_40">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Biggest Bomb Bag (40 Bombs):</strong> Win the Bomb Bag prize at the Castle Town Bombchu Bowling Alley minigame.</div>
+</div>
+<div class="check-item" data-task-id="eq_quiver_40">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Big Quiver (40 Arrows):</strong> Score a perfect 10/10 at the Kakariko Village Shooting Gallery as Adult Link.</div>
+</div>
+<div class="check-item" data-task-id="eq_quiver_50">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Biggest Quiver (50 Arrows):</strong> Score 1,500+ points in the Gerudo Fortress Horseback Archery Range minigame.</div>
+</div>
+<div class="check-item" data-task-id="eq_fire_arrows">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Fire Arrows:</strong> After clearing the Water Temple, stand on the Lake Hylia stone slab at dawn and shoot an arrow into the rising sun.</div>
+</div>
+<div class="check-item" data-task-id="eq_ice_light_arrows">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Ice Arrows &amp; Light Arrows:</strong> Clear the Gerudo Training Ground key maze for Ice Arrows; receive Light Arrows from Zelda in the Temple of Time.</div>
+</div>
+<div class="check-item" data-task-id="eq_scrub_seeds">
+<input onchange="updateTask(this)" type="checkbox"/>
+<div class="check-item-content"><strong>Business Scrub Seeds (Remake Exclusive):</strong> Collect portable merchant seeds in Dodongo's Cavern (Lizalfos upper ledge &amp; 2F west cracked wall), Death Mountain Crater grotto, and Jabu-Jabu's Belly underwater Scrub (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Dodongo_Cavern_Dungeon_Walkthrough" rel="noopener" target="_blank">IGN Dodongo Guide</a>).</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<h3>Great Fairy Fountains Locations (All 6 Blessings)</h3>
 <div class="check-item" data-task-id="fairy_spin_attack">
 <input onchange="updateTask(this)" type="checkbox"/>
-<div class="check-item-content">
-<strong>Death Mountain Summit (Magic Meter &amp; Spin Attack):</strong> Bomb the cracked wall outside the crater summit as child; play Zelda's Lullaby to receive the Magic Meter and enhanced Spin Attack.
-        </div>
+<div class="check-item-content"><strong>Death Mountain Summit (Magic Meter &amp; Din's Fire in Remake / Spin Attack in 3DS):</strong> Bomb the cracked wall left of Kaepora Gaebora at the Death Mountain Trail summit, stand on the Triforce symbol, and play Zelda's Lullaby. In the Switch 2 Remake, pay the <strong>25-Rupee offering</strong> to unlock both your green <strong>Magic Meter and Din's Fire</strong> immediately (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/Dodongo_Cavern_Dungeon_Walkthrough" rel="noopener" target="_blank">IGN Dodongo Walkthrough</a>)!</div>
 </div>
 <div class="check-item" data-task-id="fairy_dins_fire">
 <input onchange="updateTask(this)" type="checkbox"/>
-<div class="check-item-content">
-<strong>Hyrule Castle Courtyard (Din's Fire Spell):</strong> Bomb the giant boulder past the castle gate, crawl through the crawlspace, and play Zelda's Lullaby to obtain Din's Fire.
-        </div>
+<div class="check-item-content"><strong>Hyrule Castle Grounds (Magic Spin Attack in Remake / Din's Fire in 3DS):</strong> Bomb the boulder past the Hyrule Castle gate, crawl through the tunnel, and play Zelda's Lullaby. As hinted by her Death Mountain sister in the Switch 2 Remake, this Great Fairy grants your charged <strong>Magic Spin Attack</strong> sword technique (or Din's Fire in 3DS/N64)!</div>
 </div>
 <div class="check-item" data-task-id="fairy_farores_wind">
 <input onchange="updateTask(this)" type="checkbox"/>
-<div class="check-item-content">
-<strong>Zora's Fountain Corner (Farore's Wind Spell):</strong> Bomb the boulder on the small island in the southeastern corner of Zora's Fountain to obtain Farore's Wind.
-        </div>
+<div class="check-item-content"><strong>Zora's Fountain Corner (Farore's Wind Spell):</strong> Bomb the silver boulder on the small island in the southeastern corner of Zora's Fountain and play Zelda's Lullaby to obtain the dungeon warp spell <strong>Farore's Wind</strong>.</div>
 </div>
 <div class="check-item" data-task-id="fairy_double_magic">
 <input onchange="updateTask(this)" type="checkbox"/>
-<div class="check-item-content">
-<strong>Death Mountain Crater (Double Magic Meter):</strong> As Adult Link with the Megaton Hammer, smash the red rock totems behind the entrance bridge to double your magic capacity.
-        </div>
+<div class="check-item-content"><strong>Death Mountain Crater (Double Magic Meter):</strong> As Adult Link with the Megaton Hammer, smash the red boulders blocking the cavern across the broken bridge in Death Mountain Crater to double your magic capacity.</div>
 </div>
 <div class="check-item" data-task-id="fairy_nayrus_love">
 <input onchange="updateTask(this)" type="checkbox"/>
-<div class="check-item-content">
-<strong>Desert Colossus (Nayru's Love Spell):</strong> Bomb the cracked wall between the two palm trees outside the Spirit Temple to obtain the shield spell Nayru's Love.
-        </div>
+<div class="check-item-content"><strong>Desert Colossus (Nayru's Love Spell):</strong> Bomb the cracked wall between the two palm trees on the northern side of the Desert Colossus to obtain the protective crystal barrier spell <strong>Nayru's Love</strong>.</div>
 </div>
 <div class="check-item" data-task-id="fairy_double_defense">
 <input onchange="updateTask(this)" type="checkbox"/>
-<div class="check-item-content">
-<strong>Ganon's Castle Exterior (Double Defense):</strong> Lift the massive grey monolith outside Ganon's Castle using the Golden Gauntlets to receive white hearts that halve all incoming damage!
-        </div>
+<div class="check-item-content"><strong>Ganon's Castle Exterior (Double Defense):</strong> Lift the massive grey monolith outside Ganon's Castle using the Golden Gauntlets to receive white-outlined hearts that halve all incoming damage!</div>
 </div>
 <!-- Page Navigation Footer -->
-
 <div class="page-nav-footer">
 <button class="pager-btn prev-btn" onclick="showPage('sec_ocarina_songs')">← Previous: Ocarina Songs &amp; Melodies</button>
 <span class="pager-indicator">Section 8 of 10</span>
 <button class="pager-btn next-btn" onclick="showPage('sec_side_quests')">Next: Side Quests &amp; Biggoron →</button>
-</div></div>
+</div>
+</div>
 </section>
 <!-- SECTION 9: Side Quests & Trading Sequences -->
 <section class="wiki-section wiki-page" data-category="sidequests" id="sec_side_quests">
@@ -1881,7 +2245,7 @@
 <span class="badge badge-gold">Biggoron &amp; Masks</span>
 </div>
 <div class="section-content">
-<p>Mastering Hyrule's multi-step trading sequences grants the ultimate unbreakable two-handed blade, mystical masks, and all four versatile Empty Bottles:</p>
+<p>Mastering Hyrule's multi-step trading sequences grants the ultimate unbreakable two-handed blade, mystical masks, and all <strong>5 versatile Empty Bottles</strong>:</p>
 <h3>The Biggoron's Sword 11-Step Trading Quest</h3>
 <div class="table-container">
 <table>
@@ -1963,13 +2327,51 @@
 </tbody>
 </table>
 </div>
-<h3>All 4 Empty Bottles Guide</h3>
-<div class="check-item" data-task-id="bottle_1_lon_lon"><input onchange="updateTask(this)" type="checkbox"/><div class="check-item-content"><strong>Bottle #1 (Lon Lon Ranch):</strong> Win Talon's Super Cucco-catching minigame as Child Link.</div></div>
-<div class="check-item" data-task-id="bottle_2_kakariko"><input onchange="updateTask(this)" type="checkbox"/><div class="check-item-content"><strong>Bottle #2 (Kakariko Village):</strong> Gather all 7 lost Cuccos scattered across Kakariko and throw them into the lady's pen.</div></div>
-<div class="check-item" data-task-id="bottle_3_lake_hylia"><input onchange="updateTask(this)" type="checkbox"/><div class="check-item-content"><strong>Bottle #3 (Lake Hylia):</strong> Dive near the underwater grate leading to Zora's Domain to find the message in a bottle with Ruto's letter.</div></div>
-<div class="check-item" data-task-id="bottle_4_big_poes"><input onchange="updateTask(this)" type="checkbox"/><div class="check-item-content"><strong>Bottle #4 (10 Big Poes in Hyrule Field):</strong> Hunt all 10 Big Poes while mounted on Epona and sell their souls to the Ghost Shop in Market ruins as Adult Link!</div></div>
+<h3>All 5 Empty Bottles Guide (Including Remake Exclusive)</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="width: 44px; text-align: center;">Done</th>
+<th>Bottle # &amp; Initial Contents</th>
+<th>Location &amp; Era</th>
+<th>Unlock Instructions &amp; Switch 2 Remake Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="mission-row" data-task-id="bottle_1_castle_town">
+<td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
+<td><strong>1. Empty Bottle #1</strong><br/><span class="badge badge-remake">Free Red Potion</span></td>
+<td><strong>Castle Town Potion Shop</strong><br/><small style="color:var(--text-muted);">Child Link • Remake Exclusive</small></td>
+<td>Enter the Potion Shop in Hyrule Castle Town Market, talk to the shopkeeper behind the counter, and catch the escaped bug inside the shop. He rewards you with a free Red Potion and lets you keep the bottle (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/All_Empty_Bottle_Locations" rel="noopener" target="_blank">IGN Bottle Guide</a>)!</td>
+</tr>
+<tr class="mission-row" data-task-id="bottle_2_lon_lon">
+<td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
+<td><strong>2. Empty Bottle #2</strong><br/><span class="badge badge-gold">Lon Lon Milk</span></td>
+<td><strong>Lon Lon Ranch House</strong><br/><small style="color:var(--text-muted);">Child Link • Talon's Game</small></td>
+<td>After waking Talon at Hyrule Castle moat, visit the Lon Lon Ranch house and pay 10 Rupees to play his Super Cucco game. Catch the 3 Super Cuccos mixed into the flock within 30 seconds (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/All_Empty_Bottle_Locations" rel="noopener" target="_blank">IGN Bottle Guide</a>).</td>
+</tr>
+<tr class="mission-row" data-task-id="bottle_3_kakariko">
+<td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
+<td><strong>3. Empty Bottle #3</strong><br/><span class="badge badge-green">Empty Bottle</span></td>
+<td><strong>Kakariko Village</strong><br/><small style="color:var(--text-muted);">Child Link • Cucco Lady (Anju)</small></td>
+<td>Round up all 7 Cuccos around Kakariko Village during the day (entrance, Skulltula house, crate near hill, potion shop, and 3 in the upper area reached by gliding with a Cucco from the house under construction) and toss them into Anju's pen (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/All_Empty_Bottle_Locations" rel="noopener" target="_blank">IGN Bottle Guide</a>).</td>
+</tr>
+<tr class="mission-row" data-task-id="bottle_4_lake_hylia">
+<td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
+<td><strong>4. Empty Bottle #4</strong><br/><span class="badge badge-blue">Ruto's Letter</span></td>
+<td><strong>Lake Hylia &amp; Zora's Domain</strong><br/><small style="color:var(--text-muted);">Child Link • Silver Scale Required</small></td>
+<td>Win the Zora's Domain diving game for the Silver Scale, dive into the underwater Lake Hylia tunnel, grab the submerged bottle containing Princess Ruto's Letter, and show it to King Zora (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/All_Empty_Bottle_Locations" rel="noopener" target="_blank">IGN Bottle Guide</a>).</td>
+</tr>
+<tr class="mission-row" data-task-id="bottle_5_big_poes">
+<td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
+<td><strong>5. Empty Bottle #5</strong><br/><span class="badge badge-purple">Big Poe Ghost Shop</span></td>
+<td><strong>Hyrule Field &amp; Market Guardhouse</strong><br/><small style="color:var(--text-muted);">Adult Link • Epona &amp; Fairy Bow</small></td>
+<td>Hunt Big Poes on horseback across Hyrule Field and sell them to the Poe Collector in the Castle Town Ghost Shop. In the Switch 2 Remake, you only need <strong>5 out of 10 Big Poes (500 points)</strong> instead of all 10 (<a href="https://www.ign.com/wikis/ocarina-of-time-remake/All_Empty_Bottle_Locations" rel="noopener" target="_blank">IGN Bottle Guide</a>)!</td>
+</tr>
+</tbody>
+</table>
+</div>
 <!-- Page Navigation Footer -->
-
 <div class="page-nav-footer">
 <button class="pager-btn prev-btn" onclick="showPage('sec_equipment')">← Previous: Equipment &amp; Great Fairies</button>
 <span class="pager-indicator">Section 9 of 10</span>
@@ -2036,10 +2438,10 @@
 </tr>
 <tr class="mission-row" data-task-id="boss_morpha">
 <td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
-<td><strong>Morpha</strong><br/><small>Giant Aquatic Amoeba</small></td>
+<td><strong>Morpha &amp; Dark Link</strong><br/><small>Water Temple Boss &amp; Mirror Reflection</small></td>
 <td>Water Temple</td>
-<td>Red core nucleus</td>
-<td>Stay in a corner of the arena. Use the Longshot to drag Morpha's red nucleus out of the water tentacles directly to Link and corner-slash it with the sword!</td>
+<td>Red core nucleus / Mirror shadow</td>
+<td><strong>Dark Link (Mini-Boss):</strong> In the Remake, Dark Link counters crouch-stabs and parries sword swings—use Din's Fire, the Megaton Hammer, or un-targeted horizontal slashes.<br/><strong>Morpha (Boss):</strong> Stand in the dry corner out of tentacle reach, pull the red nucleus out with the Longshot, and corner-slash repeatedly!</td>
 </tr>
 <tr class="mission-row" data-task-id="boss_bongo_bongo">
 <td style="text-align:center;"><input onchange="updateMission(this)" type="checkbox"/></td>
@@ -2073,8 +2475,7 @@
 </table>
 </div>
 <!-- Page Navigation Footer -->
-
-<div class="page-nav-footer"><button class="pager-btn prev-btn" onclick="showPage('sec_side_quests')">← Previous: Side Quests &amp; Biggoron</button><button class="pager-btn next-btn" onclick="showPage('sec_basics')">Next: Section 1 — Basics &amp; 3DS Features ↺</button></div></div>
+<div class="page-nav-footer"><button class="pager-btn prev-btn" onclick="showPage('sec_side_quests')">← Previous: Side Quests &amp; Biggoron</button><button class="pager-btn next-btn" onclick="showPage('sec_basics')">Next: Section 1 — Basics &amp; Remake Features ↺</button></div></div>
 </section>
 <!-- Toast Notification -->
 <div id="toast">Coordinates Copied!</div>
@@ -2281,37 +2682,55 @@
   }
 
   // Interactive Checklist & Progress Tracking
-  function updateTask(checkboxEl) {
-    const checkItem = checkboxEl.closest('.check-item');
-    if (checkItem) {
-      if (checkboxEl.checked) {
-        checkItem.classList.add('done');
+  function syncTaskById(taskId, isChecked) {
+    if (!taskId) return;
+    document.querySelectorAll(`[data-task-id="${taskId}"]`).forEach(el => {
+      const cb = el.querySelector('input[type="checkbox"]');
+      if (cb) cb.checked = isChecked;
+      if (isChecked) {
+        el.classList.add('done');
+        const row = el.closest('tr');
+        if (row) row.classList.add('done');
       } else {
-        checkItem.classList.remove('done');
+        el.classList.remove('done');
+        const row = el.closest('tr');
+        if (row) row.classList.remove('done');
       }
+    });
+  }
+
+  function updateTask(checkboxEl) {
+    const checkItem = checkboxEl.closest('[data-task-id]');
+    if (checkItem) {
+      syncTaskById(checkItem.getAttribute('data-task-id'), checkboxEl.checked);
     }
     updateProgressStats();
     saveWikiState();
   }
 
   function updateMission(checkboxEl) {
-    const row = checkboxEl.closest('tr');
+    const row = checkboxEl.closest('[data-task-id]');
     if (row) {
-      if (checkboxEl.checked) {
-        row.classList.add('done');
-      } else {
-        row.classList.remove('done');
-      }
+      syncTaskById(row.getAttribute('data-task-id'), checkboxEl.checked);
     }
     updateProgressStats();
     saveWikiState();
   }
 
   function updateProgressStats() {
-    const allChecks = document.querySelectorAll('input[type="checkbox"]');
-    const total = allChecks.length;
+    const taskMap = new Map();
+    document.querySelectorAll('[data-task-id]').forEach(el => {
+      const tid = el.getAttribute('data-task-id');
+      const cb = el.querySelector('input[type="checkbox"]');
+      if (tid && cb) {
+        if (!taskMap.has(tid) || cb.checked) {
+          taskMap.set(tid, cb.checked);
+        }
+      }
+    });
+    const total = taskMap.size;
     let checked = 0;
-    allChecks.forEach(cb => { if (cb.checked) checked++; });
+    taskMap.forEach(val => { if (val) checked++; });
 
     const pct = total > 0 ? Math.round((checked / total) * 100) : 0;
     const bar = document.getElementById('progressBar');
@@ -2325,13 +2744,14 @@
 
   // Persistent State in Safe Storage
   function saveWikiState() {
-    const checkedIds = [];
+    const checkedSet = new Set();
     document.querySelectorAll('[data-task-id]').forEach(el => {
       const cb = el.querySelector('input[type="checkbox"]');
       if (cb && cb.checked) {
-        checkedIds.push(el.getAttribute('data-task-id'));
+        checkedSet.add(el.getAttribute('data-task-id'));
       }
     });
+    const checkedIds = Array.from(checkedSet);
     safeStorage.set('oot3d_wiki_tasks', JSON.stringify(checkedIds));
 
     const collapsedSecs = [];
@@ -2352,16 +2772,7 @@
         const checkedIds = JSON.parse(savedTasks);
         if (Array.isArray(checkedIds)) {
           checkedIds.forEach(id => {
-            const el = document.querySelector(`[data-task-id="${id}"]`);
-            if (el) {
-              const cb = el.querySelector('input[type="checkbox"]');
-              if (cb) {
-                cb.checked = true;
-                el.classList.add('done');
-                const row = el.closest('tr');
-                if (row) row.classList.add('done');
-              }
-            }
+            syncTaskById(id, true);
           });
         }
       } catch (e) {
