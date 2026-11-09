@@ -11,7 +11,7 @@ A centralized collection of comprehensive, interactive video game wikis, walkthr
 | Franchise | Title | Active Release | Trackable Tasks / Scope | Key Features |
 | :--- | :--- | :---: | :---: | :--- |
 | **Assassin's Creed** | [Assassin's Creed IV: Black Flag Resynced](games/assassins-creed/black-flag-resynced/) | `v15` | 116 Tasks | 12 IGN-grounded sections, Jackdaw naval upgrades & 5 officers, 4 Rifts, 100% sync constraints, Mayan & Templar vault armors, Caribbean pirate & Animus theme. |
-| **The Legend of Zelda** | [The Legend of Zelda: Ocarina of Time Remake](games/zelda/ocarina-of-time/) | `v13` | 159 Tasks | Comprehensive walkthrough grounded on the official IGN Remake Wiki: 2026 Switch 2 overhauls, 5 Empty Bottles, all 36 Heart Pieces, 100 Gold Skulltulas, songs & warp tunes, Biggoron trading sequence, Threads of Light & How-To guides, Hyrule/Triforce theme. |
+| **The Legend of Zelda** | [The Legend of Zelda: Ocarina of Time Remake](games/zelda/ocarina-of-time/) | `v14` | 159 Tasks | Comprehensive walkthrough grounded on the official IGN Remake Wiki: 2026 Switch 2 overhauls, 5 Empty Bottles, all 36 Heart Pieces, 100 Gold Skulltulas, songs & warp tunes, Biggoron trading sequence, Threads of Light & How-To guides, Hyrule/Triforce theme. |
 | **The Legend of Zelda** | [The Legend of Zelda: Echoes of Wisdom](games/zelda/echoes-of-wisdom/) | `v7` | 465 Tasks | All 15 main quests, 8 dungeons & Still Worlds, complete 127 Echoes compendium, all 40 Pieces of Heart, all 25 Stamp Stands, Great Fairy expansions, 4 Fairy Bottles, 6 Dampé automatons, 150 Might Crystals, 28 accessories, and 12 Slumber Dojo trials. |
 | **The Legend of Zelda** | [The Hyrule Chronicle (English)](games/zelda/the-hyrule-chronicle/) | `v5` | 5 Canonical Eras | Nintendo's official Japanese 40th anniversary timeline translated into English. Covers the pre-creation Null void (*Echoes of Wisdom*), Dual Foundings of Hyrule, Threefold Timeline Divergence (Fallen, Child, Adult), and the distant Era of the Wild (*BotW* / *TotK*). |
 
@@ -60,7 +60,7 @@ interactive-game-wikis/
         │
         ├── ocarina-of-time/
         │   ├── README.md                    # Ocarina of Time Remake guide documentation
-        │   ├── index.html                   # Active release (v13)
+        │   ├── index.html                   # Active release (v14)
         │   └── archive/
         │
         └── the-hyrule-chronicle/
