@@ -10,7 +10,7 @@ A curated collection of offline-capable, interactive single-page application (SP
 
 | Title | Platform / Type | Active Release | Scope & Tasks | Folder Location |
 | :--- | :---: | :---: | :---: | :--- |
-| [**Ocarina of Time Remake**](ocarina-of-time/) | Nintendo Switch 2 | `v13` | 159 Tasks | `ocarina-of-time/` — 12 IGN Remake-grounded sections, 2026 Switch 2 overhauls, 5 Empty Bottles, 36 Heart Pieces, 100 Gold Skulltulas, songs & warp tunes, Biggoron trading sequence, Threads of Light & How-To guides, Hyrule/Triforce theme. |
+| [**Ocarina of Time Remake**](ocarina-of-time/) | Nintendo Switch 2 | `v14` | 159 Tasks | `ocarina-of-time/` — 12 IGN Remake-grounded sections, 2026 Switch 2 overhauls, 5 Empty Bottles, 36 Heart Pieces, 100 Gold Skulltulas, songs & warp tunes, Biggoron trading sequence, Threads of Light & How-To guides, Hyrule/Triforce theme. |
 | [**Echoes of Wisdom**](echoes-of-wisdom/) | Nintendo Switch | `v7` | 465 Tasks | `echoes-of-wisdom/` — All 15 main quests, 8 dungeons & Still Worlds, complete 127 Echoes compendium, all 40 Pieces of Heart, all 25 Stamp Stands, Great Fairy expansions, 4 Fairy Bottles, 6 Dampé automatons, 150 Might Crystals, 28 accessories, and 12 Slumber Dojo trials. |
 | [**The Hyrule Chronicle (English)**](the-hyrule-chronicle/) | Official Japanese Canon Timeline Translation | `v5` | 5 Canonical Eras | `the-hyrule-chronicle/` — Full translation of Nintendo's official Japanese 40th anniversary timeline. Establishes the pre-creation Null void (*Echoes of Wisdom*), the Dual Foundings of Hyrule, the Threefold Split, and the Era of the Wild (*BotW* / *TotK*). |
 
@@ -26,7 +26,7 @@ The Legend of Zelda/
 ├── README.md                                # Zelda franchise overview (this file)
 │
 ├── ocarina-of-time/
-│   ├── The Legend of Zelda Ocarina of Time Remake Wiki_v13.html # Active interactive guide (v13)
+│   ├── The Legend of Zelda Ocarina of Time Remake Wiki_v14.html # Active interactive guide (v14)
 │   │   └── README.md                                               # Dedicated OoT Remake & 3D documentation
 │
 ├── echoes-of-wisdom/
