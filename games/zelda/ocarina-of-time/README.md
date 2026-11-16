@@ -7,8 +7,8 @@ An interactive, single-page completion guide and mechanics reference for **The L
 ## 🗡️ Overview & Quick Specs
 
 * **Game**: *The Legend of Zelda: Ocarina of Time Remake* (Nintendo Switch 2)
-* **Current Version**: `v17` (`The Legend of Zelda Ocarina of Time Remake Wiki_v17.html`)
-* **Trackable Tasks**: 198 interactive checkable items (including all 10 dungeons, all 39 equipment/bag/Great Fairy upgrades in Section 8, all 5 Empty Bottles in Section 9, all 36 Heart Pieces, all 100 Gold Skulltulas, all 12 Ocarina songs, and the 11-step Biggoron Sword trading sequence)
+* **Current Version**: `v18` (`The Legend of Zelda Ocarina of Time Remake Wiki_v18.html`)
+* **Trackable Tasks**: 195 interactive checkable items (including all 10 dungeons, all 39 equipment/bag/Great Fairy upgrades in Section 8, all 5 Empty Bottles in Section 9, all 36 Heart Pieces, all 100 Gold Skulltulas, all 12 Ocarina songs, and the 11-step Biggoron Sword trading sequence)
 * **Cross-Section Navigation**: Standardized Previous and Next section navigation buttons across all 10 section pages with responsive mobile stacking (`@media (max-width: 600px)`) and loop-back to Section 1
 * **Authoritative Source**: [IGN Ocarina of Time Remake Wiki](https://www.ign.com/wikis/ocarina-of-time-remake)
 * **Hosting Format**: Pure HTML5 / CSS3 / Vanilla JS single-page application (SPA)
