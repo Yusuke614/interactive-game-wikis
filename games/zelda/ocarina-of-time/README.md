@@ -7,7 +7,7 @@ An interactive, single-page completion guide and mechanics reference for **The L
 ## 🗡️ Overview & Quick Specs
 
 * **Game**: *The Legend of Zelda: Ocarina of Time Remake* (Nintendo Switch 2)
-* **Current Version**: `v19` (`The Legend of Zelda Ocarina of Time Remake Wiki_v19.html`)
+* **Current Version**: `v19` (`The Legend of Zelda Ocarina of Time Remake Wiki_v20.html`)
 * **Trackable Tasks**: 195 interactive checkable items (including all 10 dungeons, all 39 equipment/bag/Great Fairy upgrades in Section 8, all 5 Empty Bottles in Section 9, all 36 Heart Pieces, all 100 Gold Skulltulas, all 12 Ocarina songs, and the 11-step Biggoron Sword trading sequence)
 * **Cross-Section Navigation**: Standardized Previous and Next section navigation buttons across all 10 section pages with responsive mobile stacking (`@media (max-width: 600px)`) and loop-back to Section 1
 * **Authoritative Source**: [IGN Ocarina of Time Remake Wiki](https://www.ign.com/wikis/ocarina-of-time-remake)
@@ -29,3 +29,5 @@ An interactive, single-page completion guide and mechanics reference for **The L
 10. **Dungeon Bosses & Mini-Bosses Strategy Guide (`sec_bosses`)**: Complete weak-point phases and battle tactics for all 10 major bosses and Dark Link.
 
 - **v19**: Audited and updated **Part 5 (Child-Era Gold Skulltulas Checklist)** of the Child Link Master Checklist in Section 2 and **Section 6 (All 100 Gold Skulltulas)** against the official IGN Switch 2 Remake Gold Skulltula guide—replacing all relocated/removed N64/3DS Skulltulas with exact Switch 2 Remake locations (`#1–#100`, including the 3 Lon Lon Ranch Skulltulas `#8, #38, #39`, the 2 Hyrule Castle Skulltulas `#7, #54`, the 3 Hyrule Field Skulltulas `#5, #27, #55`, the 4 Child-obtainable Dodongo's Cavern Skulltulas `#20–#23`, and the updated Lake Hylia `#30, #31, #43` and Gerudo Valley `#41, #42` locations) with two-way `gs_1`–`gs_100` checkbox synchronization.
+
+- **v20**: Added the **Adult Link Master Checklist (Pre-Ganon's Castle 100% Sweep)** to **Section 3 (`sec_walkthrough_adult`)** mirroring Section 2's Child Link Master Checklist—covering Adult-exclusive weapons, tunics, boots, shields, gauntlets, 8 Adult Ocarina Songs, Epona/Quivers/Golden Scale/Elemental Arrows, Bottle #5 (5 Big Poes), the 3 Adult Great Fairies, all 11 Biggoron's Sword trading steps, all 12 Adult-only Heart Pieces (`#19–#22, #28–#32, #34–#36`), and all 47 Adult-only Gold Skulltulas with full two-way checkbox synchronization across Sections 5, 6, 7, 8, and 9.
