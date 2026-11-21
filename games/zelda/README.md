@@ -26,7 +26,7 @@ The Legend of Zelda/
 ├── README.md                                # Zelda franchise overview (this file)
 │
 ├── ocarina-of-time/
-│   ├── The Legend of Zelda Ocarina of Time Remake Wiki_v19.html # Active interactive guide (v18)
+│   ├── The Legend of Zelda Ocarina of Time Remake Wiki_v20.html # Active interactive guide (v18)
 │   │   └── README.md                                               # Dedicated OoT Remake & 3D documentation
 │
 ├── echoes-of-wisdom/
