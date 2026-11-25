@@ -7,7 +7,7 @@ An interactive, single-page completion guide and mechanics reference for **The L
 ## 🗡️ Overview & Quick Specs
 
 * **Game**: *The Legend of Zelda: Ocarina of Time Remake* (Nintendo Switch 2)
-* **Current Version**: `v19` (`The Legend of Zelda Ocarina of Time Remake Wiki_v21.html`)
+* **Current Version**: `v23` (`The Legend of Zelda Ocarina of Time Remake Wiki_v23.html`)
 * **Trackable Tasks**: 195 interactive checkable items (including all 10 dungeons, all 39 equipment/bag/Great Fairy upgrades in Section 8, all 5 Empty Bottles in Section 9, all 36 Heart Pieces, all 100 Gold Skulltulas, all 12 Ocarina songs, and the 11-step Biggoron Sword trading sequence)
 * **Cross-Section Navigation**: Standardized Previous and Next section navigation buttons across all 10 section pages with responsive mobile stacking (`@media (max-width: 600px)`) and loop-back to Section 1
 * **Authoritative Source**: [IGN Ocarina of Time Remake Wiki](https://www.ign.com/wikis/ocarina-of-time-remake)
@@ -33,3 +33,7 @@ An interactive, single-page completion guide and mechanics reference for **The L
 - **v20**: Added the **Adult Link Master Checklist (Pre-Ganon's Castle 100% Sweep)** to **Section 3 (`sec_walkthrough_adult`)** mirroring Section 2's Child Link Master Checklist—covering Adult-exclusive weapons, tunics, boots, shields, gauntlets, 8 Adult Ocarina Songs, Epona/Quivers/Golden Scale/Elemental Arrows, Bottle #5 (5 Big Poes), the 3 Adult Great Fairies, all 11 Biggoron's Sword trading steps, all 12 Adult-only Heart Pieces (`#19–#22, #28–#32, #34–#36`), and all 47 Adult-only Gold Skulltulas with full two-way checkbox synchronization across Sections 5, 6, 7, 8, and 9.
 
 - **v21**: Added a trackable **All 10 Big Poe Locations & Hunting Tips** checklist (`big_poe_1`–`big_poe_10`) to **Section 9 (`sec_side_quests`)** right below the Empty Bottles table, detailing all 10 Switch 2 Remake glowing purple-lantern obstacles across Hyrule Field, horseback arrow/gyro hunting tips, reverse-jump route tricks, and Poe Collector rewards (500 pts for Bottle #5, 1,000 pts for the 200R Gold Rupee), with a quick-jump link from Section 3's Adult Link Master Checklist.
+
+- **v22**: Updated all **Golden Scale** requirement listings across Section 3 (Adult Link Master Checklist & Piece of Heart #32), Section 5 (Piece of Heart #32), and Section 8 (Gauntlets, Scales & Magic) to reflect the Nintendo Switch 2 Remake's centimeter measurement (**over 60 cm**, without the Sinking Lure) instead of the original 15+ lb weight.
+
+- **v23**: Updated all **Piece of Heart #16** (Young Link Lake Hylia Fishing Pond) listings across Section 2 (Child Link Master Checklist) and Section 5 (All 36 Pieces of Heart) from `over 40 cm (10+ lbs)` to **over 50 cm** with the pounds reference removed.
